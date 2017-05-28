@@ -1,0 +1,123 @@
+'> 00-elements/02-images/00-logo': |2
+  <?php if ($logo): ?>
+    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+    </a>
+  <?php endif; ?>
+
+  <?php
+    // To get the $site_name / $site_slogan to show, add a block to the
+    // Branding region in admin/structure/block.
+  ?>
+  <?php if ($page['branding']): ?>
+    <?php if ($site_name || $site_slogan): ?>
+      <div id="name-and-slogan">
+        <?php if ($site_name): ?>
+          <?php if ($title): ?>
+            <div id="site-name"><strong>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+                <span><?php print $site_name; ?></span>
+              </a>
+            </strong></div>
+          <?php else: /* Use h1 when the content title is empty */ ?>
+            <h1 id="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+                <span><?php print $site_name; ?></span>
+              </a>
+            </h1>
+          <?php endif; ?>
+        <?php endif; ?>
+
+        <?php if ($site_slogan): ?>
+          <div id="site-slogan"><?php print $site_slogan; ?></div>
+        <?php endif; ?>
+      </div> <!-- /#name-and-slogan -->
+    <?php endif; ?>
+
+    <?php print render($page['branding']); ?>
+  <?php endif; ?>
+'header': |2
+  <?php print render($page['header']); ?>
+'> 01-compounds/03-navigation/00-primary-nav': |2
+  <?php if ($main_menu || $secondary_menu): ?>
+    <nav id="navigation" role="navigation">
+      <?php print theme(
+        'links__system_main_menu',
+        array(
+          'links' => $main_menu,
+          'attributes' => array(
+            'id' => 'main-menu'
+          ),
+          'heading' => array(
+            'text' => t('Main menu'),
+            'level' => 'h2',
+            'class' => 'icon-menu'
+          )
+        )
+      ); ?>
+      <?php print theme(
+        'links__system_secondary_menu',
+        array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'id' => 'secondary-menu'
+          ),
+          'heading' => array(
+            'text' => t('Secondary menu'),
+            'level' => 'h2',
+            'class' => 'element-invisible'
+          )
+        )
+      ); ?>
+    </nav> <!-- /#navigation -->
+  <?php endif; ?>
+'breadcrumb': |2
+  <?php
+    // To get the breadcrumbs to show, add a block to the Breadcrumb region in
+    // admin/structure/block.
+  ?>
+  <?php if ($page['breadcrumb']): ?>
+    <?php if ($breadcrumb): ?>
+      <nav id="breadcrumb" role="navigation"><?php print $breadcrumb; ?></nav>
+    <?php endif; ?>
+
+    <?php print render($page['breadcrumb']); ?>
+  <?php endif; ?>
+'> 01-compounds/07-messaging/00-alert': |2
+  <?php print $messages; ?>
+'highlighted': |2
+  <?php if (!empty($page['highlighted'])): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
+'\^ front\?': |2
+  <?php if (!$is_front): ?>
+'title_prefix': |2
+  <?php print render($title_prefix); ?>
+'# page_title': |2
+  <?php if ($title): ?>
+'page_title': |2
+  <h1 class="title" id="page-title"><?php print $title; ?></h1>
+'/ page_title': |2
+  <?php endif; ?>
+'title_suffix': |2
+  <?php print render($title_suffix); ?>
+'/ front\?': |2
+  <?php endif; ?>
+'fpo_template_content': |2
+  <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+  <?php print render($page['help']); ?>
+  <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+  <?php print render($page['content']); ?>
+  <?php print $feed_icons; ?>
+'# sidebar_first\?': |2
+  <?php if ($page['sidebar_first']): ?>
+'fpo_sidebar_first': |2
+  <?php print render($page['sidebar_first']); ?>
+'/ sidebar_first\?': |2
+  <?php endif; ?>
+'# sidebar_second\?': |2
+  <?php if ($page['sidebar_second']): ?>
+'fpo_sidebar_second': |2
+  <?php print render($page['sidebar_second']); ?>
+'/ sidebar_second\?': |2
+  <?php endif; ?>
+'> 02-components/00-global/00-footer': |2
+  <?php print render($page['footer']); ?>

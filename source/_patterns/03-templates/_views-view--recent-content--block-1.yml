@@ -1,0 +1,6 @@
+'# rows\?': |2
+  <?php if ($rows): ?>
+'fpo_template_content': |2
+  <?php print $rows; ?>
+'/ rows\?': |2
+  <?php endif; ?>

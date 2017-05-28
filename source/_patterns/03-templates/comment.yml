@@ -1,0 +1,38 @@
+'comment_classes': |2
+  <?php print $classes; ?>
+'comment_attributes': |2
+  <?php print $attributes; ?>
+'> 00-elements/02-images/04-avatar': |2
+  <?php print $picture ?>
+'# new': |2
+  <?php if ($new): ?>
+'new': |2
+  <?php print $new ?>
+'/ new': |2
+  <?php endif; ?>
+'title_prefix': |2
+  <?php print render($title_prefix); ?>
+'title_attributes': |2
+  <?php print $title_attributes; ?>
+'title': |2
+  <?php print $title ?>
+'title_suffix': |2
+  <?php print render($title_suffix); ?>
+'permalink': |2
+  <?php print $permalink; ?>
+'> 01-compounds/00-text/00-byline': |2
+  <?php print $submitted; ?>
+'content_attributes': |2
+  <?php print $content_attributes; ?>
+'fpo_template_content': |2
+  <?php
+    // We hide the comments and links now so that we can render them later.
+    hide($content['links']);
+    print render($content);
+  ?>
+'# signature': |2
+  <?php if ($signature): ?>
+'signature': |2
+  <?php print $signature ?>
+'/ signature': |2
+  <?php endif; ?>

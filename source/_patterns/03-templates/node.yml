@@ -1,0 +1,39 @@
+'node_id': |2
+  <?php print $node->nid; ?>
+'node_classes': |2
+  <?php print $classes; ?>
+'node_attributes': |2
+  <?php print $attributes; ?>
+'title_prefix': |2
+  <?php print render($title_prefix); ?>
+'\^ page\?': |2
+  <?php if (!$page): ?>
+'title_attributes': |2
+  <?php print $title_attributes; ?>
+'url': |2
+  <?php print $node_url; ?>
+'article_title': |2
+  <?php print $title; ?>
+'/ page\?': |2
+  <?php endif; ?>
+'title_suffix': |2
+  <?php print render($title_suffix); ?>
+'# page\?': |2
+  <?php if ($page): ?>
+'# submitted\?': |2
+  <?php if ($display_submitted): ?>
+'> 01-compounds/00-text/00-byline': |2
+  <?php print $submitted; ?>
+'/ submitted\?': |2
+  <?php endif; ?>
+'content_attributes': |2
+  <?php print $content_attributes; ?>
+'fpo_template_content': |2
+  <?php
+    // We hide the comments and links now so that we can render them later.
+    hide($content['comments']);
+    hide($content['links']);
+    print render($content);
+  ?>
+'> 02-components/02-comments/00-comment-thread': |2
+  <?php print render($content['comments']); ?>

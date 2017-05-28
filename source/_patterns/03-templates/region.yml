@@ -1,0 +1,8 @@
+'# content\?': |2
+  <?php if ($content): ?>
+'region_classes': |2
+  <?php print $classes; ?>
+'fpo_template_content': |2
+  <?php print $content; ?>
+'/ content\?': |2
+  <?php endif; ?>

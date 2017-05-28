@@ -1,0 +1,11 @@
+{
+  "page_title": "<span property=\"schema:name\">Pick the right camping gear</span>",
+  "page?": true,
+  "submitted?": true,
+  "img": {
+    "landscape_16x9": {
+      "src": "../../_assets/src/thumb-square-gear.jpg",
+      "alt": "Camping Gear"
+    }
+  }
+}

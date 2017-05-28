@@ -1,0 +1,43 @@
+<div id="node-{{ node_id }}" class="{{ node_classes }}"{{{ node_attributes }}}>
+
+  {{{ title_prefix }}}
+  {{^ page? }} 
+    {{# article_title }}
+      <h2{{{ title_attributes }}}><a href="{{ url }}">{{{ article_title }}}</a></h2>
+    {{/ article_title }}
+  {{/ page? }} 
+  {{{ title_suffix }}}
+
+  {{# page? }} 
+    {{# submitted? }}
+      <div class="submitted">
+        {{> 01-compounds/00-text/00-byline }}
+      </div>
+    {{/ submitted? }}
+  {{/ page? }} 
+
+  <div class="content"{{{ content_attributes }}}>
+
+    {{! BEGIN NODE CONTENT }}
+
+    {{# compounds-media-block--pages-homepage__hoagies? }}
+      {{> 01-compounds/01-blocks/02-block-media(media_block_attributes: ' property="text"') }}
+    {{/ compounds-media-block--pages-homepage__hoagies? }}
+    {{# compounds-media-block--pages-blog? }}
+      {{> 01-compounds/01-blocks/02-block-media(media_block_attributes: ' property="text"') }}
+    {{/ compounds-media-block--pages-blog? }}
+    {{# components-article? }}
+      {{> 02-components/01-article/00-article }}
+    {{/ components-article? }}
+
+    {{! END NODE CONTENT }}
+
+    {{{ fpo_template_content }}}
+
+  </div>
+
+  {{# page? }} 
+    {{> 02-components/02-comments/00-comment-thread }}
+  {{/ page? }} 
+
+</div>

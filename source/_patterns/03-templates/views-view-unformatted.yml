@@ -1,0 +1,12 @@
+'# title': |2
+  <?php if (!empty($title)): ?>
+'title': |2
+  <?php print $title; ?>
+'/ title': |2
+  <?php endif; ?>
+'fpo_template_content': |2
+  <?php foreach ($rows as $id => $row): ?>
+    <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
+      <?php print $row; ?>
+    </div>
+  <?php endforeach; ?>

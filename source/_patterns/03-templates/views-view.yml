@@ -1,0 +1,70 @@
+'views-view_classes': |2
+  <?php print $classes; ?>
+'title_prefix': |2
+  <?php print render($title_prefix); ?>
+'# title': |2
+  <?php if ($title): ?>
+'title': |2
+  <?php print $title; ?>
+'/ title': |2
+  <?php endif; ?>
+'title_suffix': |2
+  <?php print render($title_suffix); ?>
+'# header': |2
+  <?php if ($header): ?>
+'header': |2
+  <?php print $header; ?>
+'/ header': |2
+  <?php endif; ?>
+'# exposed': |2
+  <?php if ($exposed): ?>
+'exposed': |2
+  <?php print $exposed; ?>
+'/ exposed': |2
+  <?php endif; ?>
+'# attachment_before': |2
+  <?php if ($attachment_before): ?>
+'attachment_before': |2
+  <?php print $attachment_before; ?>
+'/ attachment_before': |2
+  <?php endif; ?>
+'# rows\?': |2
+  <?php if ($rows): ?>
+'fpo_template_content': |2
+  <?php print $rows; ?>
+'# empty': |2
+  <?php elseif ($empty): ?>
+'empty': |2
+  <?php print $empty; ?>
+'/ empty': |2
+  <?php endif; ?>
+'# pager\?': |2
+  <?php if ($pager): ?>
+'> 01-compounds/03-navigation/01-pagination': |2
+  <?php print $pager; ?>
+'/ pager\?': |2
+  <?php endif; ?>
+'# attachment_after': |2
+  <?php if ($attachment_after): ?>
+'attachment_after': |2
+  <?php print $attachment_after; ?>
+'/ attachment_after': |2
+  <?php endif; ?>
+'# more\?': |2
+  <?php if ($more): ?>
+'> 02-components/03-sections/02-more-link': |2
+  <?php print $more; ?>
+'/ more\?': |2
+  <?php endif; ?>
+'# footer': |2
+  <?php if ($footer): ?>
+'footer': |2
+  <?php print $footer; ?>
+'/ footer': |2
+  <?php endif; ?>
+'# feed_icon': |2
+  <?php if ($feed_icon): ?>
+'feed_icon': |2
+  <?php print $feed_icon; ?>
+'/ feed_icon': |2
+  <?php endif; ?>

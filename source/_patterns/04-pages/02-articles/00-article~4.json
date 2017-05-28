@@ -1,0 +1,11 @@
+{
+  "page_title": "<span property=\"schema:name\">Navigate the Allegheny River</span>",
+  "page?": true,
+  "submitted?": true,
+  "img": {
+    "landscape_16x9": {
+      "src": "../../_assets/src/thumb-square-river.jpg",
+      "alt": "Post Thumbnail"
+    }
+  }
+}

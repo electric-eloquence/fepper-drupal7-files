@@ -1,0 +1,11 @@
+{
+  "page_title": "<span property=\"schema:name\">Top 10 hiking mountains</span>",
+  "page?": true,
+  "submitted?": true,
+  "img": {
+    "landscape_16x9": {
+      "src": "../../_assets/src/thumb-square-yosemite.jpg",
+      "alt": "Yosemite"
+    }
+  }
+}

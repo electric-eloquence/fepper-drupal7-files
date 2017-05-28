@@ -1,0 +1,27 @@
+<div class="{{ comment_classes }} clearfix"{{{ comment_attributes }}}>
+
+  {{# new }}
+    <span class="new">{{{ new }}}</span>
+  {{/ new }}
+
+  {{{ title_prefix }}}
+  <h3{{{ title_attributes }}}>{{{ title }}}</h3>
+  {{{ title_suffix }}}
+
+  <div class="submitted">
+    {{> 00-elements/02-images/04-avatar }}
+    {{{ permalink }}}
+    {{> 01-compounds/00-text/00-byline }}
+  </div>
+
+  <div class="content"{{{ content_attributes }}}>
+    {{> 01-compounds/01-blocks/04-single-comment }}
+    {{{ fpo_template_content }}}
+    {{# signature }}
+    <div class="user-signature clearfix">
+      {{{ signature }}}
+    </div>
+    {{/ signature }}
+  </div>
+
+</div>

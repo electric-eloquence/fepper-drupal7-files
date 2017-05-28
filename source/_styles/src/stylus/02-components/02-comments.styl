@@ -1,0 +1,29 @@
+#comments
+  border-top: 1px solid $gray-light-3
+  margin-top: 2em
+  h2
+    margin: 0.667em 0
+  .comment
+    padding-bottom: 1em
+    overflow: hidden
+    .submitted
+      float: left
+      font-size: 1.2rem
+      line-height: 1.6rem
+      min-height: 15.8rem
+      width: 19.2rem
+  .user-picture img
+    display: block
+    border: 1px solid $gray-light-2
+    margin-bottom: 0.5em
+    width: 10rem
+  .username
+    font-weight: bold
+    &::before
+      content: "\A"
+      white-space: pre
+    &::after
+      content: "\A"
+      white-space: pre
+  div.comment:last-of-type
+    border-bottom: 1px solid $gray-light-3

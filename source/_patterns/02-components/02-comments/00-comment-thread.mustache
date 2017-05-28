@@ -1,0 +1,11 @@
+<div id="comments" class="comment-wrapper">
+  <h2 class="title">Comments</h2>
+  {{# listItems.five }}
+    <a class="anchor"></a>
+    {{> 03-templates/comment(
+      comment_classes: 'comment comment-by-node-author clearfix',
+      comment_attributes: ' typeof="sioc:Post sioct:Comment"'
+    ) }}
+  {{/ listItems.five }}
+  {{> 01-compounds/02-forms/01-comment-form }}
+</div>

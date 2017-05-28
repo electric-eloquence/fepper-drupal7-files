@@ -1,0 +1,50 @@
+.layout-container
+  > *:not(footer)
+    @extend .lc
+#sidebar-second
+  h2
+    border-bottom: 1px solid $gray-light-3
+    padding: 0 0 0.5em
+  li
+    padding: 0.25em 0
+    border-bottom: 1px solid $gray-light-3
+    > *
+      display: block
+.layout-content
+  @extend .cf
+@media all and (max-width: $bp-sm-max)
+  .layout-content
+    clear: both
+@media all and (min-width: $bp-med)
+  .layout-content,
+  #sidebar-first
+    float: left
+    width: 70%
+    padding-right: 1em
+  #sidebar-second
+    float: left
+    width: 30%
+    padding: 0 0 0 1em
+/* Main */
+main[role="main"]
+  @extend .cf
+/* Hero Block */
+#block-system-main
+  @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+    position: relative;
+    .views-field-field-image
+      padding-top: 75%
+      .field-content
+        position: absolute
+        top: 0
+        left: 0
+    .views-field-title
+      background: $dim
+      overflow: hidden
+      padding: $pad-half
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      a
+        color: $white

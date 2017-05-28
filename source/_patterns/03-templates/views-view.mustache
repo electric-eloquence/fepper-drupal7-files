@@ -1,0 +1,93 @@
+<div class="{{ views-view_classes }}">
+  {{{ title_prefix }}}
+  {{# title }}
+    {{{ title }}}
+  {{/ title }}
+  {{{ title_suffix }}}
+  {{# header }}
+    <div class="view-header">
+      {{{ header }}}
+    </div>
+  {{/ header }}
+
+  {{# exposed }}
+    <div class="view-filters">
+      {{{ exposed }}}
+    </div>
+  {{/ exposed }}
+
+  {{# attachment_before }}
+    <div class="attachment attachment-before">
+      {{{ attachment_before }}}
+    </div>
+  {{/ attachment_before }}
+
+  {{# rows? }}
+    <div class="view-content">
+
+
+      {{! BEGIN VIEWS ROWS }}
+
+      {{# templates-views-view-unformatted--pages-homepage__hero? }}
+        {{> 03-templates/views-view-unformatted(
+          "templates-views-view-unformatted__row--pages-homepage__hero?": true
+        ) }}
+      {{/ templates-views-view-unformatted--pages-homepage__hero? }}
+      {{# templates-views-view-list--pages-homepage__hoagies? }}
+        {{> 03-templates/views-view-list(
+          wrapper_prefix: '<div class="item-list">',
+          list_type_prefix: '<ul>',
+          "templates-views-view-list__row--pages-homepage__hoagies?": true,
+          list_type_suffix: '</ul>',
+          wrapper_suffix: '</div>'
+        ) }}
+      {{/ templates-views-view-list--pages-homepage__hoagies? }}
+      {{# templates-views-view-list--pages-blog? }}
+        {{> 03-templates/views-view-list(
+          wrapper_prefix: '<div class="item-list">',
+          list_type_prefix: '<ul>',
+          "templates-views-view-list__row--pages-blog?": true,
+          list_type_suffix: '</ul>',
+          wrapper_suffix: '</div>'
+        ) }}
+      {{/ templates-views-view-list--pages-blog? }}
+      {{{ fpo_template_content }}}
+
+      {{! END VIEWS ROWS }}
+
+
+    </div>
+  {{/ rows? }}
+  {{# empty }}
+    <div class="view-empty">
+      {{{ empty }}}
+    </div>
+  {{/ empty }}
+
+  {{# pager? }}
+    {{> 01-compounds/03-navigation/01-pagination }}
+  {{/ pager? }}
+
+  {{# attachment_after }}
+    <div class="attachment attachment-after">
+      {{{ attachment_after }}}
+    </div>
+  {{/ attachment_after }}
+
+  {{# more? }}
+    {{> 02-components/03-sections/02-more-link }}
+  {{/ more? }}
+
+  {{# footer }}
+    <div class="view-footer">
+      {{{ footer }}}
+    </div>
+  {{/ footer }}
+
+  {{# feed_icon }}
+    <div class="feed-icon">
+      {{{ feed_icon }}}
+    </div>
+  {{/ feed_icon }}
+
+</div><?php /* class view */ ?>

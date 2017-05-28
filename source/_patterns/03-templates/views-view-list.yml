@@ -1,0 +1,18 @@
+'wrapper_prefix': |2
+  <?php print $wrapper_prefix; ?>
+'# title': |2
+  <?php if (!empty($title)) : ?>
+'title': |2
+  <?php print $title; ?>
+'/ title': |2
+  <?php endif; ?>
+'list_type_prefix': |2
+  <?php print $list_type_prefix; ?>
+'fpo_template_content': |2
+  <?php foreach ($rows as $id => $row): ?>
+    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
+  <?php endforeach; ?>
+'list_type_suffix': |2
+  <?php print $list_type_suffix; ?>
+'wrapper_suffix': |2
+  <?php print $wrapper_suffix; ?>

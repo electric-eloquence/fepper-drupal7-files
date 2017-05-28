@@ -1,0 +1,78 @@
+<div id="{{ block_html_id }}" class="{{ block_classes }}"{{{ block_attributes }}}>
+
+  {{{ title_prefix }}}
+  {{# block_subject }}
+    <h2{{{ title_attributes }}}>{{{ block_subject }}}</h2>
+  {{/ block_subject }}
+  {{{ title_suffix }}}
+
+  <div class="content"{{{ content_attributes }}}>
+
+    {{! BEGIN HEADER }}
+
+    {{# compounds-search? }}
+      {{> 01-compounds/02-forms/00-search }}
+    {{/ compounds-search? }}
+    {{# compounds-primary-nav? }}
+      {{> 01-compounds/03-navigation/00-primary-nav }}
+    {{/ compounds-primary-nav? }}
+
+    {{! END HEADER }}
+
+
+    {{! BEGIN HOMEPAGE }}
+
+    {{# templates-views-view--pages-homepage__hero? }}
+      {{> 03-templates/views-view(
+        views-view_classes: 'view view-recent-content view-id-recent_content view-display-id-page_2',
+        "templates-views-view-unformatted--pages-homepage__hero?": true
+      ) }}
+    {{/ templates-views-view--pages-homepage__hero? }}
+    {{# templates-views-view--pages-homepage__hoagies? }}
+      {{> 03-templates/views-view(
+        views-view_classes: 'view view-recent-content view-id-recent_content view-display-id-block_2',
+        "templates-views-view-list--pages-homepage__hoagies?": true,
+        "more?": true
+      ) }}
+    {{/ templates-views-view--pages-homepage__hoagies? }}
+
+    {{! END HOMEPAGE }}
+
+
+    {{! BEGIN BLOG }}
+
+    {{# templates-views-view--pages-blog? }}
+      {{> 03-templates/views-view(
+        views-view_classes: 'view view-recent-content view-id-recent_content view-display-id-page_1',
+        "templates-views-view-list--pages-blog?": true,
+        "pager?": true
+      ) }}
+    {{/ templates-views-view--pages-blog? }}
+
+    {{! END BLOG }}
+
+
+    {{! BEGIN ARTICLE }}
+
+    {{# templates-node--pages-article? }}
+      {{> 03-templates/node(
+        node_classes: 'node node-article node-promoted clearfix',
+        node_attributes: ' role="article" typeof="schema:Article"',
+        "submitted?": true,
+        "components-article?": true
+      ) }}
+    {{/ templates-node--pages-article? }}
+    {{# components-related-posts? }}
+      {{> 02-components/03-sections/01-related-posts }}
+    {{/ components-related-posts? }}
+    {{# components-recent-comments? }}
+      {{> 02-components/03-sections/00-recent-comments }}
+    {{/ components-recent-comments? }}
+
+    {{! END ARTICLE }}
+
+
+    {{{ fpo_template_content }}}
+
+  </div>
+</div>

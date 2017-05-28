@@ -1,0 +1,22 @@
+'block_html_id': |2
+  <?php print $block_html_id; ?>
+'block_classes': |2
+  <?php print $classes; ?>
+'block_attributes': |2
+  <?php print $attributes; ?>
+'title_prefix': |2
+  <?php print render($title_prefix); ?>
+'# block_subject': |2
+  <?php if ($block->subject): ?>
+'title_attributes': |2
+  <?php print $title_attributes; ?>
+'block_subject': |2
+  <?php print $block->subject ?>
+'/ block_subject': |2
+  <?php endif;?>
+'title_suffix': |2
+  <?php print render($title_suffix); ?>
+'content_attributes': |2
+  <?php print $content_attributes; ?>
+'fpo_template_content': |2
+  <?php print $content ?>

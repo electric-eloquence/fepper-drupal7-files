@@ -1,0 +1,93 @@
+  <div class="layout-container">
+    <header class="header cf">
+
+      <div id="block-fepper-branding">
+        {{> 00-elements/02-images/00-logo }}
+      </div> <!-- /#block-fepper-branding -->
+
+      {{> 03-templates/region(
+        "templates-block--header?": true,
+        region_classes: 'region region-header'
+      ) }}
+      {{{ header }}}
+
+      {{> 01-compounds/03-navigation/00-primary-nav }}
+
+    </header> <!-- /.header -->
+
+    {{{ breadcrumb }}}
+
+    {{# emergency }}
+      {{> 01-compounds/07-messaging/00-alert }}
+    {{/ emergency }}
+
+    <main id="main" role="main">
+      <a id="main-content" tabindex="-1"></a>
+
+      <div class="layout-content">
+        {{{ highlighted }}}
+
+        {{^ front? }}
+          {{{ title_prefix }}}
+          {{# page_title }}
+            <h1 class="title" id="page-title">{{{ page_title }}}</h1>
+          {{/ page_title }}
+          {{{ title_suffix }}}
+        {{/ front? }}
+
+        {{# templates-region--pages-homepage? }}
+          {{> 03-templates/region(
+            "templates-block--main--pages-homepage?": true,
+            region_classes: 'region region-content'
+          ) }}
+        {{/ templates-region--pages-homepage? }}
+        {{# templates-region--pages-blog? }}
+          {{> 03-templates/region(
+            "templates-block--main--pages-blog?": true,
+            region_classes: 'region region-content'
+          ) }}
+        {{/ templates-region--pages-blog? }}
+        {{# templates-region--pages-article? }}
+          {{> 03-templates/region(
+            "templates-block--main--pages-article?": true,
+            region_classes: 'region region-content'
+          ) }}
+        {{/ templates-region--pages-article? }}
+        {{{ fpo_template_content }}}
+      </div> <!-- /.layout-content -->
+
+      {{# sidebar_first? }}
+        <div id="sidebar-first" class="column sidebar">
+          {{# templates-region--pages-homepage? }}
+            {{> 03-templates/region(
+              "templates-block--sidebar1--pages-homepage?": true,
+              region_classes: 'region region-sidebar-first'
+            ) }}
+          {{/ templates-region--pages-homepage? }}
+          {{{ fpo_sidebar_first }}}
+        </div> <!-- /#sidebar-first -->
+      {{/ sidebar_first? }}
+
+      {{# sidebar_second? }}
+        <div id="sidebar-second" class="column sidebar">
+          {{# templates-region--pages-article? }}
+            {{> 03-templates/region(
+              "templates-block--sidebar2--pages-article?": true,
+            ) }}
+          {{/ templates-region--pages-article? }}
+          {{> 03-templates/region(
+            "templates-block--sidebar2?": true,
+          ) }}
+          {{{ fpo_sidebar_second }}}
+        </div> <!-- /#sidebar-second -->
+      {{/ sidebar_second? }}
+
+    </main> <!-- /#main -->
+
+    <footer id="footer" role="contentinfo">
+      <div id="block-fepperfooter">
+        {{> 02-components/00-global/00-footer }}
+      </div> <!-- /#block-fepperfooter -->
+    </footer> <!-- /#footer -->
+
+  </div> <!-- /.layout-container -->
