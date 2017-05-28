@@ -11,14 +11,24 @@ project for Drupal 7. Instead, populate your Fepper for Drupal 8 project with
 Drupal 7 patterns: 
 
 * Download the latest release of [Fepper for Drupal 8](https://github.com/electric-eloquence/fepper-drupal/releases).
-* Copy the `source` directory from this repository over the `source` directory 
-  in Fepper for Drupal 8.
+* Download the latest release of [Drupal 7](https://www.drupal.org/project/drupal).
+* Change the name of the unpacked directory to `drupal`.
+* Replace `backend/drupal` in Fepper for Drupal 8 with the unpacked directory.
+* Replace `pref.yml` in Fepper for Drupal 8 with `pref.yml` from this repository.
+* Replace `source` in Fepper for Drupal 8 with `source` from this repository.
 
 If you wish to replicate the look and feel of the Fepper demo site (as per the 
-screenshot) in your Drupal 7 backend, you will need to download and enable the 
-[Views module](https://www.drupal.org/project/views).
+screenshot) in your Drupal 7 backend, follow these instructions:
 
-Then, follow these instructions on these files:
-
-* `fepper-drupal-mysqldump.sql` - Restore into your MySQL database.
-* `files` - Copy over `backend/drupal/sites/default/files`
+* Replace `backend/drupal/sites/default/files` in Fepper for Drupal 8 with the 
+  `files` directory from this repository.
+* Download and enable the [Views module](https://www.drupal.org/project/views).
+* Restore `fepper-drupal-mysqldump.sql` into your MySQL database.
+* Update the `$databases` settings in `backend/drupal/sites/default/settings.php` 
+  to reflect your own database settings.
+* Configure `d7.local` to be the hostname in your web server configs.
+* Configure `backend/drupal` (correctly pathed) to be the document root for this 
+  host.
+* Restart the web server.
+* Open http://d7.local in a browser.
+* Log into Drupal with `admin:admin`
