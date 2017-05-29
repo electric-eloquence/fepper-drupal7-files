@@ -1,5 +1,7 @@
 <div id="node-{{ node_id }}" class="{{ node_classes }}"{{{ node_attributes }}}>
 
+  {{{ user_picture }}}
+
   {{{ title_prefix }}}
   {{^ page? }} 
     {{# article_title }}
@@ -35,6 +37,8 @@
     {{{ fpo_template_content }}}
 
   </div>
+
+  {{{ links }}}
 
   {{# page? }} 
     {{> 02-components/02-comments/00-comment-thread }}

@@ -1,7 +1,7 @@
 <div class="{{ comment_classes }} clearfix"{{{ comment_attributes }}}>
 
   {{# new }}
-    <span class="new">{{{ new }}}</span>
+    <span class="new" style="display: none;">{{{ new }}}</span>
   {{/ new }}
 
   {{{ title_prefix }}}
@@ -23,5 +23,7 @@
     </div>
     {{/ signature }}
   </div>
+
+  {{{ links }}}
 
 </div>

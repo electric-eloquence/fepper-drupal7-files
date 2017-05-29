@@ -3,23 +3,23 @@
 'comment_attributes': |2
   <?php print $attributes; ?>
 '> 00-elements/02-images/04-avatar': |2
-  <?php print $picture ?>
+  <?php print $picture; ?>
 '# new': |2
   <?php if ($new): ?>
 'new': |2
-  <?php print $new ?>
+  <?php print $new; ?>
 '/ new': |2
   <?php endif; ?>
 'title_prefix': |2
   <?php print render($title_prefix); ?>
 'title_attributes': |2
-  <?php print $title_attributes; ?>
+   style="display: none;"
 'title': |2
-  <?php print $title ?>
+  <?php print $title; ?>
 'title_suffix': |2
   <?php print render($title_suffix); ?>
 'permalink': |2
-  <?php print $permalink; ?>
+  <?php //print $permalink; ?>
 '> 01-compounds/00-text/00-byline': |2
   <?php print $submitted; ?>
 'content_attributes': |2
@@ -33,6 +33,8 @@
 '# signature': |2
   <?php if ($signature): ?>
 'signature': |2
-  <?php print $signature ?>
+  <?php print $signature; ?>
 '/ signature': |2
   <?php endif; ?>
+'links': |2
+  <?php //print render($content['links']); ?>

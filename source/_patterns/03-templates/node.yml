@@ -4,6 +4,8 @@
   <?php print $classes; ?>
 'node_attributes': |2
   <?php print $attributes; ?>
+'user_picture': |2
+  <?php //print $user_picture; ?>
 'title_prefix': |2
   <?php print render($title_prefix); ?>
 '\^ page\?': |2
@@ -35,5 +37,7 @@
     hide($content['links']);
     print render($content);
   ?>
+'links': |2
+  <?php //print render($content['links']); ?>
 '> 02-components/02-comments/00-comment-thread': |2
   <?php print render($content['comments']); ?>
