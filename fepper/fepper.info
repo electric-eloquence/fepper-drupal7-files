@@ -1,0 +1,20 @@
+name = Fepper
+description = A Drupal theme for Fepper.
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = _styles/bld/style.css
+
+scripts[] = _scripts/src/variables.styl
+scripts[] = _scripts/src/fepper-obj.js
+scripts[] = _scripts/src/behaviors.js
+
+regions[branding] = Branding
+regions[breadcrumb] = Breadcrumb
+regions[header] = Header
+regions[highlighted] = Highlighted 
+regions[help] = Help 
+regions[content] = Content 
+regions[sidebar_first] = Left sidebar 
+regions[sidebar_second] = Right sidebar 
+regions[footer] = Footer
