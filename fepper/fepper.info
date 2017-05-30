@@ -1,6 +1,5 @@
 name = Fepper
 description = A Drupal theme for Fepper.
-version = VERSION
 core = 7.x
 
 stylesheets[all][] = _styles/bld/style.css

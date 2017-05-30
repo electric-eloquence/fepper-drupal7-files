@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Fepper theme's implementation for comments.
+ */
+?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($new): ?>
@@ -10,7 +17,7 @@
 
   <div class="submitted">
     <?php print $picture; ?>
-    <?php //print $permalink; ?>
+    <?php /* print $permalink; */ ?>
     <?php print $submitted; ?>
   </div>
 
@@ -27,6 +34,6 @@
     <?php endif; ?>
   </div>
 
-  <?php //print render($content['links']); ?>
+  <?php /* print render($content['links']); */ ?>
 
 </div>

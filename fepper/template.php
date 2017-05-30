@@ -43,7 +43,7 @@ function fepper_form_search_block_form_alter(&$form, &$form_state, $form_id) {
  * Implements template_preprocess_html().
  */
 function fepper_preprocess_html(&$variables) {
-  // Returns a string containing RDF namespace declarations for use in HTML output.
+  // Returns string containing RDF namespace declarations to use in HTML output.
   $html_rdf_namespaces = array();
 
   // Serializes the RDF namespaces in XML namespace syntax.

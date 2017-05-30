@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Fepper theme's implementation to display a block.
+ */
+?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>

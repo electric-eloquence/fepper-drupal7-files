@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Fepper theme's implementation of the main view template.
+ */
+?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

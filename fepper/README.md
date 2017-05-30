@@ -24,17 +24,17 @@ Drupal theme to match the look and feel of the Fepper frontend.
   this theme for your custom needs.
 * However, if you wish to replicate the look and feel of the Fepper demo site 
   (as per the screenshot), you should follow the Fepper documentation on 
-  [importing the sample Drupal backend](https://github.com/electric-eloquence/fepper-drupal#user-content-drupal-install) 
+  [importing the sample Drupal backend](https://github.com/electric-eloquence/fepper-drupal7-files#user-content-fepper-for-drupal-7) 
   mentioned earlier. This will serve as a starting point for further 
   customization.
 
 ## Configuration
 
-The theme has no menu or modifiable settings. There is no configuration.
+The theme has no menu or administerable settings.
 
 ## Copyright
 
-Copyright (C) 2017  Electric Eloquence
+Copyright (C) 2017 - ∞ Electric Eloquence
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

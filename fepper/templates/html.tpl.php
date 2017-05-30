@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * @file
+ * Fepper theme's implementation to display the basic html structure of a single
+ * Drupal page.
+ */
+?>
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces; ?>">
 
