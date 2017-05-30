@@ -452,10 +452,10 @@ input[type="search"]::-webkit-search-decoration {
   background: transparent;
   height: 3.6rem;
 }
-#search-block-form #edit-search-block-form--2 {
+#search-block-form .form-item-search-block-form .form-text {
   width: 11.5em;
 }
-#search-block-form #edit-submit {
+#search-block-form .form-actions .form-submit {
   border: 1px solid #808080;
   border-left: 0;
   color: transparent;
@@ -466,7 +466,7 @@ input[type="search"]::-webkit-search-decoration {
   width: 5rem;
   z-index: 1;
 }
-#search-block-form #edit-submit:hover {
+#search-block-form .form-actions .form-submit:hover {
   background: rgba(0,0,0,0.3);
 }
 @media all and (max-width: 767px) {
