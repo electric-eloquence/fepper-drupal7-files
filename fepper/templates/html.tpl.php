@@ -2,8 +2,7 @@
 
 /**
  * @file
- * Fepper theme's implementation to display the basic html structure of a single
- * Drupal page.
+ * Fepper theme's implementation to display the basic html structure of a page.
  */
 ?>
 <!DOCTYPE html>
