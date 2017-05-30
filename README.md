@@ -7,9 +7,10 @@ project for Drupal 7. Instead, populate your Fepper for Drupal 8 project with
 the Drupal 7 backend and patterns: 
 
 * Download the latest release of [Fepper for Drupal 8](https://github.com/electric-eloquence/fepper-drupal/releases).
+* Unpack the Fepper for Drupal 8 download.
 * Download the latest release of [Drupal 7](https://www.drupal.org/project/drupal).
 * Unpack the Drupal 7 download.
-* Change the name of the unpacked directory to `drupal`
+* Change the name of the unpacked Drupal 7 directory to `drupal`
 * Replace `backend/drupal` in Fepper for Drupal 8 with the unpacked directory.
 * Replace `fepper-drupal-mysqldump.sql` in Fepper for Drupal 8 with 
   `fepper-drupal-mysqldump.sql` from this repository.
