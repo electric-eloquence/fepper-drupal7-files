@@ -10,7 +10,7 @@ the Drupal 7 backend and patterns:
 * Unpack the Fepper for Drupal 8 download.
 * Download the latest release of [Drupal 7](https://www.drupal.org/project/drupal).
 * Unpack the Drupal 7 download.
-* Change the name of the unpacked Drupal 7 directory to `drupal`
+* Rename the unpacked Drupal 7 directory to `drupal`
 * Replace `backend/drupal` in Fepper for Drupal 8 with the unpacked `drupal` directory.
 * Replace `fepper-drupal-mysqldump.sql` in Fepper for Drupal 8 with 
   `fepper-drupal-mysqldump.sql` from this repository.
@@ -28,7 +28,8 @@ screenshot) in your Drupal 7 backend, follow these instructions:
 * Create a MySQL database.
 * Create a `settings.php` file by running the 
   [Drupal 7 installation script](https://www.drupal.org/docs/7/installing-drupal-7/step-4-run-the-installation-script).
-* Download and enable the [Views module](https://www.drupal.org/project/views).
+* Download and enable the [CTools](https://www.drupal.org/project/ctools) and 
+  [Views](https://www.drupal.org/project/views) modules.
 * Replace `backend/drupal/sites/default/files` in Fepper for Drupal 8 with the 
   `files` directory from this repository.
 * Restore `fepper-drupal-mysqldump.sql` into your MySQL database.
