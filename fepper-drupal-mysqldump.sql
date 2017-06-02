@@ -1161,7 +1161,7 @@ CREATE TABLE `file_managed` (
   KEY `uid` (`uid`),
   KEY `status` (`status`),
   KEY `timestamp` (`timestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='Stores information for uploaded files.';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Stores information for uploaded files.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1200,7 +1200,7 @@ CREATE TABLE `file_usage` (
 
 LOCK TABLES `file_usage` WRITE;
 /*!40000 ALTER TABLE `file_usage` DISABLE KEYS */;
-INSERT INTO `file_usage` VALUES (1,'file','node',1,1),(2,'file','node',2,1),(3,'file','node',3,1),(4,'file','node',4,1),(5,'file','node',5,1),(6,'file','node',6,1),(7,'file','node',7,1),(8,'file','node',8,1),(9,'file','node',9,1),(11,'image','default_image',8,1);
+INSERT INTO `file_usage` VALUES (1,'file','node',1,1),(2,'file','node',2,1),(3,'file','node',3,1),(4,'file','node',4,1),(5,'file','node',5,1),(6,'file','node',6,1),(7,'file','node',7,1),(8,'file','node',8,1),(9,'file','node',9,1);
 /*!40000 ALTER TABLE `file_usage` ENABLE KEYS */;
 UNLOCK TABLES;
 
