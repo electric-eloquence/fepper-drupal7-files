@@ -1,3 +1,11 @@
+'fpo_phpdoc': |2
+  <?php
+  
+  /**
+   * @file
+   * Fepper theme's implementation to display a list of view rows.
+   */
+  ?>
 'wrapper_prefix': |2
   <?php print $wrapper_prefix; ?>
 '# title': |2
@@ -10,8 +18,8 @@
   <?php print $list_type_prefix; ?>
 'fpo_template_content': |2
   <?php foreach ($rows as $id => $row): ?>
-    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-  <?php endforeach; ?>
+      <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
+    <?php endforeach; ?>
 'list_type_suffix': |2
   <?php print $list_type_suffix; ?>
 'wrapper_suffix': |2

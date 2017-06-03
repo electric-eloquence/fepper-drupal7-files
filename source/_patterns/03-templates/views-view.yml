@@ -1,3 +1,11 @@
+'fpo_phpdoc': |2
+  <?php
+  
+  /**
+   * @file
+   * Fepper theme's implementation of the main view template.
+   */
+  ?>
 'views-view_classes': |2
   <?php print $classes; ?>
 'title_prefix': |2

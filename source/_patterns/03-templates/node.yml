@@ -1,3 +1,11 @@
+'fpo_phpdoc': |2
+  <?php
+  
+  /**
+   * @file
+   * Fepper theme's implementation to display a node.
+   */
+  ?>
 'node_id': |2
   <?php print $node->nid; ?>
 'node_classes': |2
@@ -5,7 +13,7 @@
 'node_attributes': |2
   <?php print $attributes; ?>
 'user_picture': |2
-  <?php //print $user_picture; ?>
+  <?php /* print $user_picture; */ ?>
 'title_prefix': |2
   <?php print render($title_prefix); ?>
 '\^ page\?': |2
@@ -16,6 +24,8 @@
   <?php print $node_url; ?>
 'article_title': |2
   <?php print $title; ?>
+'/ article_title': |2
+  
 '/ page\?': |2
   <?php endif; ?>
 'title_suffix': |2
@@ -32,12 +42,12 @@
   <?php print $content_attributes; ?>
 'fpo_template_content': |2
   <?php
-    // We hide the comments and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    print render($content);
-  ?>
+        // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        print render($content);
+      ?>
 'links': |2
-  <?php //print render($content['links']); ?>
+  <?php /* print render($content['links']); */ ?>
 '> 02-components/02-comments/00-comment-thread': |2
   <?php print render($content['comments']); ?>

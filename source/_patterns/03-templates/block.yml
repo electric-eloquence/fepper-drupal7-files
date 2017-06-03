@@ -1,3 +1,11 @@
+'fpo_phpdoc': |2
+  <?php
+  
+  /**
+   * @file
+   * Fepper theme's implementation to display a block.
+   */
+  ?>
 'block_html_id': |2
   <?php print $block_html_id; ?>
 'block_classes': |2

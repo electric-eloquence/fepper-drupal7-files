@@ -1,3 +1,14 @@
+'fpo_phpdoc': |2
+  <?php
+  
+  /**
+   * @file
+   * Fepper theme's implementation for a specific display of a view.
+   *
+   * View name: recent_content.
+   * View display name: block_1.
+   */
+  ?>
 '# rows\?': |2
   <?php if ($rows): ?>
 'fpo_template_content': |2

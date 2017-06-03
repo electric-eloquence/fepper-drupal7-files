@@ -1,3 +1,11 @@
+'fpo_phpdoc': |2
+  <?php
+  
+  /**
+   * @file
+   * Fepper theme's implementation for comments.
+   */
+  ?>
 'comment_classes': |2
   <?php print $classes; ?>
 'comment_attributes': |2
@@ -19,7 +27,7 @@
 'title_suffix': |2
   <?php print render($title_suffix); ?>
 'permalink': |2
-  <?php //print $permalink; ?>
+  <?php /* print $permalink; */ ?>
 '> 01-compounds/00-text/00-byline': |2
   <?php print $submitted; ?>
 'content_attributes': |2
@@ -37,4 +45,4 @@
 '/ signature': |2
   <?php endif; ?>
 'links': |2
-  <?php //print render($content['links']); ?>
+  <?php /* print render($content['links']); */ ?>
