@@ -8,7 +8,7 @@
       position: relative
       right: 5.1rem
       z-index: 3
-    > ul
+    #main-menu > ul
       max-height: 0
       overflow: hidden
       position: absolute
@@ -23,7 +23,7 @@
       li
         padding-left: 2rem;
     &.open
-      > ul
+      #main-menu > ul
         max-height: 100%
         width: 100%
   @media all and (min-width: $bp-med)
@@ -37,6 +37,8 @@
     height: auto
     .icon-menu
       display: none
+    #main-menu > ul > li > ul
+      position: absolute
     li
       float: left
     a
@@ -50,7 +52,6 @@
       ul
         max-height: 0
         overflow: hidden
-        position: absolute
         transition: max-height 0.3s ease
         z-index: 2
         li
@@ -62,6 +63,13 @@
       &:hover
         ul
           max-height: 100%
+    #main-menu > ul > li.expanded > ul > li
+      li
+        border-right: 0
+        border-bottom: 0
+        border-left: 0
+      .expanded
+        padding-left: 1rem
 .item-list
   .pager
     clear: both

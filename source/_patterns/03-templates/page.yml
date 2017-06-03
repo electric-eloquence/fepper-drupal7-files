@@ -39,22 +39,12 @@
 'header': |2
   <?php print render($page['header']); ?>
 '> 01-compounds/03-navigation/00-primary-nav': |2
-  <?php if ($main_menu || $secondary_menu): ?>
+  <?php if ($main_menu_expanded || $secondary_menu): ?>
     <nav id="navigation" role="navigation">
-      <?php print theme(
-        'links__system_main_menu',
-        array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu'
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => 'icon-menu'
-          )
-        )
-      ); ?>
+      <div id="main-menu">
+        <h2 class="icon-menu">Main menu</h2>
+        <?php print render($main_menu_expanded); ?>
+      </div>
       <?php print theme(
         'links__system_secondary_menu',
         array(
