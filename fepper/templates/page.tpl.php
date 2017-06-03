@@ -50,22 +50,12 @@
 
     <?php print render($page['header']); ?>
 
-    <?php if ($main_menu || $secondary_menu): ?>
+    <?php if ($main_menu_expanded || $secondary_menu): ?>
       <nav id="navigation" role="navigation">
-        <?php print theme(
-          'links__system_main_menu',
-          array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'id' => 'main-menu',
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => 'icon-menu',
-            ),
-          )
-        ); ?>
+        <div id="main-menu">
+          <h2 class="icon-menu">Main menu</h2>
+          <?php print render($main_menu_expanded); ?>
+        </div>
         <?php print theme(
           'links__system_secondary_menu',
           array(
@@ -109,7 +99,7 @@
       <?php if (!$is_front): ?>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
-          <h1 class="title" id="page-title"><h1 class="title" id="page-title"><?php print $title; ?></h1></h1>
+          <h1 class="title" id="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
       <?php endif; ?>
