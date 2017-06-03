@@ -539,9 +539,6 @@ input[type="search"]::-webkit-search-decoration {
   #navigation .icon-menu {
     display: none;
   }
-  #navigation #main-menu > ul > li > ul {
-    position: absolute;
-  }
   #navigation li {
     float: left;
   }
@@ -575,13 +572,19 @@ input[type="search"]::-webkit-search-decoration {
   #navigation .expanded:hover ul {
     max-height: 100%;
   }
-  #navigation #main-menu > ul > li.expanded > ul > li li {
+  #navigation #main-menu > ul > .expanded > ul {
+    position: absolute;
+  }
+  #navigation #main-menu > ul > .expanded > ul > .expanded li {
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
   }
-  #navigation #main-menu > ul > li.expanded > ul > li .expanded {
+  #navigation #main-menu > ul > .expanded > ul .expanded {
     padding-left: 1rem;
+  }
+  #navigation #main-menu > ul > .expanded > ul ul {
+    background: transparent;
   }
 }
 .item-list .pager {
