@@ -23,17 +23,17 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-  // We hide the comments and links now so that we can render them later.
-  hide($content['links']);
-  print render($content);
-?>
+      // We hide the comments and links now so that we can render them later.
+      hide($content['links']);
+      print render($content);
+    ?>
     <?php if ($signature): ?>
     <div class="user-signature clearfix">
       <?php print $signature; ?>
     </div>
     <?php endif; ?>
-  </div>
 
-  <?php /* print render($content['links']); */ ?>
+    <?php /* print render($content['links']); */ ?>
+  </div>
 
 </div>

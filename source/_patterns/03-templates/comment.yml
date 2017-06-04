@@ -34,10 +34,10 @@
   <?php print $content_attributes; ?>
 'fpo_template_content': |2
   <?php
-    // We hide the comments and links now so that we can render them later.
-    hide($content['links']);
-    print render($content);
-  ?>
+        // We hide the comments and links now so that we can render them later.
+        hide($content['links']);
+        print render($content);
+      ?>
 '# signature': |2
   <?php if ($signature): ?>
 'signature': |2

@@ -395,7 +395,7 @@ input[type="number"] {
   width: 25.5rem;
 }
 textarea {
-  width: 30.4rem;
+  width: 100%;
 }
 input[type="text"],
 input[type="search"],
@@ -626,24 +626,35 @@ input[type="search"]::-webkit-search-decoration {
   margin-top: 2em;
 }
 #comments h2 {
-  margin: 0.667em 0;
+  margin: 0.667em 0 0;
 }
 #comments .comment {
-  padding: 0.75em 0 0.25em;
-  overflow: hidden;
+  display: flex;
+  padding: 0.75em 0 0.5em;
 }
 #comments .comment .submitted {
-  float: left;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  min-height: 15.8rem;
-  width: 19.2rem;
+  min-height: 11em;
+  width: 12em;
+}
+#comments .comment .submitted > span {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1.333;
+}
+#comments .comment .content {
+  padding-bottom: 0.5em;
+}
+#comments .comment .content p {
+  margin-bottom: 0;
+}
+#comments .comment .submitted + .content {
+  width: calc(100% - 12em);
 }
 #comments .user-picture img {
   display: block;
   border: 1px solid #eee;
   margin-bottom: 0.5em;
-  width: 10rem;
+  width: 6.25em;
 }
 #comments .username {
   font-weight: bold;
@@ -658,6 +669,40 @@ input[type="search"]::-webkit-search-decoration {
 }
 #comments div.comment:last-of-type {
   border-bottom: 1px solid #ddd;
+}
+#comments .links {
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+#comments .links li {
+  display: list-item;
+}
+@media all and (max-width: 480px) {
+  #comments .comment {
+    display: block;
+    overflow: hidden;
+  }
+  #comments .comment .submitted {
+    margin-bottom: 0.5em;
+    min-height: 0;
+    width: auto;
+  }
+  #comments .comment .submitted + .content {
+    width: auto;
+  }
+  #comments .comment .content {
+    padding-bottom: 0;
+  }
+  #comments .user-picture {
+    display: none;
+  }
+  #comments .username::before {
+    content: "";
+  }
+  #comments .username::after {
+    content: "";
+  }
 }
 .more-link {
   font-style: italic;
@@ -949,11 +994,14 @@ footer[role="contentinfo"] a {
   margin-bottom: 0.5em;
 }
 .node-article ul {
-  list-style: disc;
   margin: 0 0 1.6rem 1.92rem;
 }
 .node-article ul ul {
   margin-bottom: 0;
+}
+.node-article ul,
+.node-article ul li {
+  list-style: disc;
 }
 .node-article ol {
   list-style: decimal;
@@ -1035,4 +1083,7 @@ ul#secondary-menu {
 }
 .search-results {
   margin-top: 1em;
+}
+.indented {
+  margin-left: 0.75em;
 }

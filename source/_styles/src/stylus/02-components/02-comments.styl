@@ -2,21 +2,29 @@
   border-top: 1px solid $gray-light-3
   margin-top: 2em
   h2
-    margin: 0.667em 0
+    margin: 0.667em 0 0
   .comment
-    padding: 0.75em 0 0.25em
-    overflow: hidden
+    display: flex 
+    padding: 0.75em 0 0.5em
     .submitted
-      float: left
-      font-size: 1.2rem
-      line-height: 1.6rem
-      min-height: 15.8rem
-      width: 19.2rem
-  .user-picture img
-    display: block
-    border: 1px solid $gray-light-2
-    margin-bottom: 0.5em
-    width: 10rem
+      min-height: 11em
+      width: 12em
+      > span
+        display: block
+        font-size: 0.75em
+        line-height: 1.333
+    .content
+      padding-bottom: 0.5em
+      p
+        margin-bottom: 0
+    .submitted + .content
+      width: calc(100% - 12em)
+  .user-picture
+    img
+      display: block
+      border: 1px solid $gray-light-2
+      margin-bottom: 0.5em
+      width: 6.25em
   .username
     font-weight: bold
     &::before
@@ -27,3 +35,28 @@
       white-space: pre
   div.comment:last-of-type
     border-bottom: 1px solid $gray-light-3
+  .links
+    display: block
+    margin-top: 0.25em;
+    margin-bottom: 0;
+    li
+      display: list-item
+  @media all and (max-width: $bp-xs-max)
+    .comment
+      display: block
+      overflow: hidden
+      .submitted
+        margin-bottom: 0.5em
+        min-height: 0
+        width: auto
+      .submitted + .content
+        width: auto
+      .content
+        padding-bottom: 0
+    .user-picture
+      display: none
+    .username
+      &::before
+        content: ""
+      &::after
+        content: ""
