@@ -1004,10 +1004,6 @@ footer[role="contentinfo"] a {
     width: 30%;
   }
 }
-div.status,
-div.error {
-  background-image: none;
-}
 #block-fepper-branding a + a {
   display: none;
 }

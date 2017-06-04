@@ -81,7 +81,7 @@
 
       <?php print render($page['breadcrumb']); ?>
     <?php endif; ?>
-'> 01-compounds/07-messaging/00-alert': |2
+'> 01-compounds/04-messaging/00-alert': |2
   <div class="messages-container">
       <?php print $messages; ?>
     </div>
