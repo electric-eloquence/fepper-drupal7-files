@@ -1020,6 +1020,9 @@ div.status,
 div.error {
   background-image: none;
 }
+.profile .user-picture {
+  margin-top: 1.5em;
+}
 #block-fepper-branding a + a {
   display: none;
 }
