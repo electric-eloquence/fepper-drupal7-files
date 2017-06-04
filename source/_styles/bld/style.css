@@ -394,9 +394,6 @@ input[type="url"],
 input[type="number"] {
   width: 25.5rem;
 }
-textarea {
-  width: 100%;
-}
 input[type="text"],
 input[type="search"],
 input[type="url"],
