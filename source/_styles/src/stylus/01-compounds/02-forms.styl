@@ -73,18 +73,18 @@ input[type="search"]::-webkit-search-decoration
   input
     background: transparent
     height: 3.6rem
-  #edit-search-block-form--2
-    width: 11.5em
-  #edit-submit
-    border: 1px solid $gray
-    border-left: 0
-    color: transparent
-    font-size: 0.85em
-    padding-right: 0
-    padding-left: 0
-    position: relative
-    width: 5rem
-    z-index: 1
+    &[id^="edit-search-block-form"]
+      width: 11.5em
+    &[id^="edit-submit"]
+      border: 1px solid $gray
+      border-left: 0
+      color: transparent
+      font-size: 0.85em
+      padding-right: 0
+      padding-left: 0
+      position: relative
+      width: 5rem
+      z-index: 1
     &:hover
       background: rgba(0, 0, 0, 0.3)
   @media all and (max-width: $bp-sm-max)

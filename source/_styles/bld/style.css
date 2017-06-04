@@ -207,6 +207,7 @@ ul#secondary-menu::after {
 .lc,
 .layout-container > *:not(footer),
 #block-fepperfooter {
+  clear: both;
   max-width: 115.2rem;
   margin: 0 auto;
   padding: 0.8rem;
@@ -465,10 +466,10 @@ input[type="search"]::-webkit-search-decoration {
   background: transparent;
   height: 3.6rem;
 }
-#search-block-form #edit-search-block-form--2 {
+#search-block-form input[id^="edit-search-block-form"] {
   width: 11.5em;
 }
-#search-block-form #edit-submit {
+#search-block-form input[id^="edit-submit"] {
   border: 1px solid #808080;
   border-left: 0;
   color: transparent;
@@ -479,7 +480,7 @@ input[type="search"]::-webkit-search-decoration {
   width: 5rem;
   z-index: 1;
 }
-#search-block-form #edit-submit:hover {
+#search-block-form input:hover {
   background: rgba(0,0,0,0.3);
 }
 @media all and (max-width: 767px) {
@@ -619,9 +620,6 @@ input[type="search"]::-webkit-search-decoration {
   .item-list .pager {
     justify-content: flex-start;
   }
-}
-.messages-container .messages {
-  clear: both;
 }
 #comments {
   border-top: 1px solid #ddd;
