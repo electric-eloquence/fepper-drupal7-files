@@ -620,20 +620,8 @@ input[type="search"]::-webkit-search-decoration {
     justify-content: flex-start;
   }
 }
-.layout-container .alert-wrapper {
-  padding-bottom: 0;
-}
-.alert {
-  display: block;
-  text-align: center;
-  padding: 1.6rem;
-  border: 1px solid #808080;
-  background: #f9f9f9;
-}
-.alert-error {
-  color: #f00;
-  border-color: #f00;
-  background: #ffbebe;
+.messages-container .messages {
+  clear: both;
 }
 #comments {
   border-top: 1px solid #ddd;
@@ -643,7 +631,7 @@ input[type="search"]::-webkit-search-decoration {
   margin: 0.667em 0;
 }
 #comments .comment {
-  padding-bottom: 1em;
+  padding: 0.75em 0 0.25em;
   overflow: hidden;
 }
 #comments .comment .submitted {

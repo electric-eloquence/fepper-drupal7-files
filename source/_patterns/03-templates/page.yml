@@ -82,7 +82,9 @@
       <?php print render($page['breadcrumb']); ?>
     <?php endif; ?>
 '> 01-compounds/07-messaging/00-alert': |2
-  <?php print $messages; ?>
+  <div class="messages-container">
+      <?php print $messages; ?>
+    </div>
 'highlighted': |2
   <?php if (!empty($page['highlighted'])): ?>
           <div id="highlighted"><?php print render($page['highlighted']); ?></div>

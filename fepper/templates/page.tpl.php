@@ -87,7 +87,9 @@
     <?php print render($page['breadcrumb']); ?>
   <?php endif; ?>
 
-  <?php print $messages; ?>
+  <div class="messages-container">
+    <?php print $messages; ?>
+  </div>
   <main id="main" role="main">
     <a id="main-content" tabindex="-1"></a>
 
