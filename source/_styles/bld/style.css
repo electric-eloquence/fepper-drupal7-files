@@ -422,6 +422,11 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+@media all and (max-width: 480px) {
+  textarea {
+    width: 100%;
+  }
+}
 #edit-actions {
   background: transparent;
   color: #808080;
