@@ -45,4 +45,4 @@
 '/ signature': |2
   <?php endif; ?>
 'links': |2
-  <?php /* print render($content['links']); */ ?>
+  <?php print render($content['links']); ?>
