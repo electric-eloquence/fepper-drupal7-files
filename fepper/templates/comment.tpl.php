@@ -5,7 +5,7 @@
  * Fepper theme's implementation for comments.
  */
 ?>
-<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($new): ?>
     <span class="new" style="display: none;"><?php print $new; ?></span>
@@ -36,4 +36,4 @@
     <?php print render($content['links']); ?>
   </div>
 
-</div>
+</article>

@@ -5,7 +5,8 @@
     margin: 0.667em 0 0
   .comment
     display: flex 
-    padding: 0.75em 0 0.5em
+    margin-top: 0.75em
+    padding-bottom: 0.5em
     .submitted
       min-height: 11em
       width: 12em
@@ -13,6 +14,7 @@
         display: block
         font-size: 0.75em
         line-height: 1.333
+        margin-left: 2px
     .content
       padding-bottom: 0.5em
       p
@@ -33,7 +35,7 @@
     &::after
       content: "\A"
       white-space: pre
-  div.comment:last-of-type
+  article.comment:last-of-type
     border-bottom: 1px solid $gray-light-3
   .links
     display: block
@@ -41,6 +43,10 @@
     margin-bottom: 0;
     li
       display: list-item
+  .indented
+    margin-left: 0.75em
+    .comment
+      border-left: 1px solid $gray-light-3
   @media all and (max-width: $bp-xs-max)
     .comment
       display: block
@@ -49,6 +55,8 @@
         margin-bottom: 0.5em
         min-height: 0
         width: auto
+        > span
+          margin-left: 0
       .submitted + .content
         width: auto
       .content
@@ -60,3 +68,7 @@
         content: ""
       &::after
         content: ""
+    .indented
+      .comment
+        > *
+          margin-left: 2px
