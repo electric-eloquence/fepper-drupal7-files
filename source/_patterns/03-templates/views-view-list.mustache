@@ -5,22 +5,22 @@
   {{/ title }}
   {{{ list_type_prefix }}}
 
-  {{# templates-views-view-list__row--pages-homepage__hoagies? }}
+  {{# templates-views-view-list__row~~pages-homepage__hoagies? }}
     {{# hoagies }}
       {{> 03-templates/__views-view-list__row(
         views-view-list__row_classes: 'views-row',
-        "templates-node--pages-homepage__hoagies?": true
+        "templates-node~~pages-homepage__hoagies?": true
       ) }}
     {{/ hoagies }}
-  {{/ templates-views-view-list__row--pages-homepage__hoagies? }}
-  {{# templates-views-view-list__row--pages-blog? }}
+  {{/ templates-views-view-list__row~~pages-homepage__hoagies? }}
+  {{# templates-views-view-list__row~~pages-blog? }}
     {{# latest_posts }}
       {{> 03-templates/__views-view-list__row(
         views-view-list__row_classes: 'views-row',
-        "templates-node--pages-blog?": true
+        "templates-node~~pages-blog?": true
       ) }}
     {{/ latest_posts }}
-  {{/ templates-views-view-list__row--pages-blog? }}
+  {{/ templates-views-view-list__row~~pages-blog? }}
   {{{ fpo_template_content }}}
 
   {{{ list_type_suffix }}}

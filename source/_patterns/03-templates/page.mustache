@@ -36,46 +36,46 @@
         {{{ title_suffix }}}
       {{/ front? }}
 
-      {{# templates-region--pages-homepage? }}
+      {{# templates-region~~pages-homepage? }}
         {{> 03-templates/region(
-          "templates-block--main--pages-homepage?": true,
+          "templates-block--main~~pages-homepage?": true,
           region_classes: 'region region-content'
         ) }}
-      {{/ templates-region--pages-homepage? }}
-      {{# templates-region--pages-blog? }}
+      {{/ templates-region~~pages-homepage? }}
+      {{# templates-region~~pages-blog? }}
         {{> 03-templates/region(
-          "templates-block--main--pages-blog?": true,
+          "templates-block--main~~pages-blog?": true,
           region_classes: 'region region-content'
         ) }}
-      {{/ templates-region--pages-blog? }}
-      {{# templates-region--pages-article? }}
+      {{/ templates-region~~pages-blog? }}
+      {{# templates-region~~pages-article? }}
         {{> 03-templates/region(
-          "templates-block--main--pages-article?": true,
+          "templates-block--main~~pages-article?": true,
           region_classes: 'region region-content'
         ) }}
-      {{/ templates-region--pages-article? }}
+      {{/ templates-region~~pages-article? }}
       {{{ fpo_template_content }}}
     </div> <!-- /.layout-content -->
 
     {{# sidebar_first? }}
       <div id="sidebar-first" class="column sidebar">
-        {{# templates-region--pages-homepage? }}
+        {{# templates-region~~pages-homepage? }}
           {{> 03-templates/region(
-            "templates-block--sidebar1--pages-homepage?": true,
+            "templates-block--sidebar1~~pages-homepage?": true,
             region_classes: 'region region-sidebar-first'
           ) }}
-        {{/ templates-region--pages-homepage? }}
+        {{/ templates-region~~pages-homepage? }}
         {{{ fpo_sidebar_first }}}
       </div> <!-- /#sidebar-first -->
     {{/ sidebar_first? }}
 
     {{# sidebar_second? }}
       <div id="sidebar-second" class="column sidebar">
-        {{# templates-region--pages-article? }}
+        {{# templates-region~~pages-article? }}
           {{> 03-templates/region(
-            "templates-block--sidebar2--pages-article?": true,
+            "templates-block--sidebar2~~pages-article?": true,
           ) }}
-        {{/ templates-region--pages-article? }}
+        {{/ templates-region~~pages-article? }}
         {{> 03-templates/region(
           "templates-block--sidebar2?": true,
         ) }}
