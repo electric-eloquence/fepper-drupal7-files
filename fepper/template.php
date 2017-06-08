@@ -60,7 +60,7 @@ function fepper_preprocess_html(&$variables) {
  * Implements template_preprocess_page().
  */
 function fepper_preprocess_page(&$variables) {
-  // Get the entire main menu tree.
+  // Get the entire main menu tree so we can render the expanded parts.
   $main_menu_tree = menu_tree_all_data('main-menu');
 
   // Add the rendered output to the $main_menu_expanded variable.
