@@ -20,7 +20,9 @@ Drupal theme to match the look and feel of the Fepper frontend.
 * Follow these instruction to adapt Fepper to use Drupal 7 patterns: 
   https://github.com/electric-eloquence/fepper-drupal7-files
 * This theme is unopinionated with regards to styles and markup and should be 
-  used as a base theme. You are encouraged to override any or all aspects of 
+  used as a 
+  [base theme](https://www.drupal.org/docs/7/theming/creating-a-sub-theme). 
+  You are encouraged to override any or all aspects of 
   this theme for your custom needs.
 * However, if you wish to replicate the look and feel of the Fepper demo site 
   (as per the screenshot), you should follow the Fepper documentation on 
