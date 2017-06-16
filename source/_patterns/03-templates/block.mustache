@@ -73,6 +73,18 @@
     {{! END ARTICLE }}
 
 
+    {{! BEGIN NEW INSTALL }}
+
+    {{# compounds-new-install? }}
+      {{> 01-compounds/00-text/01-new-install }}
+    {{/ compounds-new-install? }}
+    {{# compounds-login? }}
+      {{> 01-compounds/02-forms/02-login }}
+    {{/ compounds-login? }}
+
+    {{! END NEW INSTALL }}
+
+
     {{{ fpo_template_content }}}
 
   </div>

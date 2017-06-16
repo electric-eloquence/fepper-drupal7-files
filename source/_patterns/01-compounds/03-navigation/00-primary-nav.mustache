@@ -2,8 +2,10 @@
   <h2 class="icon-menu">Main menu</h2>
   <ul id="main-menu">
     <li class="first"><a href="{{ link.pages-homepage }}">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="{{ link.pages-blog }}">Blog</a></li>
-    <li class="last"><a href="#">Contact</a></li>
+    {{# demo_site? }}
+      <li><a href="#">About</a></li>
+      <li><a href="{{ link.pages-blog }}">Blog</a></li>
+      <li class="last"><a href="#">Contact</a></li>
+    {{/ demo_site? }}
   </ul>
 </nav>

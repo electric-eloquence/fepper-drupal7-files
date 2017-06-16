@@ -6,10 +6,12 @@
       {{> 00-elements/02-images/00-logo }}
     </div> <!-- /#block-fepper-branding -->
 
-    {{> 03-templates/region(
-      "templates-block--header?": true,
-      region_classes: 'region region-header'
-    ) }}
+    {{# demo_site? }}
+      {{> 03-templates/region(
+        "templates-block--header?": true,
+        region_classes: 'region region-header'
+      ) }}
+    {{/ demo_site? }}
     {{{ header }}}
 
     {{> 01-compounds/03-navigation/00-primary-nav }}
@@ -54,6 +56,12 @@
           region_classes: 'region region-content'
         ) }}
       {{/ templates-region~~pages-article? }}
+      {{# templates-region~~pages-new-install? }}
+        {{> 03-templates/region(
+          "templates-block--main~~pages-new-install?": true,
+          region_classes: 'region region-content'
+        ) }}
+      {{/ templates-region~~pages-new-install? }}
       {{{ fpo_template_content }}}
     </div> <!-- /.layout-content -->
 
@@ -65,6 +73,12 @@
             region_classes: 'region region-sidebar-first'
           ) }}
         {{/ templates-region~~pages-homepage? }}
+        {{# templates-region~~pages-new-install? }}
+          {{> 03-templates/region(
+            "templates-block--sidebar1~~pages-new-install?": true,
+            region_classes: 'region region-sidebar-first'
+          ) }}
+        {{/ templates-region~~pages-new-install? }}
         {{{ fpo_sidebar_first }}}
       </div> <!-- /#sidebar-first -->
     {{/ sidebar_first? }}

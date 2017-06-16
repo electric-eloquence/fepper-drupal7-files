@@ -1,0 +1,23 @@
+<form id="user-login-form">
+  <div>
+    <div class="form-item form-type-textfield form-item-name">
+      <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+      <input id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" type="text">
+    </div>
+    <div class="form-item form-type-password form-item-pass">
+      <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+      <input id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" type="password">
+    </div>
+    <div class="item-list">
+      <ul>
+        <li class="first"><a href="#" title="Create a new user account.">Create new account</a></li>
+        <li class="last"><a href="#" title="Request new password via e-mail.">Request new password</a></li>
+      </ul>
+    </div>
+    <input name="form_build_id" value="" type="hidden">
+    <input name="form_id" value="user_login_block" type="hidden">
+    <div class="form-actions form-wrapper" id="edit-actions">
+      <input id="edit-submit" name="op" value="Log in" class="form-submit" type="submit">
+    </div>
+  </div>
+</form>
