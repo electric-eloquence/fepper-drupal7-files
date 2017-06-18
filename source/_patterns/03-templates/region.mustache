@@ -96,6 +96,19 @@
     {{! END SIDEBAR2 CONTENT }}
 
 
+    {{! BEGIN FOOTER CONTENT }}
+
+    {{# templates-block--footer? }}
+      {{> 03-templates/block(
+        block_html_id: 'block-block-1',
+        block_classes: 'block block-block',
+        "components-footer?": true
+      ) }}
+    {{/ templates-block--footer? }}
+
+    {{! END FOOTER CONTENT }}
+
+
     {{{ fpo_template_content }}}
 
   </div>

@@ -8,8 +8,8 @@
 
     {{# demo_site? }}
       {{> 03-templates/region(
-        "templates-block--header?": true,
-        region_classes: 'region region-header'
+        region_classes: 'region region-header',
+        "templates-block--header?": true
       ) }}
     {{/ demo_site? }}
     {{{ header }}}
@@ -40,26 +40,26 @@
 
       {{# templates-region~~pages-homepage? }}
         {{> 03-templates/region(
-          "templates-block--main~~pages-homepage?": true,
-          region_classes: 'region region-content'
+          region_classes: 'region region-content',
+          "templates-block--main~~pages-homepage?": true
         ) }}
       {{/ templates-region~~pages-homepage? }}
       {{# templates-region~~pages-blog? }}
         {{> 03-templates/region(
-          "templates-block--main~~pages-blog?": true,
-          region_classes: 'region region-content'
+          region_classes: 'region region-content',
+          "templates-block--main~~pages-blog?": true
         ) }}
       {{/ templates-region~~pages-blog? }}
       {{# templates-region~~pages-article? }}
         {{> 03-templates/region(
-          "templates-block--main~~pages-article?": true,
-          region_classes: 'region region-content'
+          region_classes: 'region region-content',
+          "templates-block--main~~pages-article?": true
         ) }}
       {{/ templates-region~~pages-article? }}
       {{# templates-region~~pages-new-install? }}
         {{> 03-templates/region(
-          "templates-block--main~~pages-new-install?": true,
-          region_classes: 'region region-content'
+          region_classes: 'region region-content',
+          "templates-block--main~~pages-new-install?": true
         ) }}
       {{/ templates-region~~pages-new-install? }}
       {{{ fpo_template_content }}}
@@ -69,14 +69,14 @@
       <div id="sidebar-first" class="column sidebar">
         {{# templates-region~~pages-homepage? }}
           {{> 03-templates/region(
-            "templates-block--sidebar1~~pages-homepage?": true,
-            region_classes: 'region region-sidebar-first'
+            region_classes: 'region region-sidebar-first',
+            "templates-block--sidebar1~~pages-homepage?": true
           ) }}
         {{/ templates-region~~pages-homepage? }}
         {{# templates-region~~pages-new-install? }}
           {{> 03-templates/region(
-            "templates-block--sidebar1~~pages-new-install?": true,
-            region_classes: 'region region-sidebar-first'
+            region_classes: 'region region-sidebar-first',
+            "templates-block--sidebar1~~pages-new-install?": true
           ) }}
         {{/ templates-region~~pages-new-install? }}
         {{{ fpo_sidebar_first }}}
@@ -100,9 +100,10 @@
   </main> <!-- /#main -->
 
   <footer id="footer" role="contentinfo">
-    <div id="block-fepperfooter">
-      {{> 02-components/00-global/00-footer }}
-    </div> <!-- /#block-fepperfooter -->
+    {{> 03-templates/region(
+      region_classes: 'region region-footer',
+      "templates-block--footer?": true
+    ) }}
   </footer> <!-- /#footer -->
 
 </div> <!-- /.layout-container -->

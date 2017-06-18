@@ -206,7 +206,7 @@ ul#secondary-menu::after {
 }
 .lc,
 .layout-container > *:not(footer),
-#block-fepperfooter {
+.region-footer {
   clear: both;
   max-width: 115.2rem;
   margin: 0 auto;
@@ -864,14 +864,14 @@ footer[role="contentinfo"] {
 footer[role="contentinfo"] a {
   color: #f9f9f9;
 }
-#block-fepperfooter {
+.region-footer {
   padding-top: 1.6rem;
 }
-#block-fepperfooter p {
+.region-footer p {
   margin-bottom: 0;
 }
 @media all and (min-width: 768px) {
-  #block-fepperfooter p {
+  .region-footer p {
     float: right;
   }
 }
