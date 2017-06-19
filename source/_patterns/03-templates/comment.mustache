@@ -1,12 +1,12 @@
 {{{ fpo_phpdoc }}}
-<article class="{{ comment_classes }} clearfix"{{{ comment_attributes }}}>
+<article class="{{ comment_classes }} clearfix" {{{ comment_attributes }}}>
 
   {{# new }}
     <span class="new" style="display: none;">{{{ new }}}</span>
   {{/ new }}
 
   {{{ title_prefix }}}
-  <h3{{{ title_attributes }}}>{{{ title }}}</h3>
+  <h3 {{{ title_attributes }}}>{{{ title }}}</h3>
   {{{ title_suffix }}}
 
   <div class="submitted">
@@ -15,7 +15,7 @@
     {{> 01-compounds/00-text/00-byline }}
   </div>
 
-  <div class="content"{{{ content_attributes }}}>
+  <div class="content" {{{ content_attributes }}}>
     {{> 01-compounds/01-blocks/04-single-comment }}
     {{{ fpo_template_content }}}
     {{# signature }}

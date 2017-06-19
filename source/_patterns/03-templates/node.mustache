@@ -1,5 +1,5 @@
 {{{ fpo_phpdoc }}}
-<div id="node-{{ node_id }}" class="{{ node_classes }}"{{{ node_attributes }}}>
+<div id="node-{{ node_id }}" class="{{ node_classes }}" {{{ node_attributes }}}>
 
   {{{ user_picture }}}
 
@@ -7,7 +7,7 @@
   {{^ page? }}
     {{# article_title }}
 
-      <h2{{{ title_attributes }}}><a href="{{ url }}">{{{ article_title }}}</a></h2>
+      <h2 {{{ title_attributes }}}><a href="{{ url }}">{{{ article_title }}}</a></h2>
     {{/ article_title }}
   {{/ page? }}
   {{{ title_suffix }}}
@@ -20,7 +20,7 @@
     {{/ submitted? }}
   {{/ page? }}
 
-  <div class="content"{{{ content_attributes }}}>
+  <div class="content" {{{ content_attributes }}}>
 
     {{! BEGIN NODE CONTENT }}
 
