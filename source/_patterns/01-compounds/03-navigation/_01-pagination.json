@@ -1,0 +1,43 @@
+{
+  "pager": {
+    "list_attributes": " class=\"pager\"",
+    "ul_items": [
+      {
+        "item_attributes": " class=\"pager-first first\"",
+        "item": "<a href=\"#\">« First</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-previous\"",
+        "item": "<a href=\"#\">‹ Previous</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-item\"",
+        "item": "<a title=\"Go to page 1\" href=\"#\">1</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-item\"",
+        "item": "<a title=\"Go to page 2\" href=\"#\">2</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-item\"",
+        "item": "<a title=\"Go to page 3\" href=\"#\">3</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-item\"",
+        "item": "<a title=\"Go to page 4\" href=\"#\">4</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-item\"",
+        "item": "<a title=\"Go to page 5\" href=\"#\">5</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-next\"",
+        "item": "<a href=\"#\">Next ›</a>"
+      },
+      {
+        "item_attributes": " class=\"pager-last last\"",
+        "item": "<a href=\"#\">Last »</a>"
+      }
+    ]
+  }
+}

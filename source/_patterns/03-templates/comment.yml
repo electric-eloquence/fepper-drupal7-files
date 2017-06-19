@@ -10,8 +10,6 @@
   <?php print $classes; ?>
 'comment_attributes': |2
   <?php print $attributes; ?>
-'> 00-elements/02-images/04-avatar': |2
-  <?php print $picture; ?>
 '# new': |2
   <?php if ($new): ?>
 'new': |2
@@ -26,6 +24,8 @@
   <?php print $title; ?>
 'title_suffix': |2
   <?php print render($title_suffix); ?>
+'> 00-elements/02-images/04-avatar': |2
+  <?php print $picture; ?>
 'permalink': |2
   <?php /* print $permalink; */ ?>
 '> 01-compounds/00-text/00-byline': |2

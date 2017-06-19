@@ -60,7 +60,7 @@
   <?php endif; ?>
 '# more\?': |2
   <?php if ($more): ?>
-'> 02-components/03-sections/02-more-link': |2
+'> 01-compounds/03-navigation/02-more-link': |2
   <?php print $more; ?>
 '/ more\?': |2
   <?php endif; ?>
