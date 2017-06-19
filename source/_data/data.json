@@ -10,7 +10,6 @@
   "html_title": "Fepper",
   "sidebar_second?": true,
   "rows?": true,
-  "list_attributes": " class=\"text\"",
   "ul_items": [
     {
       "item": "This is a list item in an unordered list"
@@ -28,7 +27,6 @@
       "item": "This is the last list item"
     }
   ],
-  "list_attributes": " class=\"text\"",
   "ol_items": [
     {
       "item": "This is a list item in an ordered list"

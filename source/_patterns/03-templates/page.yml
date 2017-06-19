@@ -129,3 +129,5 @@
   <?php print render($page['sidebar_second']); ?>
 '/ sidebar_second\?': |2
   <?php endif; ?>
+'fpo_footer': |2
+  <?php print render($page['footer']); ?>

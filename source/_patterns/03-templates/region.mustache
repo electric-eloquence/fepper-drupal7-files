@@ -80,9 +80,14 @@
 
     {{# templates-block--sidebar2~~pages-article? }}
       {{> 03-templates/block(
-        block_html_id: 'block-views-comments-recent-block',
+        block_html_id: 'block-views-recent-content-block',
         block_classes: 'block block-views',
         "components-related-posts?": true
+      ) }}
+      {{> 03-templates/block(
+        block_html_id: 'block-views-comments-recent-block',
+        block_classes: 'block block-views',
+        "components-recent-comments?": true
       ) }}
     {{/ templates-block--sidebar2~~pages-article? }}
     {{# templates-block--sidebar2? }}

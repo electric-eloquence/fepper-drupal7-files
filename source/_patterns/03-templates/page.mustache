@@ -87,12 +87,16 @@
       <div id="sidebar-second" class="column sidebar">
         {{# templates-region~~pages-article? }}
           {{> 03-templates/region(
+            region_classes: 'region region-sidebar-second',
             "templates-block--sidebar2~~pages-article?": true,
           ) }}
         {{/ templates-region~~pages-article? }}
-        {{> 03-templates/region(
-          "templates-block--sidebar2?": true,
-        ) }}
+        {{^ templates-region~~pages-article? }}
+          {{> 03-templates/region(
+            region_classes: 'region region-sidebar-second',
+            "templates-block--sidebar2?": true
+          ) }}
+        {{/ templates-region~~pages-article? }}
         {{{ fpo_sidebar_second }}}
       </div> <!-- /#sidebar-second -->
     {{/ sidebar_second? }}
@@ -104,6 +108,7 @@
       region_classes: 'region region-footer',
       "templates-block--footer?": true
     ) }}
+    {{{ fpo_footer }}}
   </footer> <!-- /#footer -->
 
 </div> <!-- /.layout-container -->
