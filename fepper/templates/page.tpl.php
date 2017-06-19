@@ -135,9 +135,7 @@
   </main> <!-- /#main -->
 
   <footer id="footer" role="contentinfo">
-    <div id="block-fepperfooter">
-      <?php print render($page['footer']); ?>
-    </div> <!-- /#block-fepperfooter -->
+    <?php print render($page['footer']); ?>
   </footer> <!-- /#footer -->
 
 </div> <!-- /.layout-container -->
