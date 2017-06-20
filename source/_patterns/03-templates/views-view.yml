@@ -48,7 +48,7 @@
   <?php endif; ?>
 '# pager\?': |2
   <?php if ($pager): ?>
-'> 01-compounds/03-navigation/00-pagination': |2
+'> 02-components/03-navigation/01-pagination': |2
   <?php print $pager; ?>
 '/ pager\?': |2
   <?php endif; ?>
@@ -60,7 +60,7 @@
   <?php endif; ?>
 '# more\?': |2
   <?php if ($more): ?>
-'> 01-compounds/03-navigation/01-more-link': |2
+'> 01-compounds/00-text/03-more-link': |2
   <?php print $more; ?>
 '/ more\?': |2
   <?php endif; ?>

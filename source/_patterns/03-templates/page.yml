@@ -83,7 +83,7 @@
     <?php endif; ?>
 '# alert': |2
   <?php if ($messages): ?>
-'> 01-compounds/00-text/03-alert': |2
+'> 01-compounds/00-text/02-alert': |2
   <div class="messages-container">
         <?php print $messages; ?>
       </div>

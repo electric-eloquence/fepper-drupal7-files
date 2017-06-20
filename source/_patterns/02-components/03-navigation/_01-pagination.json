@@ -1,5 +1,5 @@
 {
-  "pager": {
+  "pagination": {
     "list_attributes": " class=\"pager\"",
     "ul_items": [
       {

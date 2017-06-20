@@ -867,11 +867,11 @@ footer[role="contentinfo"] a {
 .region-footer {
   padding-top: 1.6rem;
 }
-.region-footer p {
+.region-footer .content {
   margin-bottom: 0;
 }
 @media all and (min-width: 768px) {
-  .region-footer p {
+  .region-footer .content {
     float: right;
   }
 }

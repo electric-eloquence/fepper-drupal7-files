@@ -10,6 +10,8 @@
   "html_title": "Fepper",
   "sidebar_second?": true,
   "rows?": true,
+  "footer_demo_site": "<p>&copy; MIT License</p>",
+  "footer_powered_by": "<span>Powered by <a href=\"https://github.com/electric-eloquence/fepper-drupal\">Fepper</a></span>",
   "ul_items": [
     {
       "item": "This is a list item in an unordered list"
@@ -74,7 +76,45 @@
     "short": "Lorem ipsum dolor sit (37 characters)",
     "medium": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
   },
-  "pager": {
+  "recent_comments": {
+    "ul_items": [
+      {
+        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Sugar plum wafer soufflé ice…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
+      },
+      {
+        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Fizzle crazy tortor. Sed…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
+      },
+      {
+        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Like button audience…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
+      },
+      {
+        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Especially dogs. Dogs are…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
+      },
+      {
+        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">I find your lack of faith…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
+      }
+    ]
+  },
+  "related_posts": {
+    "ul_items": [
+      {
+        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Top 10 mountain ranges for hiking</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
+      },
+      {
+        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Extreme climbing tips</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
+      },
+      {
+        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Stream hiking</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
+      },
+      {
+        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Explore hiking trails</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
+      },
+      {
+        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Navigate the Allegheny River</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
+      }
+    ]
+  },
+  "pagination": {
     "list_attributes": " class=\"pager\"",
     "ul_items": [
       {
@@ -112,44 +152,6 @@
       {
         "item_attributes": " class=\"pager-last last\"",
         "item": "<a href=\"#\">Last »</a>"
-      }
-    ]
-  },
-  "recent_comments": {
-    "ul_items": [
-      {
-        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Sugar plum wafer soufflé ice…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
-      },
-      {
-        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Fizzle crazy tortor. Sed…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
-      },
-      {
-        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Like button audience…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
-      },
-      {
-        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Especially dogs. Dogs are…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
-      },
-      {
-        "item": "<span class=\"views-field views-field-subject\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">I find your lack of faith…</a></span></span><span class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></span>"
-      }
-    ]
-  },
-  "related_posts": {
-    "ul_items": [
-      {
-        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Top 10 mountain ranges for hiking</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
-      },
-      {
-        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Extreme climbing tips</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
-      },
-      {
-        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Stream hiking</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
-      },
-      {
-        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Explore hiking trails</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
-      },
-      {
-        "item": "<div class=\"views-field views-field-title\"><span class=\"field-content\"><a href=\"#\" hreflang=\"en\">Navigate the Allegheny River</a></span></div><div class=\"views-field views-field-changed\"><span class=\"field-content\">2 weeks 6 days ago</span></div>"
       }
     ]
   },
