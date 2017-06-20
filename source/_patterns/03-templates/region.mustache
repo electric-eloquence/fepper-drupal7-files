@@ -110,6 +110,13 @@
         "components-footer?": true
       ) }}
     {{/ templates-block--footer? }}
+    {{# templates-block--footer~~pages-new-install? }}
+      {{> 03-templates/block(
+        block_html_id: 'block-system-powered-by',
+        block_classes: 'block block-system',
+        "components-footer~~pages-new-install?": true
+      ) }}
+    {{/ templates-block--footer~~pages-new-install? }}
 
     {{! END FOOTER CONTENT }}
 

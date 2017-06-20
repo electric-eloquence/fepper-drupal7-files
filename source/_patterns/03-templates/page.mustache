@@ -104,10 +104,18 @@
   </main> <!-- /#main -->
 
   <footer id="footer" role="contentinfo">
-    {{> 03-templates/region(
-      region_classes: 'region region-footer',
-      "templates-block--footer?": true
-    ) }}
+    {{# demo_site? }}
+      {{> 03-templates/region(
+        region_classes: 'region region-footer',
+        "templates-block--footer?": true
+      ) }}
+    {{/ demo_site? }}
+    {{# templates-region~~pages-new-install? }}
+      {{> 03-templates/region(
+        region_classes: 'region region-footer',
+        "templates-block--footer~~pages-new-install?": true
+      ) }}
+    {{/ templates-region~~pages-new-install? }}
     {{{ fpo_footer }}}
   </footer> <!-- /#footer -->
 
