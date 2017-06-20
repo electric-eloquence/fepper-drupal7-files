@@ -46,7 +46,7 @@
         <?php endif; ?>
 'header': |2
   <?php print render($page['header']); ?>
-'> 01-compounds/03-navigation/00-primary-nav': |2
+'> 02-components/03-navigation/00-primary-nav': |2
   <?php if ($main_menu_expanded || $secondary_menu): ?>
         <nav id="navigation" role="navigation">
           <div id="main-menu">
