@@ -360,6 +360,10 @@ object {
   max-width: 100%;
   height: auto;
 }
+.more-link {
+  font-style: italic;
+  text-align: left;
+}
 form ol,
 form ul {
   list-style: none;
@@ -493,6 +497,103 @@ input[type="search"]::-webkit-search-decoration {
     top: 5.8rem;
   }
 }
+#comments {
+  border-top: 1px solid #ddd;
+  margin-top: 2em;
+}
+#comments h2 {
+  margin: 0.667em 0 0;
+}
+#comments .comment {
+  display: flex;
+  margin-top: 0.75em;
+  padding-bottom: 0.5em;
+}
+#comments .comment .submitted {
+  min-height: 11em;
+  width: 12em;
+}
+#comments .comment .submitted > span {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1.333;
+  margin-left: 2px;
+}
+#comments .comment .content {
+  padding-bottom: 0.5em;
+}
+#comments .comment .content p {
+  margin-bottom: 0;
+}
+#comments .comment .submitted + .content {
+  width: calc(100% - 12em);
+}
+#comments .user-picture img {
+  display: block;
+  border: 1px solid #eee;
+  margin-bottom: 0.5em;
+  width: 6.25em;
+}
+#comments .username {
+  font-weight: bold;
+}
+#comments .username::before {
+  content: "\A";
+  white-space: pre;
+}
+#comments .username::after {
+  content: "\A";
+  white-space: pre;
+}
+#comments article.comment:last-of-type {
+  border-bottom: 1px solid #ddd;
+}
+#comments .links {
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: 0;
+}
+#comments .links li {
+  display: list-item;
+}
+#comments .indented {
+  margin-left: 0.75em;
+}
+#comments .indented .comment {
+  border-left: 1px solid #ddd;
+}
+@media all and (max-width: 480px) {
+  #comments .comment {
+    display: block;
+    overflow: hidden;
+  }
+  #comments .comment .submitted {
+    margin-bottom: 0.5em;
+    min-height: 0;
+    width: auto;
+  }
+  #comments .comment .submitted > span {
+    margin-left: 0;
+  }
+  #comments .comment .submitted + .content {
+    width: auto;
+  }
+  #comments .comment .content {
+    padding-bottom: 0;
+  }
+  #comments .user-picture {
+    display: none;
+  }
+  #comments .username::before {
+    content: "";
+  }
+  #comments .username::after {
+    content: "";
+  }
+  #comments .indented .comment > * {
+    margin-left: 2px;
+  }
+}
 #navigation ul {
   background: rgba(255,255,255,0.9);
 }
@@ -622,107 +723,6 @@ input[type="search"]::-webkit-search-decoration {
   .item-list .pager {
     justify-content: flex-start;
   }
-}
-#comments {
-  border-top: 1px solid #ddd;
-  margin-top: 2em;
-}
-#comments h2 {
-  margin: 0.667em 0 0;
-}
-#comments .comment {
-  display: flex;
-  margin-top: 0.75em;
-  padding-bottom: 0.5em;
-}
-#comments .comment .submitted {
-  min-height: 11em;
-  width: 12em;
-}
-#comments .comment .submitted > span {
-  display: block;
-  font-size: 0.75em;
-  line-height: 1.333;
-  margin-left: 2px;
-}
-#comments .comment .content {
-  padding-bottom: 0.5em;
-}
-#comments .comment .content p {
-  margin-bottom: 0;
-}
-#comments .comment .submitted + .content {
-  width: calc(100% - 12em);
-}
-#comments .user-picture img {
-  display: block;
-  border: 1px solid #eee;
-  margin-bottom: 0.5em;
-  width: 6.25em;
-}
-#comments .username {
-  font-weight: bold;
-}
-#comments .username::before {
-  content: "\A";
-  white-space: pre;
-}
-#comments .username::after {
-  content: "\A";
-  white-space: pre;
-}
-#comments article.comment:last-of-type {
-  border-bottom: 1px solid #ddd;
-}
-#comments .links {
-  display: block;
-  margin-top: 0.25em;
-  margin-bottom: 0;
-}
-#comments .links li {
-  display: list-item;
-}
-#comments .indented {
-  margin-left: 0.75em;
-}
-#comments .indented .comment {
-  border-left: 1px solid #ddd;
-}
-@media all and (max-width: 480px) {
-  #comments .comment {
-    display: block;
-    overflow: hidden;
-  }
-  #comments .comment .submitted {
-    margin-bottom: 0.5em;
-    min-height: 0;
-    width: auto;
-  }
-  #comments .comment .submitted > span {
-    margin-left: 0;
-  }
-  #comments .comment .submitted + .content {
-    width: auto;
-  }
-  #comments .comment .content {
-    padding-bottom: 0;
-  }
-  #comments .user-picture {
-    display: none;
-  }
-  #comments .username::before {
-    content: "";
-  }
-  #comments .username::after {
-    content: "";
-  }
-  #comments .indented .comment > * {
-    margin-left: 2px;
-  }
-}
-.more-link {
-  font-style: italic;
-  text-align: left;
 }
 header.header {
   background: #fff;
