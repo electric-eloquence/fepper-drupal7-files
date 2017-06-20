@@ -10,8 +10,8 @@
   "html_title": "Fepper",
   "sidebar_second?": true,
   "rows?": true,
-  "footer_demo_site": "<p>&copy; MIT License</p>",
-  "footer_powered_by": "<span>Powered by <a href=\"https://github.com/electric-eloquence/fepper-drupal\">Fepper</a></span>",
+  "copyright": "<p>&copy; MIT License</p>",
+  "powered_by": "<span>Powered by <a href=\"https://github.com/electric-eloquence/fepper-drupal\">Fepper</a></span>",
   "ul_items": [
     {
       "item": "This is a list item in an unordered list"
