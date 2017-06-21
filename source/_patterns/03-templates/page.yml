@@ -6,7 +6,7 @@
    * Fepper theme's implementation to display a single Drupal page.
    */
   ?>
-'> 00-elements/02-images/00-logo': |2
+'> 01-compounds/01-blocks/04-logo': |2
   <?php if ($logo): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />

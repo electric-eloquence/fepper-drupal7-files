@@ -776,7 +776,6 @@ header.header {
   background: rgba(255,255,255,0.9);
   float: right;
   margin: 0.65em 0.5em 0 0;
-  overflow: hidden;
   position: relative;
 }
 #block-search-form h2 {
@@ -789,6 +788,7 @@ header.header {
   #block-search-form {
     margin: 0.1rem 0 0;
     max-height: 4.9rem;
+    overflow: hidden;
     position: absolute;
     top: 0;
     right: 0;
