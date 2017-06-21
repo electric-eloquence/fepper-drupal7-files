@@ -6,9 +6,9 @@
   @media all and (max-width: $bp-sm-max)
     .icon-menu
       position: relative
-      right: 5.1rem
+      right: 0
       z-index: 3
-    #main-menu > ul
+    #main-menu
       max-height: 0
       overflow: hidden
       position: absolute
@@ -23,7 +23,7 @@
       li
         padding-left: 2rem;
     &.open
-      #main-menu > ul
+      #main-menu
         max-height: 100%
         width: 100%
   @media all and (min-width: $bp-med)
@@ -71,6 +71,10 @@
         padding-left: 1rem
       ul
         background: transparent
+.region-header + #navigation
+  @media all and (max-width: $bp-sm-max)
+    .icon-menu
+      right: 5.1rem
 .item-list
   .pager
     clear: both

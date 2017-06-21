@@ -60,10 +60,12 @@ input[type="search"]::-webkit-search-decoration
     label
       display: block
       float: left
+  .form-item,
+  .form-actions
+    background: $white-translucent
   .form-item-search-block-form
     float: left
     font-size: 1em
-    height: 2.25em
     margin-bottom: 0
     &::after
       color: $black
@@ -71,9 +73,10 @@ input[type="search"]::-webkit-search-decoration
       position: absolute
       top: 0.8rem
       right: 1.4rem
+      z-index: 1
   input
     background: transparent
-    height: 3.6rem
+    height: 4rem
     &[id^="edit-search-block-form"]
       width: 11.5em
     &[id^="edit-submit"]
@@ -94,3 +97,5 @@ input[type="search"]::-webkit-search-decoration
         clear: both
     .form-item-search-block-form::after
       top: 5.8rem
+    input
+      height: 3.7rem
