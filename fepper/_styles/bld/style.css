@@ -333,18 +333,22 @@ li a:hover,
 li a:focus {
   color: #808080;
 }
-.text ul {
+.text ul,
+ul.text {
   list-style: disc;
   margin: 0 0 1.6rem 1.92rem;
 }
-.text ul ul {
+.text ul ul,
+ul.text ul {
   margin-bottom: 0;
 }
-.text ol {
+.text ol,
+ol.text {
   list-style: decimal;
   margin: 0 0 1.6rem 1.92rem;
 }
-.text ol ol {
+.text ol ol,
+ol.text ol {
   margin-bottom: 0;
 }
 .item-list ol,
@@ -1029,23 +1033,6 @@ footer[role="contentinfo"] a {
   font-size: 0.9em;
   font-style: italic;
   margin-bottom: 0.5em;
-}
-.node-article ul {
-  margin: 0 0 1.6rem 1.92rem;
-}
-.node-article ul ul {
-  margin-bottom: 0;
-}
-.node-article ul,
-.node-article ul li {
-  list-style: disc;
-}
-.node-article ol {
-  list-style: decimal;
-  margin: 0 0 1.6rem 1.92rem;
-}
-.node-article ol ol {
-  margin-bottom: 0;
 }
 @media all and (max-width: 480px) {
   #block-views-recent-content-block-2 .node-article > div > div:first-of-type > a,
