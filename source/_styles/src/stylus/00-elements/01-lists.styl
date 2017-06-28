@@ -10,15 +10,17 @@ li
   a:hover, a:focus
     color: $gray
 .text ul,
-ul.text
-  list-style: disc
-  margin: 0 0 $space 1.92rem
-  ul
-    margin-bottom: 0
 .text ol,
-ol.text
-  list-style: decimal
+ul.text,
+ol.text,
+.node-article ul,
+.node-article ol,
+*[role="article"] ul,
+*[role="article"] ol,
+*[typeof="schema:Article"] ul,
+*[typeof="schema:Article"] ol
   margin: 0 0 $space 1.92rem
+  ul,
   ol
     margin-bottom: 0
 .item-list
@@ -28,3 +30,15 @@ ol.text
     & li
       margin: 0
       padding: 0
+.text ul,
+ul.text,
+.node-article ul,
+*[role="article"] ul,
+*[typeof="schema:Article"] ul
+  list-style: disc
+.text ol,
+ol.text,
+.node-article ol,
+*[role="article"] ol,
+*[typeof="schema:Article"] ol
+  list-style: decimal
