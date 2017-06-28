@@ -339,21 +339,37 @@ li a:focus {
   color: #808080;
 }
 .text ul,
-ul.text {
-  list-style: disc;
+.text ol,
+ul.text,
+ol.text,
+.node-article ul,
+.node-article ol,
+*[role="article"] ul,
+*[role="article"] ol,
+*[typeof="schema:Article"] ul,
+*[typeof="schema:Article"] ol {
   margin: 0 0 1.6rem 1.92rem;
 }
 .text ul ul,
-ul.text ul {
-  margin-bottom: 0;
-}
-.text ol,
-ol.text {
-  list-style: decimal;
-  margin: 0 0 1.6rem 1.92rem;
-}
+.text ol ul,
+ul.text ul,
+ol.text ul,
+.node-article ul ul,
+.node-article ol ul,
+*[role="article"] ul ul,
+*[role="article"] ol ul,
+*[typeof="schema:Article"] ul ul,
+*[typeof="schema:Article"] ol ul,
+.text ul ol,
 .text ol ol,
-ol.text ol {
+ul.text ol,
+ol.text ol,
+.node-article ul ol,
+.node-article ol ol,
+*[role="article"] ul ol,
+*[role="article"] ol ol,
+*[typeof="schema:Article"] ul ol,
+*[typeof="schema:Article"] ol ol {
   margin-bottom: 0;
 }
 .item-list ol,
@@ -362,6 +378,20 @@ ol.text ol {
 .item-list ul li {
   margin: 0;
   padding: 0;
+}
+.text ul,
+ul.text,
+.node-article ul,
+*[role="article"] ul,
+*[typeof="schema:Article"] ul {
+  list-style: disc;
+}
+.text ol,
+ol.text,
+.node-article ol,
+*[role="article"] ol,
+*[typeof="schema:Article"] ol {
+  list-style: decimal;
 }
 img,
 video,
@@ -549,6 +579,12 @@ input[type="search"]::-webkit-search-decoration {
   border: 1px solid #eee;
   margin-bottom: 0.5em;
   width: 6.25em;
+}
+#comments .permalink {
+  font-size: 0.75em;
+  display: block;
+  margin-left: 2px;
+  text-decoration: underline;
 }
 #comments .username {
   font-weight: bold;

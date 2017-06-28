@@ -17,7 +17,7 @@
 
   <div class="submitted">
     <?php print $picture; ?>
-    <?php /* print $permalink; */ ?>
+    <?php print $permalink; ?>
     <?php print $submitted; ?>
   </div>
 

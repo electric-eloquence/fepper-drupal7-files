@@ -10,9 +10,15 @@
 
     <div id="block-fepper-branding">
       <?php if ($logo): ?>
+        <?php if ($is_front): ?>
+          <h1>
+        <?php endif; ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
+        <?php if ($is_front): ?>
+          </h1>
+        <?php endif; ?>
       <?php endif; ?>
 
       <?php
