@@ -8,7 +8,7 @@
       position: relative
       right: 0
       z-index: 3
-    #main-menu
+    .menu
       max-height: 0
       overflow: hidden
       position: absolute
@@ -23,7 +23,7 @@
       li
         padding-left: 2rem;
     &.open
-      #main-menu
+      .menu
         max-height: 100%
         width: 100%
   @media all and (min-width: $bp-med)
@@ -61,7 +61,7 @@
       &:hover
         ul
           max-height: 100%
-    #main-menu > ul > .expanded > ul
+    .menu > ul > .expanded > ul
       position: absolute
       > .expanded li
         border-right: 0
