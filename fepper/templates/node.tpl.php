@@ -7,7 +7,7 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
 
-  <?php /* print $user_picture; */ ?>
+  <?php print $user_picture; ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
@@ -35,7 +35,7 @@
 
   </div>
 
-  <?php /* print render($content['links']); */ ?>
+  <?php print render($content['links']); ?>
 
   <?php if ($page): ?>
     <?php print render($content['comments']); ?>

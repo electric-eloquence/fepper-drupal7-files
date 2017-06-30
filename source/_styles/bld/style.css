@@ -1114,6 +1114,13 @@ footer[role="contentinfo"] a {
   font-style: italic;
   margin-bottom: 0.5em;
 }
+.node-article > .links li {
+  padding: 0;
+}
+.node-article > .links a::before {
+  content: "•";
+  margin-right: 0.25em;
+}
 @media all and (max-width: 480px) {
   #block-views-recent-content-block-2 .node-article > div > div:first-of-type > a,
   .view-id-recent_content.view-display-id-page_1 .node-article > div > div:first-of-type > a {

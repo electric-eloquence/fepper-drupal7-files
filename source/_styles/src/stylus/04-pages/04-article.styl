@@ -8,6 +8,12 @@
     font-size: $font-size-slightly-smaller
     font-style: italic
     margin-bottom: 0.5em
+  > .links
+    li
+      padding: 0
+    a::before
+      content: "•"
+      margin-right: 0.25em 
 #block-views-recent-content-block-2,
 .view-id-recent_content.view-display-id-page_1
   @media all and (max-width: $bp-xs-max)
