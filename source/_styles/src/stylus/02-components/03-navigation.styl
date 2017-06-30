@@ -1,9 +1,9 @@
-#main-menu .menu,
+#main-menu > .menu,
 #secondary-menu
-  background: $white-translucent
   a
     display: block
   @media all and (max-width: $bp-sm-max)
+    background: $white-translucent
     max-height: 0
     overflow: hidden
     position: absolute
@@ -37,10 +37,8 @@
         font-size: $font-size-sm
         margin-left: $space-half
       ul
-        max-height: 0
-        overflow: hidden
-        transition: max-height 0.3s ease
-        z-index: 2
+        margin: 0
+        padding: 0
         li
           float: none
           border: 1px solid $gray-light-2
@@ -50,13 +48,17 @@
       &:hover
         ul
           max-height: 100%
-    > ul > .expanded > ul
+    > .expanded > ul
+      background: $white-translucent
+      max-height: 0
+      overflow: hidden
       position: absolute
+      transition: max-height 0.3s ease
+      z-index: 2
       > .expanded li
         border-right: 0
         border-bottom: 0
         border-left: 0
-      .expanded
         padding-left: 1rem
       ul
         background: transparent
