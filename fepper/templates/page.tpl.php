@@ -57,26 +57,24 @@
     <?php print render($page['header']); ?>
 
     <?php if ($main_menu_expanded || $secondary_menu): ?>
-      <nav id="navigation" role="navigation">
-        <div id="main-menu">
-          <h2 class="icon-menu">Main menu</h2>
-          <?php print render($main_menu_expanded); ?>
-        </div>
-        <?php print theme(
-          'links__system_secondary_menu',
-          array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'id' => 'secondary-menu',
-            ),
-            'heading' => array(
-              'text' => t('Secondary menu'),
-              'level' => 'h2',
-              'class' => 'element-invisible',
-            ),
-          )
-        ); ?>
+      <nav id="main-menu" role="navigation">
+        <h2 class="icon-menu">Main menu</h2>
+        <?php print render($main_menu_expanded); ?>
       </nav> <!-- /#navigation -->
+      <?php print theme(
+        'links__system_secondary_menu',
+        array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'id' => 'secondary-menu',
+          ),
+          'heading' => array(
+            'text' => t('Secondary menu'),
+            'level' => 'h2',
+            'class' => 'element-invisible',
+          ),
+        )
+      ); ?>
     <?php endif; ?>
 
   </header> <!-- /.header -->

@@ -17,7 +17,7 @@
 
   Drupal.behaviors.openToggle = {
     attach: function (context) {
-      toggleOpen('#navigation');
+      toggleOpen('#main-menu');
       toggleOpen('#block-search-form');
     }
   };

@@ -1,81 +1,76 @@
-#main-menu
-  .menu
-    background: $white-translucent
+#main-menu .menu,
+#secondary-menu
+  background: $white-translucent
   a
     display: block
   @media all and (max-width: $bp-sm-max)
-    .icon-menu
-      position: relative
-      right:0 
-      z-index: 3
-    .menu
-      max-height: 0
-      overflow: hidden
-      position: absolute
-      top: 5rem
-      left: 0
-      z-index: 1
+    max-height: 0
+    overflow: hidden
+    position: absolute
+    top: 5rem
+    left: 0
+    z-index: 1
+    li
+      border-top: 1px solid $gray-light-3
+      a
+        display: table
+        padding: $pad-half $pad
       li
-        border-top: 1px solid $gray-light-3
-        a
-          display: table
-          padding: $pad-half $pad
+        padding-left: 2rem;
+  @media all and (min-width: $bp-med)
+    border-top: 1px solid $gray-light-2
+    clear: none
+    float: left
+    margin-top: -0.1rem
+    padding-top: $pad-quarter * 3
+    position: static
+    width: auto
+    height: auto
+    li
+      float: left
+    a
+      padding: $pad-quarter $pad
+    .expanded
+      > a::after
+        color: $gray
+        content: "▼"
+        font-size: $font-size-sm
+        margin-left: $space-half
+      ul
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.3s ease
+        z-index: 2
         li
-          padding-left: 2rem;
-    // Open hamburger menu.
-    &.open .menu
+          float: none
+          border: 1px solid $gray-light-2
+          border-bottom: 0
+          &:last-child
+            border-bottom: 1px solid $gray-light-2
+      &:hover
+        ul
+          max-height: 100%
+    > ul > .expanded > ul
+      position: absolute
+      > .expanded li
+        border-right: 0
+        border-bottom: 0
+        border-left: 0
+      .expanded
+        padding-left: 1rem
+      ul
+        background: transparent
+// Open hamburger menu.
+#main-menu.open
+  @media all and (max-width: $bp-sm-max)
+    .menu
       max-height: 100%
       width: 100%
-  @media all and (min-width: $bp-med)
-    .icon-menu
-      display: none
-    .menu
-      border-top: 1px solid $gray-light-2
-      clear: none
-      float: left
-      margin-top: -0.1rem
-      padding-top: $pad-quarter * 3
-      position: static
-      width: auto
-      height: auto
-      li
-        float: left
-      a
-        padding: $pad-quarter $pad
-      .expanded
-        > a::after
-          color: $gray
-          content: "▼"
-          font-size: $font-size-sm
-          margin-left: $space-half
-        ul
-          max-height: 0
-          overflow: hidden
-          transition: max-height 0.3s ease
-          z-index: 2
-          li
-            float: none
-            border: 1px solid $gray-light-2
-            border-bottom: 0
-            &:last-child
-              border-bottom: 1px solid $gray-light-2
-        &:hover
-          ul
-            max-height: 100%
-      .menu > ul > .expanded > ul
-        position: absolute
-        > .expanded li
-          border-right: 0
-          border-bottom: 0
-          border-left: 0
-        .expanded
-          padding-left: 1rem
-        ul
-          background: transparent
 .region-header + #main-menu
   @media all and (max-width: $bp-sm-max)
     .icon-menu
       right: 5.1rem
+      z-index: 3
 // Pager.
 .item-list
   .pager
