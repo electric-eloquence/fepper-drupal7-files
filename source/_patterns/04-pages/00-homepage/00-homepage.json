@@ -1,7 +1,7 @@
 {
   "homepage?": true,
   "demo_site?": true,
-  "body_class": "front two-sidebars page-hero", 
+  "body_class": "html front not-logged-in two-sidebars page-hero",
   "sidebar_first?": true,
   "hero": [
     {

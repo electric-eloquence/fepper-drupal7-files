@@ -1,5 +1,5 @@
 {
-  "body_class": "front page-node",
+  "body_class": "html front not-logged-in one-sidebar sidebar-first page-node",
   "sidebar_first?": true,
   "sidebar_second?": false
 }

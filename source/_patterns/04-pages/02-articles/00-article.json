@@ -1,6 +1,6 @@
 {
   "demo_site?": true,
-  "body_class": "page-node",
+  "body_class": "html not-front not-logged-in one-sidebar sidebar-second page-node page-node- node-type-article",
   "page_title": "<span property=\"schema:name\">Top 10 mountain ranges for hiking</span>",
   "article_attributes": " role=\"article\"",
   "page?": true,

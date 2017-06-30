@@ -9,11 +9,14 @@
     font-style: italic
     margin-bottom: 0.5em
   > .links
+    margin-bottom: 0
     li
       padding: 0
     a::before
       content: "•"
       margin-right: 0.25em 
+    body:not(.node-type-article) &
+      display: none
 #block-views-recent-content-block-2,
 .view-id-recent_content.view-display-id-page_1
   @media all and (max-width: $bp-xs-max)

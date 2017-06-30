@@ -1,6 +1,6 @@
 {
   "demo_site?": true,
-  "body_class": "page-blog",
+  "body_class": "html not-front not-logged-in one-sidebar sidebar-second page-blog",
   "page_title": "Our Outdoor Blog",
   "latest_posts": [
     {
