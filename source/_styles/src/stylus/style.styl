@@ -50,7 +50,7 @@
   @extend .cf
 #region-primary-menu
   padding-bottom: 0
-#navigation .menu
+#main-menu .menu
   @extend .cf
 #region-secondary-menu
   padding-top: $pad-and-half
@@ -70,3 +70,8 @@ ul#secondary-menu
   display: none
 .search-results
   margin-top: 1em
+@media all and (max-width: $bp-md-max)
+  #user-login-form
+    input[type="text"],
+    input[type="password"]
+      width: 20rem

@@ -181,14 +181,14 @@ figure {
 .layout-content::before,
 main[role="main"]::before,
 #region-highlighted::before,
-#navigation .menu::before,
+#main-menu .menu::before,
 ul#secondary-menu::before,
 .cf::after,
 #search-block-form .container-inline::after,
 .layout-content::after,
 main[role="main"]::after,
 #region-highlighted::after,
-#navigation .menu::after,
+#main-menu .menu::after,
 ul#secondary-menu::after {
   content: " ";
 /* 1 */
@@ -200,7 +200,7 @@ ul#secondary-menu::after {
 .layout-content::after,
 main[role="main"]::after,
 #region-highlighted::after,
-#navigation .menu::after,
+#main-menu .menu::after,
 ul#secondary-menu::after {
   clear: both;
 }
@@ -646,19 +646,19 @@ input[type="search"]::-webkit-search-decoration {
     margin-left: 2px;
   }
 }
-#navigation ul {
+#main-menu .menu {
   background: rgba(255,255,255,0.9);
 }
-#navigation a {
+#main-menu a {
   display: block;
 }
 @media all and (max-width: 767px) {
-  #navigation .icon-menu {
+  #main-menu .icon-menu {
     position: relative;
     right: 0;
     z-index: 3;
   }
-  #navigation .menu {
+  #main-menu .menu {
     max-height: 0;
     overflow: hidden;
     position: absolute;
@@ -666,23 +666,26 @@ input[type="search"]::-webkit-search-decoration {
     left: 0;
     z-index: 1;
   }
-  #navigation li {
+  #main-menu .menu li {
     border-top: 1px solid #ddd;
   }
-  #navigation li a {
+  #main-menu .menu li a {
     display: table;
     padding: 0.8rem 1.6rem;
   }
-  #navigation li li {
+  #main-menu .menu li li {
     padding-left: 2rem;
   }
-  #navigation.open .menu {
+  #main-menu.open .menu {
     max-height: 100%;
     width: 100%;
   }
 }
 @media all and (min-width: 768px) {
-  #navigation {
+  #main-menu .icon-menu {
+    display: none;
+  }
+  #main-menu .menu {
     border-top: 1px solid #eee;
     clear: none;
     float: left;
@@ -692,22 +695,19 @@ input[type="search"]::-webkit-search-decoration {
     width: auto;
     height: auto;
   }
-  #navigation .icon-menu {
-    display: none;
-  }
-  #navigation li {
+  #main-menu .menu li {
     float: left;
   }
-  #navigation a {
+  #main-menu .menu a {
     padding: 0.4rem 1.6rem;
   }
-  #navigation .expanded > a::after {
+  #main-menu .menu .expanded > a::after {
     color: #808080;
     content: "▼";
     font-size: 0.75em;
     margin-left: 0.8rem;
   }
-  #navigation .expanded ul {
+  #main-menu .menu .expanded ul {
     max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.3s ease;
@@ -717,34 +717,34 @@ input[type="search"]::-webkit-search-decoration {
     transition: max-height 0.3s ease;
     z-index: 2;
   }
-  #navigation .expanded ul li {
+  #main-menu .menu .expanded ul li {
     float: none;
     border: 1px solid #eee;
     border-bottom: 0;
   }
-  #navigation .expanded ul li:last-child {
+  #main-menu .menu .expanded ul li:last-child {
     border-bottom: 1px solid #eee;
   }
-  #navigation .expanded:hover ul {
+  #main-menu .menu .expanded:hover ul {
     max-height: 100%;
   }
-  #navigation .menu > ul > .expanded > ul {
+  #main-menu .menu .menu > ul > .expanded > ul {
     position: absolute;
   }
-  #navigation .menu > ul > .expanded > ul > .expanded li {
+  #main-menu .menu .menu > ul > .expanded > ul > .expanded li {
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
   }
-  #navigation .menu > ul > .expanded > ul .expanded {
+  #main-menu .menu .menu > ul > .expanded > ul .expanded {
     padding-left: 1rem;
   }
-  #navigation .menu > ul > .expanded > ul ul {
+  #main-menu .menu .menu > ul > .expanded > ul ul {
     background: transparent;
   }
 }
 @media all and (max-width: 767px) {
-  .region-header + #navigation .icon-menu {
+  .region-header + #main-menu .icon-menu {
     right: 5.1rem;
   }
 }
@@ -816,7 +816,7 @@ header.header {
     height: 4rem;
   }
 }
-#navigation h2,
+#main-menu h2,
 #block-search-form h2 {
   background: rgba(255,255,255,0.9);
   border-left: 1px solid #ddd;
@@ -828,19 +828,19 @@ header.header {
   height: 5rem;
   overflow: hidden;
 }
-#navigation h2::before,
+#main-menu h2::before,
 #block-search-form h2::before {
   color: #333;
   float: right;
   font-size: 2.1rem;
   padding: 0.7em;
 }
-#navigation h2:hover::before,
+#main-menu h2:hover::before,
 #block-search-form h2:hover::before {
   color: #808080;
 }
 @media all and (min-width: 768px) {
-  #navigation h2,
+  #main-menu h2,
   #block-search-form h2 {
     display: none;
   }
@@ -889,6 +889,11 @@ header.header {
     float: left;
     width: 70%;
     padding-right: 1em;
+  }
+  .one-sidebar #sidebar-first {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
   }
   #sidebar-second {
     float: left;
@@ -946,14 +951,6 @@ footer[role="contentinfo"] a {
   .region-footer .content {
     float: right;
   }
-}
-.front .layout-content {
-  border-bottom: 2px solid #eee;
-  margin-bottom: 3.2rem;
-  padding: 0 0 3.2rem;
-  width: 100%;
-/* Hero Block */
-/* Subs Block */
 }
 @media all and (min-width: 768px) {
   .front .layout-content {
@@ -1058,6 +1055,12 @@ footer[role="contentinfo"] a {
     width: calc(33.3333333% - 1.0666666rem);
   }
 }
+.front.page-hero .layout-content {
+  border-bottom: 2px solid #eee;
+  margin-bottom: 3.2rem;
+  padding: 0 0 3.2rem;
+  width: 100%;
+}
 @media all and (min-width: 481px) and (max-width: 767px) {
   .front.page-hero .layout-content #block-system-main,
   .front.page-hero .layout-content .region-content > .views-row {
@@ -1148,4 +1151,10 @@ ul#secondary-menu {
 }
 .search-results {
   margin-top: 1em;
+}
+@media all and (max-width: 1024px) {
+  #user-login-form input[type="text"],
+  #user-login-form input[type="password"] {
+    width: 20rem;
+  }
 }
