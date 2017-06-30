@@ -671,31 +671,6 @@ input[type="search"]::-webkit-search-decoration {
 #secondary-menu a {
   display: block;
 }
-@media all and (max-width: 767px) {
-  #main-menu > .menu,
-  #secondary-menu {
-    background: rgba(255,255,255,0.95);
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    z-index: 1;
-  }
-  #main-menu > .menu li,
-  #secondary-menu li {
-    border-top: 1px solid #ddd;
-  }
-  #main-menu > .menu li a,
-  #secondary-menu li a {
-    display: table;
-    padding: 0.8rem 1.6rem;
-  }
-  #main-menu > .menu li li,
-  #secondary-menu li li {
-    padding-left: 2rem;
-  }
-}
 @media all and (min-width: 768px) {
   #main-menu > .menu,
   #secondary-menu {
@@ -768,15 +743,41 @@ input[type="search"]::-webkit-search-decoration {
   }
 }
 @media all and (max-width: 767px) {
+  #main-menu > .menu {
+    background: rgba(255,255,255,0.95);
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    z-index: 1;
+  }
+  #main-menu > .menu li {
+    border-top: 1px solid #ddd;
+  }
+  #main-menu > .menu li a {
+    display: table;
+    padding: 0.8rem 1.6rem;
+  }
+  #main-menu > .menu li li {
+    padding-left: 2rem;
+  }
   #main-menu.open .menu {
     max-height: 100%;
     width: 100%;
   }
-}
-@media all and (max-width: 767px) {
-  .region-header + #main-menu .icon-menu {
+  body:not(.logged-in) .region-header + #main-menu .icon-menu {
     right: 5.1rem;
     z-index: 3;
+  }
+  #secondary-menu {
+    padding-top: 1em;
+  }
+  #secondary-menu li {
+    float: left;
+  }
+  #secondary-menu li a {
+    padding: 0 1em;
   }
 }
 .item-list .pager {
