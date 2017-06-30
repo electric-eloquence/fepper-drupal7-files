@@ -30,7 +30,6 @@
   .permalink
     font-size: 0.75em
     display: block
-    margin-left: 2px
     text-decoration: underline
   .username
     font-weight: bold
@@ -40,7 +39,12 @@
     &::after
       content: "\A"
       white-space: pre
-  article.comment:last-of-type
+  .comment-reply
+    padding: 0
+    a::before
+      content: "•"
+      margin-right: 0.25em
+  .comment:last-of-type
     border-bottom: 1px solid $gray-light-3
   .links
     display: block
@@ -55,19 +59,33 @@
   @media all and (max-width: $bp-xs-max)
     .comment
       display: block
+      margin: 0
+      padding: 0
       overflow: hidden
       .submitted
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        height: 6.25em
         margin-bottom: 0.5em
         min-height: 0
+        position: relative
         width: auto
+        > a,
         > span
-          margin-left: 0
+          display: block
+          margin: 0
+          max-width: calc(100% - 6.25em)
       .submitted + .content
         width: auto
       .content
         padding-bottom: 0
     .user-picture
-      display: none
+      position: absolute
+      right: 0
+      bottom: 0
+      img
+        margin: 0
     .username
       &::before
         content: ""
@@ -77,3 +95,5 @@
       .comment
         > *
           margin-left: 2px
+    .comment:last-of-type
+      padding-bottom: 1em

@@ -580,7 +580,6 @@ input[type="search"]::-webkit-search-decoration {
 #comments .permalink {
   font-size: 0.75em;
   display: block;
-  margin-left: 2px;
   text-decoration: underline;
 }
 #comments .username {
@@ -594,7 +593,14 @@ input[type="search"]::-webkit-search-decoration {
   content: "\A";
   white-space: pre;
 }
-#comments article.comment:last-of-type {
+#comments .comment-reply {
+  padding: 0;
+}
+#comments .comment-reply a::before {
+  content: "•";
+  margin-right: 0.25em;
+}
+#comments .comment:last-of-type {
   border-bottom: 1px solid #ddd;
 }
 #comments .links {
@@ -614,15 +620,25 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 480px) {
   #comments .comment {
     display: block;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
   }
   #comments .comment .submitted {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 6.25em;
     margin-bottom: 0.5em;
     min-height: 0;
+    position: relative;
     width: auto;
   }
+  #comments .comment .submitted > a,
   #comments .comment .submitted > span {
-    margin-left: 0;
+    display: block;
+    margin: 0;
+    max-width: calc(100% - 6.25em);
   }
   #comments .comment .submitted + .content {
     width: auto;
@@ -631,7 +647,12 @@ input[type="search"]::-webkit-search-decoration {
     padding-bottom: 0;
   }
   #comments .user-picture {
-    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  #comments .user-picture img {
+    margin: 0;
   }
   #comments .username::before {
     content: "";
@@ -641,6 +662,9 @@ input[type="search"]::-webkit-search-decoration {
   }
   #comments .indented .comment > * {
     margin-left: 2px;
+  }
+  #comments .comment:last-of-type {
+    padding-bottom: 1em;
   }
 }
 #main-menu .menu,
