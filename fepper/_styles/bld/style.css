@@ -639,7 +639,7 @@ input[type="search"]::-webkit-search-decoration {
   #comments .comment .submitted > span {
     display: block;
     margin: 0;
-    max-width: calc(100% - 8.75rem);
+    max-width: calc(100% - 8.75rem - 0.2rem);
   }
   #comments .comment .submitted + .content {
     width: auto;
