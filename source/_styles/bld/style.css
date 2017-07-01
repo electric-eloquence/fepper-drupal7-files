@@ -629,7 +629,7 @@ input[type="search"]::-webkit-search-decoration {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 6.25em;
+    height: 8.75rem;
     margin-bottom: 0.5em;
     min-height: 0;
     position: relative;
@@ -639,7 +639,7 @@ input[type="search"]::-webkit-search-decoration {
   #comments .comment .submitted > span {
     display: block;
     margin: 0;
-    max-width: calc(100% - 6.25em);
+    max-width: calc(100% - 8.75rem);
   }
   #comments .comment .submitted + .content {
     width: auto;
