@@ -231,11 +231,13 @@ body {
 aside {
   margin-bottom: 1.6rem;
 }
-.is-hidden {
+.hidden {
   display: none !important;
   visibility: hidden !important;
 }
-.visually-hidden {
+.visually-hidden,
+#block-fepper-branding a + a,
+.page-search h1 {
   position: absolute !important;
   overflow: hidden;
   width: 1px;
@@ -265,39 +267,32 @@ aside {
 .align-left {
   text-align: left;
 }
-.valid {
-  color: #089e00;
-}
 div.error,
 div.error a {
   color: #f00;
 }
-div.error a {
-  text-decoration: underline;
+article h1,
+aside h1,
+nav h1,
+section h1 {
+  font-size: 2em;
 }
 h1,
-.alpha {
+h2 {
   line-height: 1.2;
 }
-@media all and (max-width: 767px) {
-  h1,
-  .alpha {
-    font-size: 2.8rem;
-  }
-}
-h2,
-.beta {
-  line-height: 1.2;
+h2 {
   margin-top: 0.5em;
-}
-h3,
-.gamma {
-  line-height: 1.2;
 }
 h4 {
   font-size: 1.1em;
-  font-weight: bold;
   margin-bottom: 1.6rem;
+}
+h5 {
+  font-size: 1.0625em;
+}
+h6 {
+  font-size: 1em;
 }
 p {
   margin-bottom: 1.6rem;
@@ -476,12 +471,6 @@ input[type="search"]::-webkit-search-decoration {
 }
 #edit-preview {
   margin-left: 0.5rem;
-}
-.has-error {
-  border-color: #f00;
-}
-.is-valid {
-  border-color: #089e00;
 }
 .form-item,
 .form-actions {
@@ -1102,9 +1091,6 @@ footer[role="contentinfo"] a {
     width: calc(50% - 0.4rem);
   }
 }
-.page-node h1 {
-  font-size: 2.5em;
-}
 .node-article {
   margin-bottom: 1.6rem;
 }
@@ -1166,9 +1152,6 @@ body:not(.node-type-article) .node-article > .links {
     width: 30%;
   }
 }
-#block-fepper-branding a + a {
-  display: none;
-}
 #region-highlighted {
   padding-top: 0;
   padding-bottom: 0;
@@ -1187,11 +1170,11 @@ body:not(.node-type-article) .node-article > .links {
   font-size: 0.75em;
   font-weight: bold;
 }
+.messages a {
+  text-decoration: underline;
+}
 .page-user .profile .user-picture {
   margin-top: 1.5em;
-}
-.page-search h1 {
-  display: none;
 }
 .search-results {
   margin-top: 1em;

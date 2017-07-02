@@ -43,7 +43,7 @@
 // Only in Drupal, not Fepper.
 #block-fepper-branding
   a + a
-    display: none
+    @extend .visually-hidden
 #region-highlighted
   padding-top: 0
   padding-bottom: 0
@@ -53,17 +53,19 @@
 #main-menu .menu
   @extend .cf
 #region-secondary-menu
-  padding-top: $pad-and-half
+  padding-top: $space-and-half
 #region-primary-menu + #region-secondary-menu
   padding-top: 0
 #region-breadcrumb,
 #breadcrumb
   font-size: 0.75em
   font-weight: bold
+.messages a
+  text-decoration: underline
 .page-user .profile .user-picture
   margin-top: 1.5em
 .page-search h1
-  display: none
+  @extend .visually-hidden
 .search-results
   margin-top: 1em
 @media all and (max-width: $bp-md-max)
