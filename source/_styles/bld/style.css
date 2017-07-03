@@ -493,8 +493,8 @@ input[type="search"]::-webkit-search-decoration {
   color: #000;
   content: "\73";
   position: absolute;
-  top: 0.8rem;
-  right: 1.4rem;
+  top: 1.1rem;
+  right: 1.7rem;
   z-index: 1;
 }
 #search-block-form input {
@@ -523,7 +523,7 @@ input[type="search"]::-webkit-search-decoration {
     clear: both;
   }
   #search-block-form .form-item-search-block-form::after {
-    top: 5.8rem;
+    top: 6rem;
   }
   #search-block-form input {
     height: 3.7rem;
