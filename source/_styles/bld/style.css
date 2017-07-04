@@ -311,7 +311,6 @@ p a {
   text-decoration: underline;
 }
 blockquote {
-  font-style: italic;
   border-left: 1px solid #808080;
   color: #808080;
   padding-left: 1.6rem;
@@ -891,12 +890,11 @@ header.header {
   }
 }
 #sidebar-second h2 {
-  border-bottom: 1px solid #ddd;
   padding: 0 0 0.5em;
 }
 #sidebar-second li {
   padding: 0.25em 0;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 #sidebar-second li > * {
   display: block;
@@ -1031,6 +1029,9 @@ footer[role="contentinfo"] a {
   .front .layout-content #block-system-main {
     position: relative;
   }
+  .front .layout-content #block-system-main .views-field-field-image {
+    min-height: 7.68rem;
+  }
   .front .layout-content #block-system-main .views-field-title {
     position: absolute;
     bottom: 0;
@@ -1045,6 +1046,7 @@ footer[role="contentinfo"] a {
   position: relative;
 }
 .front .layout-content .region-content > .views-row .views-field-field-image {
+  min-height: 17rem;
   position: relative;
   z-index: 0;
 }
