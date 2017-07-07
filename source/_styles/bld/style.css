@@ -271,6 +271,13 @@ div.error,
 div.error a {
   color: #f00;
 }
+@media print {
+  header.header,
+  form,
+  footer[role="contentinfo"] {
+    display: none;
+  }
+}
 article h1,
 aside h1,
 nav h1,

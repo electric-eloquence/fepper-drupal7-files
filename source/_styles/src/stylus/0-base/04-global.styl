@@ -48,3 +48,9 @@ aside
 div.error,
 div.error a
   color: $error
+/* Hide elements in print view */
+@media print
+  header.header,
+  form,
+  footer[role="contentinfo"]
+    display: none
