@@ -2,7 +2,7 @@
 
 The documentation for Fepper for Drupal 7 does not vary from the documentation 
 for [Fepper for Drupal 8](https://github.com/electric-eloquence/fepper-drupal). 
-As such, there does not exist justification to maintain a separate Fepper 
+As such, there does not exist enough justification to maintain a separate Fepper 
 project for Drupal 7. Instead, populate your Fepper for Drupal 8 project with 
 the Drupal 7 backend and patterns: 
 
