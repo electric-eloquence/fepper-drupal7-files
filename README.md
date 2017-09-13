@@ -1,14 +1,17 @@
 # Fepper for Drupal 7
 
 The documentation for Fepper for Drupal 7 does not vary from the documentation 
-for [Fepper for Drupal 8](https://github.com/electric-eloquence/fepper-drupal). 
-As such, there does not exist enough justification to maintain a separate Fepper 
-project for Drupal 7. Instead, populate your Fepper for Drupal 8 project with 
-the Drupal 7 backend and patterns: 
+for <a href="https://github.com/electric-eloquence/fepper-drupal" target="_blank">
+Fepper for Drupal 8</a>. As such, there does not exist enough justification to 
+maintain a separate Fepper project for Drupal 7. Instead, populate your Fepper 
+for Drupal 8 project with the Drupal 7 backend and patterns: 
 
-* Download the latest release of [Fepper for Drupal 8](https://github.com/electric-eloquence/fepper-drupal/releases).
+* Download the latest release of 
+  <a href="https://github.com/electric-eloquence/fepper-drupal/releases" target="_blank">
+  Fepper for Drupal 8</a>.
 * Unpack the Fepper for Drupal 8 download.
-* Download the latest release of [Drupal 7](https://www.drupal.org/project/drupal).
+* Download the latest release of 
+  <a href="https://www.drupal.org/project/drupal" target="_blank">Drupal 7</a>.
 * Unpack the Drupal 7 download.
 * Rename the unpacked Drupal 7 directory to `drupal`
 * Replace `backend/drupal` in Fepper for Drupal 8 with the unpacked `drupal` directory.
@@ -27,9 +30,11 @@ screenshot) in your Drupal 7 backend, follow these instructions:
 * Restart the web server.
 * Create a MySQL database.
 * Create a `settings.php` file by running the 
-  [Drupal 7 installation script](https://www.drupal.org/docs/7/installing-drupal-7/step-4-run-the-installation-script).
-* Download and enable the [CTools](https://www.drupal.org/project/ctools) and 
-  [Views](https://www.drupal.org/project/views) modules.
+  <a href="https://www.drupal.org/docs/7/installing-drupal-7/step-4-run-the-installation-script" target="_blank">
+  Drupal 7 installation script</a>.
+* Download and enable the 
+  <a href="https://www.drupal.org/project/ctools" target="_blank">CTools</a> and 
+  <a href="https://www.drupal.org/project/views" target="_blank">Views</a> modules.
 * Replace `backend/drupal/sites/default/files` in Fepper for Drupal 8 with the 
   `files` directory from this repository.
 * Restore `fepper-drupal-mysqldump.sql` into your MySQL database.
