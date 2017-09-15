@@ -1,0 +1,20 @@
+name = Fepper Sub
+description = Use this sub-theme to customize the Fepper base theme.
+core = 7.x
+base theme = fepper
+
+stylesheets[all][] = _styles/bld/style-sub.css
+
+scripts[] = _scripts/src/variables.styl
+scripts[] = _scripts/src/fepper-obj.js
+scripts[] = _scripts/src/behaviors-sub.js
+
+regions[branding] = Branding
+regions[breadcrumb] = Breadcrumb
+regions[header] = Header
+regions[highlighted] = Highlighted 
+regions[help] = Help 
+regions[content] = Content 
+regions[sidebar_first] = Left sidebar 
+regions[sidebar_second] = Right sidebar 
+regions[footer] = Footer

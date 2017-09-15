@@ -20,6 +20,7 @@ for Drupal 8 project with the Drupal 7 backend and patterns:
 * Replace `pref.yml` in Fepper for Drupal 8 with `pref.yml` from this repository.
 * Replace `source` in Fepper for Drupal 8 with `source` from this repository.
 * Copy `fepper` from this repository to `backend/drupal/sites/all/themes/`
+* Copy `fepper_sub` from this repository to `backend/drupal/sites/all/themes/`
 
 If you wish to replicate the look and feel of the Fepper demo site (as per the 
 screenshot) in your Drupal 7 backend, follow these instructions:
