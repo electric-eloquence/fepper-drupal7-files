@@ -1,0 +1,15 @@
+.node-article
+  margin-bottom: $space
+  > .submitted
+    font-size: 0.9em
+    font-style: italic
+    margin-bottom: 0.5em
+  > .links
+    margin-bottom: 0
+    li
+      padding: 0
+    a::before
+      content: "•"
+      margin-right: 0.25em 
+    body:not(.node-type-article) &
+      display: none

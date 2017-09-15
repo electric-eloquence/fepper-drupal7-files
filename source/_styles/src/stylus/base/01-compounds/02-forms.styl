@@ -49,24 +49,26 @@ input[type="search"]::-webkit-search-decoration
 .form-actions
   margin: 0
 #search-block-form
+  float: right
+  margin-top: $space-half
   .container-inline
     @extend .cf
-    div,
-    label
+    > div
       display: block
       float: left
+    label
+      display: none
   .form-item,
   .form-actions
     background: $white-translucent
   .form-item-search-block-form
-    float: left
     font-size: 1em
     margin-bottom: 0
     &::after
+      @extend .icon-search::before
       color: $black
-      content: "\73"
       position: absolute
-      top: 1.1rem
+      top: 2rem
       right: 1.7rem
       z-index: 1
   input
@@ -83,14 +85,21 @@ input[type="search"]::-webkit-search-decoration
       padding-left: 0
       position: relative
       width: 5rem
-      z-index: 1
       &:hover
         background: rgba(0, 0, 0, 0.3)
   @media all and (max-width: $bp-sm-max)
-    .container-inline
-      .form-item-search-block-form
-        clear: both
-    .form-item-search-block-form::after
-      top: 6rem
+    margin-top: 0
+    max-height: 0
+    overflow: hidden
+    position: absolute
+    top: $nav-toggle-n-border
+    right: 0
+    z-index: 2
+    .open &
+      max-height: 100%
+      overflow: visible
     input
       height: 3.7rem
+    .form-item-search-block-form
+      &::after
+        top: 1.1rem

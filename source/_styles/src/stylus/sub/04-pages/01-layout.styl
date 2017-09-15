@@ -1,14 +1,5 @@
-*[role="main"],
-.layout-container > *:not(footer)
-  @extend .lc
-#sidebar-second
-  h2
-    padding: 0 0 0.5em
-  li
-    padding: 0.25em 0
-    border-top: 1px solid $gray-light-3
-    > *
-      display: block
+[role="main"]
+  @extend .cf
 .layout-content
   @extend .cf
 @media all and (max-width: $bp-sm-max)
@@ -18,7 +9,7 @@
   .layout-content,
   .two-sidebars #sidebar-first
     float: left
-    width: 70%
+    width: 67%
     padding-right: 1em
   .one-sidebar #sidebar-first
     display: flex
@@ -26,12 +17,9 @@
     padding-right: 0
   #sidebar-second
     float: left
-    width: 30%
+    width: 33%
     padding: 0 0 0 1em
-/* Main */
-main[role="main"]
-  @extend .cf
-/* Hero Block */
+// Hero block
 #block-system-main
   @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
     position: relative;
