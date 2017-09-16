@@ -7,7 +7,7 @@ maintain a separate Fepper project for Drupal 7. Instead, populate your Fepper
 for Drupal 8 project with the Drupal 7 backend and patterns: 
 
 * Download the latest release of 
-  <a href="https://github.com/electric-eloquence/fepper-drupal/releases" target="_blank">
+  <a href="https://github.com/electric-eloquence/fepper-drupal/releases/latest" target="_blank">
   Fepper for Drupal 8</a>.
 * Unpack the Fepper for Drupal 8 download.
 * Download the latest release of 

@@ -549,7 +549,7 @@ input[type="search"]::-webkit-search-decoration {
   margin-top: 2em;
 }
 #comments h2 {
-  margin: 0.667em 0 0;
+  margin: 1.6rem 0 0;
 }
 #comments .comment {
   display: flex;
@@ -562,8 +562,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 #comments .comment .submitted > span {
   display: block;
-  font-size: 0.75em;
-  line-height: 1.333;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   margin-left: 2px;
 }
 #comments .comment .content {
@@ -773,8 +773,8 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (min-width: 768px) {
   #main-menu {
     border-top: 1px solid #ddd;
-    display: inline-block;
     margin-top: -0.1rem;
+    padding-bottom: 0.8rem;
   }
   #main-menu,
   #secondary-menu {
