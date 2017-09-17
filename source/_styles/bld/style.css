@@ -976,6 +976,9 @@ body:not(.node-type-article) .node-article > .links {
   margin-top: 1em;
 }
 @media all and (max-width: 1024px) {
+  #skip-link a {
+    display: none;
+  }
   #user-login-form input[type="text"],
   #user-login-form input[type="password"] {
     width: 20rem;
