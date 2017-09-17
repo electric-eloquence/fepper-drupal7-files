@@ -737,7 +737,6 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 767px) {
   #main-menu > .menu {
     background: rgba(255,255,255,0.95);
-    border-bottom: 1px solid #ddd;
     max-height: 0;
     overflow: hidden;
     position: absolute;
@@ -756,6 +755,7 @@ input[type="search"]::-webkit-search-decoration {
     padding-left: 2rem;
   }
   #main-menu.open > .menu {
+    border-bottom: 1px solid #ddd;
     max-height: 100%;
     padding-top: 5.4rem;
     width: 100%;
