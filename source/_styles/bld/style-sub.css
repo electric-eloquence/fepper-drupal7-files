@@ -52,6 +52,9 @@
     width: 66.66666666666667%;
     padding-right: 1em;
   }
+  .no-sidebars .layout-content {
+    width: 100%;
+  }
   .one-sidebar #sidebar-first {
     display: flex;
     justify-content: center;
