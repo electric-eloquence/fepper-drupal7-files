@@ -23,6 +23,7 @@
 // Styles specific to Compound subtypes.
 // /////////////////////////////////////////////////////////////////////////////
 @import 'base/01-compounds/00-text'
+@import 'base/01-compounds/01-blocks'
 @import 'base/01-compounds/02-forms'
 
 // /////////////////////////////////////////////////////////////////////////////
@@ -40,22 +41,13 @@
 @import 'base/04-pages/03-article'
 
 // Only in Drupal, not Fepper.
-#block-fepper-branding
-  a + a
-    @extend .visually-hidden
-#region-highlighted
-  padding-top: 0
-  padding-bottom: 0
-  @extend .cf
-#region-primary-menu
-  padding-bottom: 0
+#name-and-slogan
+  float: left
+  margin: $space-half
+.region-branding
+  clear: both
 #main-menu .menu
   @extend .cf
-#region-secondary-menu
-  padding-top: $space-and-half
-#region-primary-menu + #region-secondary-menu
-  padding-top: 0
-#region-breadcrumb,
 #breadcrumb
   font-size: 0.75em
   font-weight: bold

@@ -1,13 +1,11 @@
 .cf::before,
 #search-block-form .container-inline::before,
 #block-search-form .content::before,
-#region-highlighted::before,
 #main-menu .menu::before,
 .page-user .profile::before,
 .cf::after,
 #search-block-form .container-inline::after,
 #block-search-form .content::after,
-#region-highlighted::after,
 #main-menu .menu::after,
 .page-user .profile::after {
   content: " ";
@@ -16,7 +14,6 @@
 .cf::after,
 #search-block-form .container-inline::after,
 #block-search-form .content::after,
-#region-highlighted::after,
 #main-menu .menu::after,
 .page-user .profile::after {
   clear: both;
@@ -31,7 +28,6 @@
   padding: 0.8rem;
 }
 .visually-hidden,
-#block-fepper-branding a + a,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -232,7 +228,6 @@ aside {
   visibility: hidden !important;
 }
 .visually-hidden,
-#block-fepper-branding a + a,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -396,6 +391,10 @@ object {
 .more-link {
   font-style: italic;
   text-align: left;
+}
+#logo img {
+  float: left;
+  margin: 0.8rem 0;
 }
 form ol,
 form ul {
@@ -948,20 +947,13 @@ footer[role="contentinfo"] a {
 body:not(.node-type-article) .node-article > .links {
   display: none;
 }
-#region-highlighted {
-  padding-top: 0;
-  padding-bottom: 0;
+#name-and-slogan {
+  float: left;
+  margin: 0.8rem;
 }
-#region-primary-menu {
-  padding-bottom: 0;
+.region-branding {
+  clear: both;
 }
-#region-secondary-menu {
-  padding-top: 2.4rem;
-}
-#region-primary-menu + #region-secondary-menu {
-  padding-top: 0;
-}
-#region-breadcrumb,
 #breadcrumb {
   font-size: 0.75em;
   font-weight: bold;

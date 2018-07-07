@@ -2,8 +2,17 @@
 <div class="layout-container">
   <header class="header cf">
 
-    <div id="block-fepper-branding">
-      {{> 01-compounds/01-blocks/04-logo }}
+    <div id="block-fepper-branding cf">
+      {{# img.logo }}
+        {{# homepage? }}
+          {{^ text_h1? }}<h1>{{/ text_h1? }}
+        {{/ homepage? }}
+        {{> 01-compounds/01-blocks/04-logo.mustache }}
+        {{# homepage? }}
+          {{^ text_h1? }}</h1>{{/ text_h1? }}
+        {{/ homepage? }}
+      {{/ img.logo }}
+      {{! branding }}
     </div> <!-- /#block-fepper-branding -->
 
     {{# demo_site? }}

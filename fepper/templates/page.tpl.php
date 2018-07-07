@@ -8,19 +8,18 @@
 <div class="layout-container">
   <header class="header cf">
 
-    <div id="block-fepper-branding">
+    <div id="block-fepper-branding cf">
       <?php if ($logo): ?>
         <?php if ($is_front): ?>
-          <h1>
+          <?php if (!$page['branding'] || !$site_name || $title): ?><h1><?php endif; ?>
         <?php endif; ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
         </a>
         <?php if ($is_front): ?>
-          </h1>
+          <?php if (!$page['branding'] || !$site_name || $title): ?></h1><?php endif; ?>
         <?php endif; ?>
       <?php endif; ?>
-
       <?php
         // To get the $site_name / $site_slogan to show, add a block to the
         // Branding region in admin/structure/block.

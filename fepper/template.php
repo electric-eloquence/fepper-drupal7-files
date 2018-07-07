@@ -60,6 +60,11 @@ function fepper_preprocess_html(&$variables) {
  * Implements template_preprocess_page().
  */
 function fepper_preprocess_page(&$variables) {
+  // Set $variables['system_site_name'] to provide site name even when site_name
+  // has been switched off in the block configuration at
+  // admin/appearance/settings/fepper.
+  $variables['system_site_name'] = variable_get('site_name');
+
   // Get the entire main menu tree so we can render the expanded parts.
   $main_menu_tree = menu_tree_all_data('main-menu');
 
