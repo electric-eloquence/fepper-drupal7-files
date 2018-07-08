@@ -1,10 +1,12 @@
 .cf::before,
 #search-block-form .container-inline::before,
+#comments .submitted::before,
 #block-search-form .content::before,
 #main-menu .menu::before,
 .page-user .profile::before,
 .cf::after,
 #search-block-form .container-inline::after,
+#comments .submitted::after,
 #block-search-form .content::after,
 #main-menu .menu::after,
 .page-user .profile::after {
@@ -13,6 +15,7 @@
 }
 .cf::after,
 #search-block-form .container-inline::after,
+#comments .submitted::after,
 #block-search-form .content::after,
 #main-menu .menu::after,
 .page-user .profile::after {
@@ -269,6 +272,14 @@ div.error a {
     display: none;
   }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.4rem;
+}
 article h1,
 aside h1,
 nav h1,
@@ -292,7 +303,10 @@ h6 {
   font-size: 1em;
 }
 p {
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0;
+}
+.node-teaser p {
+  margin-top: 0;
 }
 a {
   color: #333;
@@ -548,30 +562,30 @@ input[type="search"]::-webkit-search-decoration {
   margin-top: 2em;
 }
 #comments h2 {
-  margin: 1.6rem 0 0;
+  margin-top: 1.6rem;
 }
 #comments .comment {
   display: flex;
   margin-top: 0.75em;
   padding-bottom: 0.5em;
 }
-#comments .comment .submitted {
+#comments .submitted {
   min-height: 11em;
   width: 12em;
 }
-#comments .comment .submitted > span {
+#comments .submitted > span {
   display: block;
   font-size: 1.2rem;
   line-height: 1.6rem;
   margin-left: 2px;
 }
-#comments .comment .content {
+#comments .content {
   padding-bottom: 0.5em;
 }
-#comments .comment .content p {
+#comments .content p {
   margin-bottom: 0;
 }
-#comments .comment .submitted + .content {
+#comments .submitted + .content {
   width: calc(100% - 12em);
 }
 #comments .user-picture img {
@@ -623,44 +637,44 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 480px) {
   #comments .comment {
     display: block;
-    margin: 0;
+    margin: 0 0 0.8rem;
     padding: 0;
     overflow: hidden;
   }
-  #comments .comment .submitted {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 0.5em;
-    min-height: 8.75rem;
-    position: relative;
+  #comments .submitted {
+    min-height: 0;
     width: auto;
-  }
-  #comments .comment .submitted > a,
-  #comments .comment .submitted > span {
-    display: block;
-    margin: 0;
-    max-width: calc(100% - 8.75rem - 0.2rem);
-  }
-  #comments .comment .submitted + .content {
-    width: auto;
-  }
-  #comments .comment .content {
-    padding-bottom: 0;
   }
   #comments .user-picture {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    float: left;
   }
   #comments .user-picture img {
     margin: 0;
+  }
+  #comments .user-picture {
+    margin-right: 0.4rem;
   }
   #comments .username::before {
     content: "";
   }
   #comments .username::after {
     content: "";
+  }
+  #comments .content {
+    padding-bottom: 0;
+  }
+  #comments .content p {
+    margin-top: 0.4rem;
+  }
+  #comments .submitted + .content {
+    width: auto;
+  }
+  #comments .links {
+    margin-top: 0;
+    text-align: right;
+  }
+  #comments .filter-wrapper {
+    padding-bottom: 0;
   }
   #comments .indented .comment > * {
     margin-left: 2px;
@@ -890,9 +904,6 @@ header.header {
     margin: 0;
   }
 }
-#sidebar-second h2 {
-  padding: 0 0 0.5em;
-}
 #sidebar-second li {
   padding: 0.25em 0;
   border-top: 1px solid #ddd;
@@ -921,6 +932,14 @@ footer[role="contentinfo"] a {
 .region-footer .content {
   margin-bottom: 0;
 }
+.region-footer .content p {
+  margin: 0;
+}
+@media all and (max-width: 480px) {
+  .region-footer .content p {
+    text-align: center;
+  }
+}
 @media all and (min-width: 768px) {
   .region-footer .content {
     float: right;
@@ -946,6 +965,9 @@ footer[role="contentinfo"] a {
 }
 body:not(.node-type-article) .node-article > .links {
   display: none;
+}
+.node-teaser {
+  margin-bottom: 0;
 }
 #name-and-slogan {
   float: left;

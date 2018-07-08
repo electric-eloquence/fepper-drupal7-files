@@ -16,5 +16,10 @@ footer[role="contentinfo"]
   @extend .lc
   .content
     margin-bottom: 0
+    p
+      margin: 0
+    @media all and (max-width: $bp-xs-max)
+      p
+        text-align: center
     @media all and (min-width: $bp-med)
       float: right

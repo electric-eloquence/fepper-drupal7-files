@@ -2,25 +2,25 @@
   border-top: 1px solid $gray-light-3
   margin-top: 2em
   h2
-    margin: $space 0 0
+    margin-top: $space
   .comment
     display: flex 
     margin-top: 0.75em
     padding-bottom: 0.5em
-    .submitted
-      min-height: 11em
-      width: 12em
-      > span
-        display: block
-        font-size: 1.2rem
-        line-height: 1.6rem
-        margin-left: 2px
-    .content
-      padding-bottom: 0.5em
-      p
-        margin-bottom: 0
-    .submitted + .content
-      width: calc(100% - 12em)
+  .submitted
+    min-height: 11em
+    width: 12em
+    > span
+      display: block
+      font-size: 1.2rem
+      line-height: 1.6rem
+      margin-left: 2px
+  .content
+    padding-bottom: 0.5em
+    p
+      margin-bottom: 0
+  .submitted + .content
+    width: calc(100% - 12em)
   .user-picture
     img
       display: block
@@ -60,37 +60,35 @@
     $img-size-xs = 8.75rem
     .comment
       display: block
-      margin: 0
+      margin: 0 0 $space-half
       padding: 0
       overflow: hidden
-      .submitted
-        display: flex
-        flex-direction: column
-        justify-content: flex-end
-        margin-bottom: 0.5em
-        min-height: $img-size-xs
-        position: relative
-        width: auto
-        > a,
-        > span
-          display: block
-          margin: 0
-          max-width: "calc(100% - %s - 0.2rem)" % $img-size-xs
-      .submitted + .content
-        width: auto
-      .content
-        padding-bottom: 0
+    .submitted
+      @extend .cf
+      min-height: 0
+      width: auto
     .user-picture
-      position: absolute
-      right: 0
-      bottom: 0
+      float: left
       img
         margin: 0
+    .user-picture
+      margin-right: $space-quarter
     .username
       &::before
         content: ""
       &::after
         content: ""
+    .content
+      padding-bottom: 0
+      p
+        margin-top: $space-quarter
+    .submitted + .content
+      width: auto
+    .links
+      margin-top: 0
+      text-align: right
+    .filter-wrapper
+      padding-bottom: 0
     .indented
       .comment
         > *

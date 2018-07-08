@@ -1,12 +1,16 @@
 #block-views-recent-content-block-2,
 .view-id-recent_content.view-display-id-page_1
   @media all and (max-width: $bp-xs-max)
+    h2
+      text-align: center
     .field-name-field-image
+      display: flex
+      justify-content: center
       a
         display: block
         max-width: 22.5rem
   @media all and (max-width: $bp-sm-max)
-    .node-article
+    .node-teaser
       > h2
         font-size: 1.8rem
   @media all and (min-width: $bp-small)
@@ -16,13 +20,14 @@
         clear: both
         float: left
         margin-bottom: $space-and-half
-    .node-article
+    .node-teaser
       > h2,
       .field-name-body p
         float: right
-        margin-top: 0
         padding: 0 1.6rem
         width: 2 * (100% / 3)
+      > h2
+        margin-top: 0
       img
         float: left
         height: auto

@@ -1,6 +1,9 @@
 [role="main"],
 .layout-content
   @extend .cf
+@media all and (max-width: $bp-xs-max)
+  #sidebar-second
+    text-align: center
 @media all and (max-width: $bp-sm-max)
   .layout-content
     clear: both

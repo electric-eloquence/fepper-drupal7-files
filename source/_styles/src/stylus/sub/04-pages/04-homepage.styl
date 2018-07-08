@@ -21,6 +21,7 @@
       .views-field-title
         display: flex
         flex-flow: column nowrap
+        align-items: center
         justify-content: center
         height: 8.7rem
     @media all and (max-width: $bp-sm-max)
@@ -73,6 +74,9 @@
         font-size: 1.8rem
         font-weight: bold
         line-height: 1.2
+  @media all and (max-width: $bp-xs-max)
+    .views-field-title
+      text-align: center
   @media all and (max-width: $bp-sm-max)
     .region-content > .views-row
       .views-field-title
