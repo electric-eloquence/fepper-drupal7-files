@@ -1,8 +1,37 @@
-#main-menu > .menu,
-#secondary-menu
-  a
-    display: block
+#main-menu
+  .menu
+    @extend .cf
+  > .menu
+    a
+      display: block
+  @media all and (max-width: $bp-sm-max)
+    > .menu
+      max-height: 0
+      overflow: hidden
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      li
+        background: $white-translucent
+        border-top: 1px solid $gray-light-3
+        a
+          display: table
+          padding: $space-half $space
+        li
+          padding-left: 2rem;
+    // Open hamburger menu.
+    &.open
+      > .menu
+        border-bottom: 1px solid $gray-light-3
+        max-height: 100%
+        padding-top: $nav-toggle-height
+        width: 100%
   @media all and (min-width: $bp-med)
+    border-top: 1px solid $gray-light-3
+    float: left
+    margin-top: -0.1rem
+    padding: 1.2rem 0 $space-half
     li
       float: left
     a
@@ -39,42 +68,6 @@
         padding-left: 1rem
       ul
         background: transparent
-@media all and (max-width: $bp-sm-max)
-  #main-menu > .menu
-    background: $white-translucent
-    max-height: 0
-    overflow: hidden
-    position: absolute
-    top: 0
-    left: 0
-    z-index: 1
-    li
-      border-top: 1px solid $gray-light-3
-      a
-        display: table
-        padding: $space-half $space
-      li
-        padding-left: 2rem;
-  // Open hamburger menu.
-  #main-menu.open > .menu
-    border-bottom: 1px solid $gray-light-3
-    max-height: 100%
-    padding-top: $nav-toggle-height
-    width: 100%
-  #secondary-menu
-    padding-top: 1em
-    li
-      float: left
-      a
-        padding: 0 1em
-@media all and (min-width: $bp-med)
-  #main-menu
-    border-top: 1px solid $gray-light-3
-    margin-top: -0.1rem
-    padding-bottom: $space-half
-  #main-menu,
-  #secondary-menu
-    padding-top: 1.2rem
 // Pager.
 .item-list
   .pager

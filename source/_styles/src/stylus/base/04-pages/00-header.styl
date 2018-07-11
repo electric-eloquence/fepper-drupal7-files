@@ -11,11 +11,11 @@ header.header
     width: "calc(%s - %s)" % ($max-width $space)
 #block-fepper-branding
   position: relative
-  img
-    float: left
-    margin: $space-half 0
-    @media all and (max-width: $bp-sm-max)
-      height: 3.7rem
+  h1
+    margin-bottom: 0
+.region-branding,
+.region-header
+  clear: both
 // Icon fonts in header
 #main-menu,
 #block-search-form
@@ -26,10 +26,11 @@ header.header
     cursor: pointer
     float: right
     margin: 0
-    width: $nav-toggle-n-border
-    height: $nav-toggle-height
+    overflow: hidden
     position: relative
     z-index: 2
+    width: $nav-toggle-n-border
+    height: $nav-toggle-height
     &::before
       color: $gray-dark
       float: right
@@ -44,7 +45,6 @@ header.header
   .page-search &
     display: none
   h2
-    float: right
     &::before
       @extend .icon-search::before
   .content

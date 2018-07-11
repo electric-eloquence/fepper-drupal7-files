@@ -65,9 +65,18 @@ function fepper_preprocess_page(&$variables) {
   // admin/appearance/settings/fepper.
   $variables['system_site_name'] = variable_get('site_name');
 
+  // Determine if the main-menu has been enabled as a block within a region at
+  // admin/structure/block. Possible values are 0 or 1.
+  $variables['main_menu_block_enabled'] = db_select('block', 'b')
+    ->fields('b', array('status'))
+    ->condition('delta', 'main-menu', '=')
+    ->condition('theme', 'fepper', '=')
+    ->execute()
+    ->fetchField();
+
   // Get the entire main menu tree so we can render the expanded parts.
   $main_menu_tree = menu_tree_all_data('main-menu');
 
-  // Add the rendered output to the $main_menu_expanded variable.
+  // Add the output of the expanded menu tree to the $variables array.
   $variables['main_menu_expanded'] = menu_tree_output($main_menu_tree);
 }

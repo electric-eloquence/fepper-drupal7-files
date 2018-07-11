@@ -34,9 +34,11 @@
 }
 @media all and (min-width: 768px) {
   #main-menu {
-    display: inline-block;
     padding-bottom: 0;
   }
+}
+.region-header {
+  clear: none;
 }
 .region-header #block-search-form .content::before {
   content: "";

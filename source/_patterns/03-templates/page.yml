@@ -60,30 +60,16 @@
 
           <?php print render($page['branding']); ?>
         <?php endif; ?>
-'header': |2
-  <?php print render($page['header']); ?>
 '> 02-components/03-navigation/00-primary-nav': |2
-  <?php if ($main_menu_expanded || $secondary_menu): ?>
+  <?php if (!$main_menu_block_enabled): ?>
         <nav id="main-menu" role="navigation">
           <h2 class="icon-menu">Main menu</h2>
           <?php print render($main_menu_expanded); ?>
         </nav> <!-- /#navigation -->
-        <?php print theme(
-          'links__system_secondary_menu',
-          array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'id' => 'secondary-menu',
-            ),
-            'heading' => array(
-              'text' => t('Secondary menu'),
-              'level' => 'h2',
-              'class' => 'element-invisible',
-            ),
-          )
-        ); ?>
       <?php endif; ?>
-'breadcrumb': |2
+'fpo_header': |2
+  <?php print render($page['header']); ?>
+'fpo_breadcrumb': |2
   <?php
       // To get the breadcrumbs to show, add a block to the Breadcrumb region in
       // admin/structure/block.
@@ -103,7 +89,7 @@
       </div>
 '/ alert': |2
   <?php endif; ?>
-'highlighted': |2
+'fpo_highlighted': |2
   <?php if (!empty($page['highlighted'])): ?>
           <div id="highlighted"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>

@@ -1,14 +1,14 @@
 .cf::before,
 #search-block-form .container-inline::before,
 #comments .submitted::before,
-#block-search-form .content::before,
 #main-menu .menu::before,
+#block-search-form .content::before,
 .page-user .profile::before,
 .cf::after,
 #search-block-form .container-inline::after,
 #comments .submitted::after,
-#block-search-form .content::after,
 #main-menu .menu::after,
+#block-search-form .content::after,
 .page-user .profile::after {
   content: " ";
   display: table;
@@ -16,8 +16,8 @@
 .cf::after,
 #search-block-form .container-inline::after,
 #comments .submitted::after,
-#block-search-form .content::after,
 #main-menu .menu::after,
+#block-search-form .content::after,
 .page-user .profile::after {
   clear: both;
 }
@@ -410,6 +410,11 @@ object {
   float: left;
   margin: 0.8rem 0;
 }
+@media all and (max-width: 767px) {
+  #logo img {
+    height: 3.7rem;
+  }
+}
 form ol,
 form ul {
   list-style: none;
@@ -683,73 +688,11 @@ input[type="search"]::-webkit-search-decoration {
     padding-bottom: 0.5em;
   }
 }
-#main-menu > .menu a,
-#secondary-menu a {
+#main-menu > .menu a {
   display: block;
-}
-@media all and (min-width: 768px) {
-  #main-menu > .menu li,
-  #secondary-menu li {
-    float: left;
-  }
-  #main-menu > .menu a,
-  #secondary-menu a {
-    padding: 0.4rem 1.6rem;
-  }
-  #main-menu > .menu .expanded > a::after,
-  #secondary-menu .expanded > a::after {
-    color: #808080;
-    content: "▼";
-    font-size: 0.75em;
-    margin-left: 0.8rem;
-  }
-  #main-menu > .menu .expanded ul,
-  #secondary-menu .expanded ul {
-    margin: 0;
-    padding: 0;
-  }
-  #main-menu > .menu .expanded ul li,
-  #secondary-menu .expanded ul li {
-    float: none;
-    border: 1px solid #eee;
-    border-bottom: 0;
-  }
-  #main-menu > .menu .expanded ul li:last-child,
-  #secondary-menu .expanded ul li:last-child {
-    border-bottom: 1px solid #eee;
-  }
-  #main-menu > .menu .expanded:hover ul,
-  #secondary-menu .expanded:hover ul {
-    max-height: 100%;
-  }
-  #main-menu > .menu > .expanded > ul,
-  #secondary-menu > .expanded > ul {
-    background: rgba(255,255,255,0.95);
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    -webkit-transition: max-height 0.3s ease;
-    -moz-transition: max-height 0.3s ease;
-    -ms-transition: max-height 0.3s ease;
-    -o-transition: max-height 0.3s ease;
-    transition: max-height 0.3s ease;
-    z-index: 2;
-  }
-  #main-menu > .menu > .expanded > ul > .expanded li,
-  #secondary-menu > .expanded > ul > .expanded li {
-    border-right: 0;
-    border-bottom: 0;
-    border-left: 0;
-    padding-left: 1rem;
-  }
-  #main-menu > .menu > .expanded > ul ul,
-  #secondary-menu > .expanded > ul ul {
-    background: transparent;
-  }
 }
 @media all and (max-width: 767px) {
   #main-menu > .menu {
-    background: rgba(255,255,255,0.95);
     max-height: 0;
     overflow: hidden;
     position: absolute;
@@ -758,6 +701,7 @@ input[type="search"]::-webkit-search-decoration {
     z-index: 1;
   }
   #main-menu > .menu li {
+    background: rgba(255,255,255,0.95);
     border-top: 1px solid #ddd;
   }
   #main-menu > .menu li a {
@@ -773,25 +717,61 @@ input[type="search"]::-webkit-search-decoration {
     padding-top: 5.4rem;
     width: 100%;
   }
-  #secondary-menu {
-    padding-top: 1em;
-  }
-  #secondary-menu li {
-    float: left;
-  }
-  #secondary-menu li a {
-    padding: 0 1em;
-  }
 }
 @media all and (min-width: 768px) {
   #main-menu {
     border-top: 1px solid #ddd;
+    float: left;
     margin-top: -0.1rem;
-    padding-bottom: 0.8rem;
+    padding: 1.2rem 0 0.8rem;
   }
-  #main-menu,
-  #secondary-menu {
-    padding-top: 1.2rem;
+  #main-menu li {
+    float: left;
+  }
+  #main-menu a {
+    padding: 0.4rem 1.6rem;
+  }
+  #main-menu .expanded > a::after {
+    color: #808080;
+    content: "▼";
+    font-size: 0.75em;
+    margin-left: 0.8rem;
+  }
+  #main-menu .expanded ul {
+    margin: 0;
+    padding: 0;
+  }
+  #main-menu .expanded ul li {
+    float: none;
+    border: 1px solid #eee;
+    border-bottom: 0;
+  }
+  #main-menu .expanded ul li:last-child {
+    border-bottom: 1px solid #eee;
+  }
+  #main-menu .expanded:hover ul {
+    max-height: 100%;
+  }
+  #main-menu > .expanded > ul {
+    background: rgba(255,255,255,0.95);
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transition: max-height 0.3s ease;
+    -moz-transition: max-height 0.3s ease;
+    -ms-transition: max-height 0.3s ease;
+    -o-transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease;
+    z-index: 2;
+  }
+  #main-menu > .expanded > ul > .expanded li {
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    padding-left: 1rem;
+  }
+  #main-menu > .expanded > ul ul {
+    background: transparent;
   }
 }
 .item-list .pager {
@@ -851,14 +831,12 @@ header.header {
 #block-fepper-branding {
   position: relative;
 }
-#block-fepper-branding img {
-  float: left;
-  margin: 0.8rem 0;
+#block-fepper-branding h1 {
+  margin-bottom: 0;
 }
-@media all and (max-width: 767px) {
-  #block-fepper-branding img {
-    height: 3.7rem;
-  }
+.region-branding,
+.region-header {
+  clear: both;
 }
 #main-menu h2,
 #block-search-form h2 {
@@ -868,10 +846,11 @@ header.header {
   cursor: pointer;
   float: right;
   margin: 0;
-  width: 5.5rem;
-  height: 5.4rem;
+  overflow: hidden;
   position: relative;
   z-index: 2;
+  width: 5.5rem;
+  height: 5.4rem;
 }
 #main-menu h2::before,
 #block-search-form h2::before {
@@ -895,9 +874,6 @@ header.header {
 }
 .page-search #block-search-form {
   display: none;
-}
-#block-search-form h2 {
-  float: right;
 }
 @media all and (max-width: 767px) {
   #block-search-form {
@@ -936,7 +912,7 @@ footer[role="contentinfo"] a {
   margin: 0;
 }
 @media all and (max-width: 480px) {
-  .region-footer .content p {
+  .region-footer .content {
     text-align: center;
   }
 }
@@ -971,10 +947,10 @@ body:not(.node-type-article) .node-article > .links {
 }
 #name-and-slogan {
   float: left;
-  margin: 0.8rem;
+  margin: 0.4em 1em;
 }
-.region-branding {
-  clear: both;
+#site-name {
+  font-size: 2em;
 }
 #breadcrumb {
   font-size: 0.75em;

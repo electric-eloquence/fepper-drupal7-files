@@ -27,11 +27,18 @@
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
 }
+@media all and (max-width: 480px) {
+  .more-link {
+    text-align: center;
+  }
+}
 @media all and (min-width: 768px) {
   #main-menu {
-    display: inline-block;
     padding-bottom: 0;
   }
+}
+.region-header {
+  clear: none;
 }
 .region-header #block-search-form .content::before {
   content: "";
@@ -39,6 +46,11 @@
 }
 .region-header #block-search-form .content::after {
   clear: none;
+}
+@media all and (max-width: 480px) {
+  #sidebar-second {
+    text-align: center;
+  }
 }
 @media all and (max-width: 767px) {
   .layout-content {
@@ -92,6 +104,15 @@
   }
 }
 @media all and (max-width: 480px) {
+  #block-views-recent-content-block-2 h2,
+  .view-id-recent_content.view-display-id-page_1 h2 {
+    text-align: center;
+  }
+  #block-views-recent-content-block-2 .field-name-field-image,
+  .view-id-recent_content.view-display-id-page_1 .field-name-field-image {
+    display: flex;
+    justify-content: center;
+  }
   #block-views-recent-content-block-2 .field-name-field-image a,
   .view-id-recent_content.view-display-id-page_1 .field-name-field-image a {
     display: block;
@@ -99,8 +120,8 @@
   }
 }
 @media all and (max-width: 767px) {
-  #block-views-recent-content-block-2 .node-article > h2,
-  .view-id-recent_content.view-display-id-page_1 .node-article > h2 {
+  #block-views-recent-content-block-2 .node-teaser > h2,
+  .view-id-recent_content.view-display-id-page_1 .node-teaser > h2 {
     font-size: 1.8rem;
   }
 }
@@ -115,17 +136,20 @@
     float: left;
     margin-bottom: 2.4rem;
   }
-  #block-views-recent-content-block-2 .node-article > h2,
-  .view-id-recent_content.view-display-id-page_1 .node-article > h2,
-  #block-views-recent-content-block-2 .node-article .field-name-body p,
-  .view-id-recent_content.view-display-id-page_1 .node-article .field-name-body p {
+  #block-views-recent-content-block-2 .node-teaser > h2,
+  .view-id-recent_content.view-display-id-page_1 .node-teaser > h2,
+  #block-views-recent-content-block-2 .node-teaser .field-name-body p,
+  .view-id-recent_content.view-display-id-page_1 .node-teaser .field-name-body p {
     float: right;
-    margin-top: 0;
     padding: 0 1.6rem;
     width: 66.66666666666667%;
   }
-  #block-views-recent-content-block-2 .node-article img,
-  .view-id-recent_content.view-display-id-page_1 .node-article img {
+  #block-views-recent-content-block-2 .node-teaser > h2,
+  .view-id-recent_content.view-display-id-page_1 .node-teaser > h2 {
+    margin-top: 0;
+  }
+  #block-views-recent-content-block-2 .node-teaser img,
+  .view-id-recent_content.view-display-id-page_1 .node-teaser img {
     float: left;
     height: auto;
     width: 33.333333333333336%;
@@ -158,6 +182,7 @@
   .front .layout-content #block-system-main .views-field-title {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     justify-content: center;
     height: 8.7rem;
   }
@@ -230,6 +255,11 @@
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.2;
+}
+@media all and (max-width: 480px) {
+  .front .layout-content .views-field-title {
+    text-align: center;
+  }
 }
 @media all and (max-width: 767px) {
   .front .layout-content .region-content > .views-row .views-field-title a {

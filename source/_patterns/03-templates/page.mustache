@@ -2,7 +2,7 @@
 <div class="layout-container">
   <header class="header cf">
 
-    <div id="block-fepper-branding cf">
+    <div id="block-fepper-branding">
       {{# img.logo }}
         {{# homepage? }}
           {{^ text_h1? }}<h1>{{/ text_h1? }}
@@ -15,19 +15,19 @@
       {{! branding }}
     </div> <!-- /#block-fepper-branding -->
 
+    {{> 02-components/03-navigation/00-primary-nav }}
+
     {{# demo_site? }}
       {{> 03-templates/region(
         region_classes: 'region region-header',
         "templates-block--header?": true
       ) }}
     {{/ demo_site? }}
-    {{{ header }}}
-
-    {{> 02-components/03-navigation/00-primary-nav }}
+    {{{ fpo_header }}}
 
   </header> <!-- /.header -->
 
-  {{{ breadcrumb }}}
+  {{{ fpo_breadcrumb }}}
 
   {{# alert }}
     {{> 01-compounds/00-text/02-alert }}
@@ -37,7 +37,7 @@
     <a id="main-content" tabindex="-1"></a>
 
     <div class="layout-content">
-      {{{ highlighted }}}
+      {{{ fpo_highlighted }}}
 
       {{^ front? }}
         {{{ title_prefix }}}
