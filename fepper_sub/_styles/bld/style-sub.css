@@ -1,13 +1,19 @@
 .cf::before,
+#search-block-form .container-inline::before,
+.region-header #block-search-form .content::before,
 [role="main"]::before,
 .layout-content::before,
 .cf::after,
+#search-block-form .container-inline::after,
+.region-header #block-search-form .content::after,
 [role="main"]::after,
 .layout-content::after {
   content: " ";
   display: table;
 }
 .cf::after,
+#search-block-form .container-inline::after,
+.region-header #block-search-form .content::after,
 [role="main"]::after,
 .layout-content::after {
   clear: both;
@@ -27,9 +33,220 @@
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
 }
+.header-icon-font,
+.region-header #block-search-form h2 {
+  background: rgba(255,255,255,0.95);
+  color: transparent;
+  cursor: pointer;
+  float: right;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  width: 5.5rem;
+  height: 5.4rem;
+}
+.header-icon-font::before,
+.region-header #block-search-form h2::before {
+  color: #333;
+  float: right;
+  font-size: 2.1rem;
+  padding: 0.8em;
+}
+.header-icon-font:hover::before,
+.region-header #block-search-form h2:hover::before {
+  color: #808080;
+}
+@media all and (min-width: 768px) {
+  .header-icon-font,
+  .region-header #block-search-form h2 {
+    display: none;
+  }
+}
+@font-face {
+  font-family: 'icons';
+  src: url("fonts/icons.eot");
+  src: url("fonts/icons.eot?#iefix") format("embedded-opentype"), url("fonts/icons.woff") format("woff"), url("fonts/icons.ttf") format("truetype"), url("fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-font,
+.icon-twitter::before,
+.icon-stumbleupon::before,
+.icon-pinterest::before,
+.icon-linkedin::before,
+.icon-google-plus::before,
+.icon-search::before,
+.icon-play::before,
+.icon-menu::before,
+.icon-arrow-left::before,
+.icon-arrow-right::before,
+.icon-bubble::before,
+.icon-facebook::before,
+.icon-feed::before,
+.icon-youtube::before,
+.icon-tag::before,
+.icon-tumblr::before,
+.icon-instagram::before,
+.icon-podcast::before,
+.icon-android::before,
+.icon-apple::before,
+.icon-envelope::before,
+.icon-arrow::before,
+#search-block-form .form-item-search-block-form::after,
+.region-header #block-search-form h2::before {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-twitter::before {
+  content: "\74";
+}
+.icon-stumbleupon::before {
+  content: "\75";
+}
+.icon-pinterest::before {
+  content: "\70";
+}
+.icon-linkedin::before {
+  content: "\69";
+}
+.icon-google-plus::before {
+  content: "\67";
+}
+.icon-search::before,
+#search-block-form .form-item-search-block-form::after,
+.region-header #block-search-form h2::before {
+  content: "\73";
+}
+.icon-play::before {
+  content: "\61";
+}
+.icon-menu::before {
+  content: "\21";
+}
+.icon-arrow-left::before {
+  content: "\23";
+}
+.icon-arrow-right::before {
+  content: "\24";
+}
+.icon-bubble::before {
+  content: "\25";
+}
+.icon-facebook::before {
+  content: "\66";
+}
+.icon-feed::before {
+  content: "\27";
+}
+.icon-youtube::before {
+  content: "\79";
+}
+.icon-tag::before {
+  content: "\28";
+}
+.icon-tumblr::before {
+  content: "\6d";
+}
+.icon-instagram::before {
+  content: "\22";
+}
+.icon-podcast::before {
+  content: "\26";
+}
+.icon-android::before {
+  content: "\29";
+}
+.icon-apple::before {
+  content: "\2a";
+}
+.icon-envelope::before {
+  content: "\2b";
+}
+.icon-arrow::before {
+  content: "\61";
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 @media all and (max-width: 480px) {
   .more-link {
     text-align: center;
+  }
+}
+#search-block-form {
+  float: right;
+  margin-top: 0.8rem;
+}
+#search-block-form .container-inline > div {
+  display: block;
+  float: left;
+}
+#search-block-form .container-inline label {
+  display: none;
+}
+#search-block-form .form-item,
+#search-block-form .form-actions {
+  background: rgba(255,255,255,0.95);
+}
+#search-block-form .form-item-search-block-form {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+#search-block-form .form-item-search-block-form::after {
+  color: #000;
+  position: absolute;
+  top: 2rem;
+  right: 1.7rem;
+  z-index: 1;
+}
+#search-block-form input {
+  background: transparent;
+  height: 4rem;
+}
+#search-block-form input[id^="edit-search-block-form"] {
+  width: 11.5em;
+}
+#search-block-form input[id^="edit-submit"] {
+  border: 1px solid #808080;
+  border-left: 0;
+  color: transparent;
+  font-size: 0.85em;
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  width: 5rem;
+}
+#search-block-form input[id^="edit-submit"]:hover {
+  background: rgba(0,0,0,0.3);
+}
+@media all and (max-width: 767px) {
+  #search-block-form {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    z-index: 2;
+  }
+  .open #search-block-form {
+    max-height: 100%;
+    overflow: visible;
+  }
+  #search-block-form input {
+    height: 3.7rem;
+  }
+  #search-block-form .form-item-search-block-form::after {
+    top: 1.1rem;
   }
 }
 @media all and (min-width: 768px) {
@@ -40,12 +257,26 @@
 .region-header {
   clear: none;
 }
+.region-header #block-search-form {
+  position: relative;
+}
+.region-header #block-search-form h2 {
+  border-left: 1px solid #ddd;
+}
 .region-header #block-search-form .content::before {
   content: "";
   display: inline;
 }
 .region-header #block-search-form .content::after {
   clear: none;
+}
+.page-search .region-header #block-search-form {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .region-header #block-search-form {
+    margin: 0;
+  }
 }
 @media all and (max-width: 480px) {
   #sidebar-second {

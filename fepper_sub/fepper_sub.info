@@ -9,12 +9,11 @@ scripts[] = _scripts/src/variables.styl
 scripts[] = _scripts/src/fepper-obj.js
 scripts[] = _scripts/src/behaviors-sub.js
 
-regions[branding] = Branding
-regions[breadcrumb] = Breadcrumb
 regions[header] = Header
 regions[highlighted] = Highlighted 
 regions[help] = Help 
 regions[content] = Content 
-regions[sidebar_first] = Left sidebar 
-regions[sidebar_second] = Right sidebar 
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
 regions[footer] = Footer
+regions[breadcrumb] = Breadcrumb
