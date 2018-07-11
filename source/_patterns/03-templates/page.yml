@@ -28,7 +28,7 @@
   <?php endif; ?>
 '/ img.logo': |2
   <?php endif; ?>
-'! branding': |2
+'fpo_branding': |2
   <?php if ($site_name || $site_slogan): ?>
           <div id="name-and-slogan">
             <?php if ($site_name): ?>
@@ -69,7 +69,8 @@
 'fpo_breadcrumb': |2
   <?php
       // To get the breadcrumbs to show, add a block to the Breadcrumb region at
-      // admin/structure/block.
+      // admin/structure/block. This could be a custom block consisting of just
+      // <span></span> if you just want breadcrumbs and nothing else.
     ?>
     <?php if ($page['breadcrumb']): ?>
       <?php if ($breadcrumb): ?>

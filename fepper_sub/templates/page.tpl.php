@@ -63,7 +63,8 @@
 
   <?php
     // To get the breadcrumbs to show, add a block to the Breadcrumb region at
-    // admin/structure/block.
+    // admin/structure/block. This could be a custom block consisting of just
+    // <span></span> if you just want breadcrumbs and nothing else.
   ?>
   <?php if ($page['breadcrumb']): ?>
     <?php if ($breadcrumb): ?>
