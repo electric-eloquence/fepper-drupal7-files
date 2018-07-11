@@ -675,7 +675,7 @@ input[type="search"]::-webkit-search-decoration {
     width: auto;
   }
   #comments .links {
-    margin-top: 0;
+    margin: 0 0.8rem 0 0;
     text-align: right;
   }
   #comments .filter-wrapper {
