@@ -14,7 +14,7 @@
           <?php if (!$site_name || $title): ?><h1><?php endif; ?>
         <?php endif; ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+          <img src="<?php print $logo; ?>" alt="<?php print $system_site_name; ?>" /></a>
         </a>
         <?php if ($is_front): ?>
           <?php if (!$site_name || $title): ?></h1><?php endif; ?>
@@ -64,7 +64,7 @@
   <?php
     // To get the breadcrumbs to show, add a block to the Breadcrumb region at
     // admin/structure/block. This could be a custom block consisting of just
-    // <span></span>
+    // <span></span> if you just want breadcrumbs and nothing else.
   ?>
   <?php if ($page['breadcrumb']): ?>
     <?php if ($breadcrumb): ?>

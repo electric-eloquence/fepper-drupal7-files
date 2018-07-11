@@ -21,7 +21,7 @@
 'img.logo.src': |2
   <?php print $logo; ?>
 'img.logo.alt': |2
-  <?php print t('Home'); ?>
+  <?php print $system_site_name; ?>
 '/ text_h1\?': |2
   <?php endif; ?>
 '/ homepage\?': |2
