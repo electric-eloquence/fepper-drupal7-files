@@ -862,6 +862,11 @@ body:not(.node-type-article) .node-article > .links {
 }
 #site-name {
   font-size: 2em;
+  font-weight: bold;
+  line-height: 1.2;
+}
+#site-name h1 {
+  font-size: 1em;
 }
 #breadcrumb {
   font-size: 0.75em;

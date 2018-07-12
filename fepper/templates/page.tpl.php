@@ -10,34 +10,40 @@
 
     <div id="block-fepper-branding">
       <?php if ($logo): ?>
+        <?php
+          // Wrap in h1 on front page when the site name is not configured to be
+          // rendered.
+        ?>
         <?php if ($is_front): ?>
-          <?php if (!$site_name || $title): ?><h1><?php endif; ?>
+          <?php if (!$site_name): ?><h1><?php endif; ?>
         <?php endif; ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print $system_site_name; ?>" /></a>
+          <img src="<?php print $logo; ?>" alt="<?php print $system_site_name; ?>" />
         </a>
         <?php if ($is_front): ?>
-          <?php if (!$site_name || $title): ?></h1><?php endif; ?>
+          <?php if (!$site_name): ?></h1><?php endif; ?>
         <?php endif; ?>
       <?php endif; ?>
       <?php if ($site_name || $site_slogan): ?>
         <div id="name-and-slogan">
           <?php if ($site_name): ?>
-            <?php if ($title): ?>
-              <div id="site-name"><strong>
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-                  <span><?php print $site_name; ?></span>
-                </a>
-              </strong></div>
-            <?php else: /* Use h1 when the content title is empty */ ?>
+            <?php
+              // Wrap in h1 on front page or when the content title is empty.
+            ?>
+            <?php if ($is_front || !$title): ?>
               <h1 id="site-name">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-                  <span><?php print $site_name; ?></span>
-                </a>
+            <?php else: ?>
+              <div id="site-name">
+            <?php endif; ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+              <?php print $site_name; ?>
+            </a>
+            <?php if ($is_front || !$title): ?>
               </h1>
+            <?php else: ?>
+              </div>
             <?php endif; ?>
           <?php endif; ?>
-
           <?php if ($site_slogan): ?>
             <div id="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
@@ -70,7 +76,6 @@
     <?php if ($breadcrumb): ?>
       <nav id="breadcrumb" role="navigation"><?php print $breadcrumb; ?></nav>
     <?php endif; ?>
-
     <?php print render($page['breadcrumb']); ?>
   <?php endif; ?>
 
