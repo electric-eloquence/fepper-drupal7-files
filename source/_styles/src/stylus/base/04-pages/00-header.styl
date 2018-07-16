@@ -13,6 +13,26 @@ header.header
   position: relative
   h1
     margin-bottom: 0
-.region-branding,
 .region-header
-  clear: both
+  #block-search-form
+    position: relative
+    > h2
+      float: right
+      margin: 0
+      > a
+        @extend .header-icon-font
+        border-left: 1px solid $gray-light-3
+        &::before
+          @extend .icon-search::before
+    .content
+      &::before
+        content: ""
+        display: inline
+      &::after
+        clear: none
+    .page-search &
+      display: none
+    .content
+      @extend .cf
+    @media all and (max-width: $bp-sm-max)
+      margin: 0

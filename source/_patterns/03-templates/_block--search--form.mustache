@@ -1,0 +1,13 @@
+{{{ fpo_phpdoc }}}
+<div id="{{ block_html_id }}" class="{{ block_classes }}" {{{ block_attributes }}}>
+
+  {{{ title_prefix }}}
+  {{# block_subject }}
+    <h2 {{{ title_attributes }}}><a href="#">{{{ block_subject }}}</a></h2>
+  {{/ block_subject }}
+  {{{ title_suffix }}}
+
+  <div class="content" {{{ content_attributes }}}>
+    {{> 01-compounds/02-forms/00-search }}
+  </div>
+</div>

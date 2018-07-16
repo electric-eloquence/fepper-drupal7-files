@@ -6,19 +6,24 @@
 (function ($) {
   'use strict';
 
-  function toggleOpen(parentSelector, context) {
-    $(parentSelector, context)
-      .find('h2')
-      .click(function () {
-        $(this).parents(parentSelector).toggleClass('open');
+  function mobileNavToggle($togglerParent) {
+    var $toggler = $togglerParent.find('> h2 > a');
+
+    $toggler.click(function (e) {
+      e.preventDefault();
+
+      $togglerParent.toggleClass('open');
+
+      if (!$togglerParent.hasClass('open')) {
+        $toggler.blur();
       }
-    );
+    });
   }
 
   Drupal.behaviors.openToggle = {
     attach: function (context) {
-      toggleOpen('#main-menu');
-      toggleOpen('#block-search-form');
+      mobileNavToggle($('#main-menu', context));
+      mobileNavToggle($('#block-search-form', context));
     }
   };
 })(jQuery);

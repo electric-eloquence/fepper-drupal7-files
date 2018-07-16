@@ -58,20 +58,20 @@
             <?php endif; ?>
           </div> <!-- /#name-and-slogan -->
         <?php endif; ?>
-'> 02-components/03-navigation/00-primary-nav': |2
+'fpo_header': |2
+  <?php print render($page['header']); ?>
+'info_primary_nav': |2
   <?php
         // On a default install, the main-menu expanded will appear in the header.
         // Do not render this menu if the main-menu block is administratively
         // enabled in a region at admin/structure/block.
       ?>
-      <?php if (!$main_menu_block_enabled): ?>
-        <nav id="main-menu" role="navigation">
-          <h2 class="icon-menu">Main menu</h2>
-          <?php print render($main_menu_expanded); ?>
-        </nav> <!-- /#navigation -->
-      <?php endif; ?>
-'fpo_header': |2
-  <?php print render($page['header']); ?>
+'\^ main_menu_block_enabled': |2
+  <?php if (!$main_menu_block_enabled): ?>
+'> 01-compounds/01-blocks/_06-primary-nav-menu': |2
+  <?php print render($main_menu_expanded); ?>
+'/ main_menu_block_enabled': |2
+  <?php endif; ?>
 'fpo_breadcrumb': |2
   <?php
       // To get the breadcrumbs to show, add a block to the Breadcrumb region at

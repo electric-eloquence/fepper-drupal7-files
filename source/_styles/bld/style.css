@@ -1,10 +1,12 @@
 .cf::before,
 #comments .submitted::before,
 #main-menu .menu::before,
+.region-header #block-search-form .content::before,
 .page-user .profile::before,
 .cf::after,
 #comments .submitted::after,
 #main-menu .menu::after,
+.region-header #block-search-form .content::after,
 .page-user .profile::after {
   content: " ";
   display: table;
@@ -12,6 +14,7 @@
 .cf::after,
 #comments .submitted::after,
 #main-menu .menu::after,
+.region-header #block-search-form .content::after,
 .page-user .profile::after {
   clear: both;
 }
@@ -35,12 +38,12 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 .header-icon-font,
-#main-menu h2 {
+#main-menu > h2 > a,
+.region-header #block-search-form > h2 > a {
   background: rgba(255,255,255,0.95);
   color: transparent;
   cursor: pointer;
-  float: right;
-  margin: 0;
+  display: block;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -48,19 +51,22 @@
   height: 5.4rem;
 }
 .header-icon-font::before,
-#main-menu h2::before {
+#main-menu > h2 > a::before,
+.region-header #block-search-form > h2 > a::before {
   color: #333;
   float: right;
   font-size: 2.1rem;
   padding: 0.8em;
 }
 .header-icon-font:hover::before,
-#main-menu h2:hover::before {
+#main-menu > h2 > a:hover::before,
+.region-header #block-search-form > h2 > a:hover::before {
   color: #808080;
 }
 @media all and (min-width: 768px) {
   .header-icon-font,
-  #main-menu h2 {
+  #main-menu > h2 > a,
+  .region-header #block-search-form > h2 > a {
     display: none;
   }
 }
@@ -144,7 +150,8 @@ summary {
 .icon-android::before,
 .icon-apple::before,
 .icon-envelope::before,
-.icon-arrow::before {
+.icon-arrow::before,
+.region-header #block-search-form > h2 > a::before {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -169,7 +176,8 @@ summary {
 .icon-google-plus::before {
   content: "\67";
 }
-.icon-search::before {
+.icon-search::before,
+.region-header #block-search-form > h2 > a::before {
   content: "\73";
 }
 .icon-play::before {
@@ -641,11 +649,16 @@ input[type="search"]::-webkit-search-decoration {
     padding-bottom: 0.5em;
   }
 }
+#main-menu > h2 {
+  float: right;
+  margin: 0;
+}
 #main-menu > .menu a {
   display: block;
 }
 @media all and (max-width: 767px) {
   #main-menu > .menu {
+    background: rgba(255,255,255,0.95);
     max-height: 0;
     overflow: hidden;
     position: absolute;
@@ -654,7 +667,6 @@ input[type="search"]::-webkit-search-decoration {
     z-index: 1;
   }
   #main-menu > .menu li {
-    background: rgba(255,255,255,0.95);
     border-top: 1px solid #ddd;
   }
   #main-menu > .menu li a {
@@ -667,18 +679,12 @@ input[type="search"]::-webkit-search-decoration {
   #main-menu.open > .menu {
     border-bottom: 1px solid #ddd;
     max-height: 100%;
-    padding-top: 5.4rem;
+    top: 5.4rem;
     width: 100%;
   }
 }
 @media all and (min-width: 768px) {
   #main-menu {
-    border-top: 1px solid #ddd;
-    float: left;
-    margin-top: -0.1rem;
-    padding: 1.2rem 0 0.8rem;
-  }
-  #main-menu li {
     float: left;
   }
   #main-menu a {
@@ -704,6 +710,12 @@ input[type="search"]::-webkit-search-decoration {
   }
   #main-menu .expanded:hover ul {
     max-height: 100%;
+  }
+  #main-menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 5.600000000000001rem;
   }
   #main-menu > ul > .expanded > ul {
     background: rgba(255,255,255,0.95);
@@ -787,9 +799,30 @@ header.header {
 #block-fepper-branding h1 {
   margin-bottom: 0;
 }
-.region-branding,
-.region-header {
-  clear: both;
+.region-header #block-search-form {
+  position: relative;
+}
+.region-header #block-search-form > h2 {
+  float: right;
+  margin: 0;
+}
+.region-header #block-search-form > h2 > a {
+  border-left: 1px solid #ddd;
+}
+.region-header #block-search-form .content::before {
+  content: "";
+  display: inline;
+}
+.region-header #block-search-form .content::after {
+  clear: none;
+}
+.page-search .region-header #block-search-form {
+  display: none;
+}
+@media all and (max-width: 767px) {
+  .region-header #block-search-form {
+    margin: 0;
+  }
 }
 #sidebar-second li {
   padding: 0.25em 0;

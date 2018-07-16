@@ -15,15 +15,16 @@
       {{{ fpo_branding }}}
     </div> <!-- /#block-fepper-branding -->
 
-    {{> 02-components/03-navigation/00-primary-nav }}
-
     {{# demo_site? }}
       {{> 03-templates/region(
         region_classes: 'region region-header',
         "templates-block--header?": true
       ) }}
     {{/ demo_site? }}
+
     {{{ fpo_header }}}
+
+    {{> 02-components/03-navigation/00-primary-nav.mustache }}
 
   </header> <!-- /.header -->
 

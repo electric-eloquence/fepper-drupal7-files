@@ -1,11 +1,7 @@
-<nav id="main-menu" role="navigation">
-  <h2 class="icon-menu">Main menu</h2>
-  <ul class="menu">
-    <li class="first"><a href="{{ link.pages-homepage }}">Home</a></li>
-    {{# demo_site? }}
-      <li><a href="#">About</a></li>
-      <li><a href="{{ link.pages-blog }}">Blog</a></li>
-      <li class="last"><a href="#">Contact</a></li>
-    {{/ demo_site? }}
-  </ul>
-</nav>
+{{ info_primary_nav }}
+    {{^ main_menu_block_enabled }}
+      <nav id="main-menu" role="navigation">
+        <h2><a href="#" class="icon-menu">Main menu</a></h2>
+        {{> 01-compounds/01-blocks/_06-primary-nav-menu }}
+      </nav> <!-- /#navigation -->
+    {{/ main_menu_block_enabled }}

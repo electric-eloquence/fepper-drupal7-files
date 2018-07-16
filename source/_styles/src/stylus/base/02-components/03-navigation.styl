@@ -1,6 +1,9 @@
 #main-menu
-  h2
-    @extend .header-icon-font
+  > h2
+    float: right
+    margin: 0
+    > a
+      @extend .header-icon-font
   .menu
     @extend .cf
   > .menu
@@ -8,6 +11,7 @@
       display: block
   @media all and (max-width: $bp-sm-max)
     > .menu
+      background: $white-translucent
       max-height: 0
       overflow: hidden
       position: absolute
@@ -15,7 +19,6 @@
       left: 0
       z-index: 1
       li
-        background: $white-translucent
         border-top: 1px solid $gray-light-3
         a
           display: table
@@ -27,15 +30,10 @@
       > .menu
         border-bottom: 1px solid $gray-light-3
         max-height: 100%
-        padding-top: $nav-toggle-height
+        top: $nav-toggle-height
         width: 100%
   @media all and (min-width: $bp-med)
-    border-top: 1px solid $gray-light-3
     float: left
-    margin-top: -0.1rem
-    padding: 1.2rem 0 $space-half
-    li
-      float: left
     a
       padding: $space-quarter $space
     .expanded
@@ -56,20 +54,25 @@
       &:hover
         ul
           max-height: 100%
-    > ul > .expanded > ul
-      background: $white-translucent
-      max-height: 0
-      overflow: hidden
-      position: absolute
-      transition: max-height 0.3s ease
-      z-index: 2
-      > .expanded li
-        border-right: 0
-        border-bottom: 0
-        border-left: 0
-        padding-left: 1rem
-      ul
-        background: transparent
+    > ul
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      min-height: $nav-toggle-height + 0.2rem
+      > .expanded > ul
+        background: $white-translucent
+        max-height: 0
+        overflow: hidden
+        position: absolute
+        transition: max-height 0.3s ease
+        z-index: 2
+        > .expanded li
+          border-right: 0
+          border-bottom: 0
+          border-left: 0
+          padding-left: 1rem
+        ul
+          background: transparent
 // Pager.
 .item-list
   .pager

@@ -51,6 +51,8 @@
       <?php endif; ?>
     </div> <!-- /#block-fepper-branding -->
 
+    <?php print render($page['header']); ?>
+
     <?php
       // On a default install, the main-menu expanded will appear in the header.
       // Do not render this menu if the main-menu block is administratively
@@ -58,12 +60,10 @@
     ?>
     <?php if (!$main_menu_block_enabled): ?>
       <nav id="main-menu" role="navigation">
-        <h2 class="icon-menu">Main menu</h2>
+        <h2><a href="#" class="icon-menu">Main menu</a></h2>
         <?php print render($main_menu_expanded); ?>
       </nav> <!-- /#navigation -->
     <?php endif; ?>
-
-    <?php print render($page['header']); ?>
 
   </header> <!-- /.header -->
 
