@@ -48,3 +48,39 @@ input[type="search"]::-webkit-search-decoration
 .form-item,
 .form-actions
   margin: 0
+#block-search-form
+  position: relative
+  .page-search &
+    display: none
+  .container-inline
+    display: flex
+  .form-item,
+  .form-actions
+    background: $white-translucent
+  .form-item-search-block-form
+    font-size: 1em
+    margin-bottom: 0
+    position: relative
+    &::after
+      @extend .icon-search::before
+      color: $black
+      position: absolute
+      top: 1.2rem
+      right: -3.2rem
+      z-index: 1
+  input
+    background: transparent
+    height: 4rem
+    &[id^="edit-search-block-form"]
+      width: 11.5em
+    &[id^="edit-submit"]
+      border: 1px solid $gray
+      border-left: 0
+      color: transparent
+      font-size: 0.85em
+      padding-right: 0
+      padding-left: 0
+      position: relative
+      width: 5rem
+      &:hover
+        background: rgba(0, 0, 0, 0.3)

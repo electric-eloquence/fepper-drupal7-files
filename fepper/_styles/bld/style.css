@@ -26,7 +26,7 @@
 }
 .visually-hidden,
 #main-menu > h2,
-.mobile-nav-toggle,
+.region-header .mobile-nav-toggle,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -38,7 +38,7 @@
 }
 .mobile-nav-icon > a,
 #main-menu > h2 > a,
-.mobile-nav-toggle > a {
+.region-header .mobile-nav-toggle > a {
   background: rgba(255,255,255,0.95);
   color: transparent;
   cursor: pointer;
@@ -51,7 +51,7 @@
 }
 .mobile-nav-icon > a::before,
 #main-menu > h2 > a::before,
-.mobile-nav-toggle > a::before {
+.region-header .mobile-nav-toggle > a::before {
   color: #333;
   float: right;
   font-size: 2.1rem;
@@ -59,7 +59,7 @@
 }
 .mobile-nav-icon > a:hover::before,
 #main-menu > h2 > a:hover::before,
-.mobile-nav-toggle > a:hover::before {
+.region-header .mobile-nav-toggle > a:hover::before {
   color: #808080;
 }
 html {
@@ -143,8 +143,8 @@ summary {
 .icon-apple::before,
 .icon-envelope::before,
 .icon-arrow::before,
-.region-header #block-search-form .form-item-search-block-form::after,
-.mobile-nav-toggle > a::before {
+#block-search-form .form-item-search-block-form::after,
+.region-header .mobile-nav-toggle > a::before {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -170,8 +170,8 @@ summary {
   content: "\67";
 }
 .icon-search::before,
-.region-header #block-search-form .form-item-search-block-form::after,
-.mobile-nav-toggle > a::before {
+#block-search-form .form-item-search-block-form::after,
+.region-header .mobile-nav-toggle > a::before {
   content: "\73";
 }
 .icon-play::before {
@@ -254,7 +254,7 @@ aside {
 }
 .visually-hidden,
 #main-menu > h2,
-.mobile-nav-toggle,
+.region-header .mobile-nav-toggle,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -518,6 +518,51 @@ input[type="search"]::-webkit-search-decoration {
 .form-item,
 .form-actions {
   margin: 0;
+}
+#block-search-form {
+  position: relative;
+}
+.page-search #block-search-form {
+  display: none;
+}
+#block-search-form .container-inline {
+  display: flex;
+}
+#block-search-form .form-item,
+#block-search-form .form-actions {
+  background: rgba(255,255,255,0.95);
+}
+#block-search-form .form-item-search-block-form {
+  font-size: 1em;
+  margin-bottom: 0;
+  position: relative;
+}
+#block-search-form .form-item-search-block-form::after {
+  color: #000;
+  position: absolute;
+  top: 1.2rem;
+  right: -3.2rem;
+  z-index: 1;
+}
+#block-search-form input {
+  background: transparent;
+  height: 4rem;
+}
+#block-search-form input[id^="edit-search-block-form"] {
+  width: 11.5em;
+}
+#block-search-form input[id^="edit-submit"] {
+  border: 1px solid #808080;
+  border-left: 0;
+  color: transparent;
+  font-size: 0.85em;
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  width: 5rem;
+}
+#block-search-form input[id^="edit-submit"]:hover {
+  background: rgba(0,0,0,0.3);
 }
 #comments {
   border-top: 1px solid #ddd;
@@ -805,50 +850,8 @@ header.header {
 .region-header #block-search-form {
   float: right;
   margin-top: 0.8rem;
-  position: relative;
 }
-.page-search .region-header #block-search-form {
-  display: none;
-}
-.region-header #block-search-form .container-inline {
-  display: flex;
-}
-.region-header #block-search-form .form-item,
-.region-header #block-search-form .form-actions {
-  background: rgba(255,255,255,0.95);
-}
-.region-header #block-search-form .form-item-search-block-form {
-  font-size: 1em;
-  margin-bottom: 0;
-}
-.region-header #block-search-form .form-item-search-block-form::after {
-  color: #000;
-  position: absolute;
-  top: 2rem;
-  right: 1.7rem;
-  z-index: 1;
-}
-.region-header #block-search-form input {
-  background: transparent;
-  height: 4rem;
-}
-.region-header #block-search-form input[id^="edit-search-block-form"] {
-  width: 11.5em;
-}
-.region-header #block-search-form input[id^="edit-submit"] {
-  border: 1px solid #808080;
-  border-left: 0;
-  color: transparent;
-  font-size: 0.85em;
-  padding-right: 0;
-  padding-left: 0;
-  position: relative;
-  width: 5rem;
-}
-.region-header #block-search-form input[id^="edit-submit"]:hover {
-  background: rgba(0,0,0,0.3);
-}
-.mobile-nav-toggle {
+.region-header .mobile-nav-toggle {
   float: right;
   margin: 0;
 }
@@ -867,14 +870,11 @@ header.header {
   .region-header #block-search-form input {
     height: 3.7rem;
   }
-  .region-header #block-search-form .form-item-search-block-form::after {
-    top: 1.1rem;
-  }
   .region-header #block-search-form.open .content {
     max-height: 100%;
     overflow: visible;
   }
-  .mobile-nav-toggle {
+  .region-header .mobile-nav-toggle {
     overflow: visible;
     position: relative !important;
     width: auto;
