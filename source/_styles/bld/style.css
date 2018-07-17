@@ -1,12 +1,10 @@
 .cf::before,
 #comments .submitted::before,
 #main-menu .menu::before,
-.region-header #block-search-form .content::before,
 .page-user .profile::before,
 .cf::after,
 #comments .submitted::after,
 #main-menu .menu::after,
-.region-header #block-search-form .content::after,
 .page-user .profile::after {
   content: " ";
   display: table;
@@ -14,7 +12,6 @@
 .cf::after,
 #comments .submitted::after,
 #main-menu .menu::after,
-.region-header #block-search-form .content::after,
 .page-user .profile::after {
   clear: both;
 }
@@ -28,6 +25,8 @@
   padding: 0.8rem;
 }
 .visually-hidden,
+#main-menu > h2,
+.mobile-nav-toggle,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -37,9 +36,9 @@
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
 }
-.header-icon-font,
+.mobile-nav-icon > a,
 #main-menu > h2 > a,
-.region-header #block-search-form > h2 > a {
+.mobile-nav-toggle > a {
   background: rgba(255,255,255,0.95);
   color: transparent;
   cursor: pointer;
@@ -50,25 +49,18 @@
   width: 5.5rem;
   height: 5.4rem;
 }
-.header-icon-font::before,
+.mobile-nav-icon > a::before,
 #main-menu > h2 > a::before,
-.region-header #block-search-form > h2 > a::before {
+.mobile-nav-toggle > a::before {
   color: #333;
   float: right;
   font-size: 2.1rem;
   padding: 0.8em;
 }
-.header-icon-font:hover::before,
+.mobile-nav-icon > a:hover::before,
 #main-menu > h2 > a:hover::before,
-.region-header #block-search-form > h2 > a:hover::before {
+.mobile-nav-toggle > a:hover::before {
   color: #808080;
-}
-@media all and (min-width: 768px) {
-  .header-icon-font,
-  #main-menu > h2 > a,
-  .region-header #block-search-form > h2 > a {
-    display: none;
-  }
 }
 html {
   box-sizing: border-box;
@@ -151,7 +143,8 @@ summary {
 .icon-apple::before,
 .icon-envelope::before,
 .icon-arrow::before,
-.region-header #block-search-form > h2 > a::before {
+.region-header #block-search-form .form-item-search-block-form::after,
+.mobile-nav-toggle > a::before {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -177,7 +170,8 @@ summary {
   content: "\67";
 }
 .icon-search::before,
-.region-header #block-search-form > h2 > a::before {
+.region-header #block-search-form .form-item-search-block-form::after,
+.mobile-nav-toggle > a::before {
   content: "\73";
 }
 .icon-play::before {
@@ -259,6 +253,8 @@ aside {
   visibility: hidden !important;
 }
 .visually-hidden,
+#main-menu > h2,
+.mobile-nav-toggle,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -657,6 +653,13 @@ input[type="search"]::-webkit-search-decoration {
   display: block;
 }
 @media all and (max-width: 767px) {
+  #main-menu > h2 {
+    overflow: visible;
+    position: relative !important;
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
   #main-menu > .menu {
     background: rgba(255,255,255,0.95);
     max-height: 0;
@@ -800,28 +803,83 @@ header.header {
   margin-bottom: 0;
 }
 .region-header #block-search-form {
-  position: relative;
-}
-.region-header #block-search-form > h2 {
   float: right;
-  margin: 0;
-}
-.region-header #block-search-form > h2 > a {
-  border-left: 1px solid #ddd;
-}
-.region-header #block-search-form .content::before {
-  content: "";
-  display: inline;
-}
-.region-header #block-search-form .content::after {
-  clear: none;
+  margin-top: 0.8rem;
+  position: relative;
 }
 .page-search .region-header #block-search-form {
   display: none;
 }
+.region-header #block-search-form .container-inline {
+  display: flex;
+}
+.region-header #block-search-form .form-item,
+.region-header #block-search-form .form-actions {
+  background: rgba(255,255,255,0.95);
+}
+.region-header #block-search-form .form-item-search-block-form {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.region-header #block-search-form .form-item-search-block-form::after {
+  color: #000;
+  position: absolute;
+  top: 2rem;
+  right: 1.7rem;
+  z-index: 1;
+}
+.region-header #block-search-form input {
+  background: transparent;
+  height: 4rem;
+}
+.region-header #block-search-form input[id^="edit-search-block-form"] {
+  width: 11.5em;
+}
+.region-header #block-search-form input[id^="edit-submit"] {
+  border: 1px solid #808080;
+  border-left: 0;
+  color: transparent;
+  font-size: 0.85em;
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  width: 5rem;
+}
+.region-header #block-search-form input[id^="edit-submit"]:hover {
+  background: rgba(0,0,0,0.3);
+}
+.mobile-nav-toggle {
+  float: right;
+  margin: 0;
+}
 @media all and (max-width: 767px) {
   .region-header #block-search-form {
-    margin: 0;
+    margin-top: 0;
+  }
+  .region-header #block-search-form .content {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    z-index: 2;
+  }
+  .region-header #block-search-form input {
+    height: 3.7rem;
+  }
+  .region-header #block-search-form .form-item-search-block-form::after {
+    top: 1.1rem;
+  }
+  .region-header #block-search-form.open .content {
+    max-height: 100%;
+    overflow: visible;
+  }
+  .mobile-nav-toggle {
+    overflow: visible;
+    position: relative !important;
+    width: auto;
+    height: auto;
+    clip: auto;
   }
 }
 #sidebar-second li {

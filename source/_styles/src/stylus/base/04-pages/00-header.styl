@@ -15,24 +15,74 @@ header.header
     margin-bottom: 0
 .region-header
   #block-search-form
+    float: right
+    margin-top: $space-half
     position: relative
-    > h2
-      float: right
-      margin: 0
-      > a
-        @extend .header-icon-font
-        border-left: 1px solid $gray-light-3
-        &::before
-          @extend .icon-search::before
-    .content
-      &::before
-        content: ""
-        display: inline
-      &::after
-        clear: none
     .page-search &
       display: none
-    .content
-      @extend .cf
-    @media all and (max-width: $bp-sm-max)
-      margin: 0
+    .container-inline
+      display: flex
+    .form-item,
+    .form-actions
+      background: $white-translucent
+    .form-item-search-block-form
+      font-size: 1em
+      margin-bottom: 0
+      &::after
+        @extend .icon-search::before
+        color: $black
+        position: absolute
+        top: 2rem
+        right: 1.7rem
+        z-index: 1
+    input
+      background: transparent
+      height: 4rem
+      &[id^="edit-search-block-form"]
+        width: 11.5em
+      &[id^="edit-submit"]
+        border: 1px solid $gray
+        border-left: 0
+        color: transparent
+        font-size: 0.85em
+        padding-right: 0
+        padding-left: 0
+        position: relative
+        width: 5rem
+        &:hover
+          background: rgba(0, 0, 0, 0.3)
+.mobile-nav-toggle
+  @extend .mobile-nav-icon
+  @extend .visually-hidden
+  float: right
+  margin: 0
+  > a
+    &::before
+      @extend .icon-search::before
+@media all and (max-width: $bp-sm-max)
+  .region-header
+    #block-search-form
+      margin-top: 0
+      .content
+        max-height: 0
+        overflow: hidden
+        position: absolute
+        top: $nav-toggle-n-border
+        right: 0
+        z-index: 2
+      input
+        height: 3.7rem
+      .form-item-search-block-form
+        &::after
+          top: 1.1rem
+    #block-search-form.open
+      .content
+        max-height: 100%
+        overflow: visible
+  .mobile-nav-toggle
+    // Undo .visually-hidden.
+    overflow: visible
+    position: relative !important
+    width: auto
+    height: auto
+    clip: auto

@@ -23,6 +23,8 @@
   <?php print $block->subject ?>
 '/ block_subject': |2
   <?php endif;?>
+'\^ block_subject': |2
+  <?php if (!$block->subject): ?>
 'title_suffix': |2
   <?php print render($title_suffix); ?>
 'content_attributes': |2

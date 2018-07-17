@@ -1,15 +1,22 @@
 #main-menu
   > h2
+    @extend .mobile-nav-icon
+    @extend .visually-hidden
     float: right
     margin: 0
-    > a
-      @extend .header-icon-font
   .menu
     @extend .cf
   > .menu
     a
       display: block
   @media all and (max-width: $bp-sm-max)
+    > h2
+      // Undo .visually-hidden.
+      overflow: visible
+      position: relative !important
+      width: auto
+      height: auto
+      clip: auto
     > .menu
       background: $white-translucent
       max-height: 0
