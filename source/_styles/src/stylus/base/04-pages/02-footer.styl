@@ -12,13 +12,14 @@ footer[role="contentinfo"]
   a
     color: $gray-light
 .region-footer
-  padding-top: $space
-  @extend .lc
-  .content
-    margin-bottom: 0
-    p
-      margin: 0
-    @media all and (max-width: $bp-xs-max)
-      text-align: center
-    @media all and (min-width: $bp-med)
-      float: right
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  height: 100%
+  position: relative
+  > *
+    padding: $space-half
+  p
+    margin: 0

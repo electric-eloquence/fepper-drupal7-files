@@ -17,8 +17,7 @@
 }
 .lc,
 [role="main"],
-.layout-container > *:not(footer),
-.region-footer {
+.layout-container > *:not(footer) {
   clear: both;
   max-width: 1152px;
   margin: 0 auto;
@@ -908,23 +907,19 @@ footer[role="contentinfo"] a {
   color: #f9f9f9;
 }
 .region-footer {
-  padding-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.region-footer .content {
-  margin-bottom: 0;
+.region-footer > * {
+  padding: 0.8rem;
 }
-.region-footer .content p {
+.region-footer p {
   margin: 0;
-}
-@media all and (max-width: 480px) {
-  .region-footer .content {
-    text-align: center;
-  }
-}
-@media all and (min-width: 768px) {
-  .region-footer .content {
-    float: right;
-  }
 }
 .node-article {
   margin-bottom: 1.6rem;
