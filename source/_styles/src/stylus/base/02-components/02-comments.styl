@@ -33,12 +33,6 @@
     text-decoration: underline
   .username
     font-weight: bold
-    &::before
-      content: "\A"
-      white-space: pre
-    &::after
-      content: "\A"
-      white-space: pre
   .comment-reply
     padding: 0
     a::before
@@ -73,11 +67,6 @@
         margin: 0
     .user-picture
       margin-right: $space-quarter
-    .username
-      &::before
-        content: ""
-      &::after
-        content: ""
     .content
       padding-bottom: 0
       p
@@ -95,3 +84,11 @@
           margin-left: 2px
     .comment:last-of-type
       padding-bottom: 0.5em
+  @media all and (min-width: $bp-small)
+    .username
+      &::before
+        content: "\A"
+        white-space: pre
+      &::after
+        content: "\A"
+        white-space: pre

@@ -611,14 +611,6 @@ input[type="search"]::-webkit-search-decoration {
 #comments .username {
   font-weight: bold;
 }
-#comments .username::before {
-  content: "\A";
-  white-space: pre;
-}
-#comments .username::after {
-  content: "\A";
-  white-space: pre;
-}
 #comments .comment-reply {
   padding: 0;
 }
@@ -663,12 +655,6 @@ input[type="search"]::-webkit-search-decoration {
   #comments .user-picture {
     margin-right: 0.4rem;
   }
-  #comments .username::before {
-    content: "";
-  }
-  #comments .username::after {
-    content: "";
-  }
   #comments .content {
     padding-bottom: 0;
   }
@@ -690,6 +676,16 @@ input[type="search"]::-webkit-search-decoration {
   }
   #comments .comment:last-of-type {
     padding-bottom: 0.5em;
+  }
+}
+@media all and (min-width: 481px) {
+  #comments .username::before {
+    content: "\A";
+    white-space: pre;
+  }
+  #comments .username::after {
+    content: "\A";
+    white-space: pre;
   }
 }
 #main-menu > h2 {
