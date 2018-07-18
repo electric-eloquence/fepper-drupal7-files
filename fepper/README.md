@@ -32,7 +32,16 @@ Drupal theme to match the look and feel of the Fepper frontend.
 
 ## Configuration
 
-The theme has no menu or administerable settings.
+This theme has no menu or administration settings.
+
+The only JavaScript in this theme adds behavior for mobile navigation, which is 
+tooled for the Main menu and the Search form block. The behavior will be 
+attached to the default Main menu on standard installation. In order for it to 
+be attached to the Search form block, that block must be enabled in the Header 
+region. Be aware that enabling the Main menu block within a region (overriding 
+and replacing the default Main menu) will disable the mobile navigation behavior 
+for the Main menu. Also be aware that titles will not be displayed for the 
+Search form block if it is enabled in the Header region.
 
 ## Copyright
 
