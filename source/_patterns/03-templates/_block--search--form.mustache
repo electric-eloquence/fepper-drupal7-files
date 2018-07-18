@@ -1,13 +1,7 @@
 {{{ fpo_phpdoc }}}
 <div id="{{ block_html_id }}" class="{{ block_classes }}" {{{ block_attributes }}}>
-
   {{{ title_prefix }}}
-  {{# block_subject }}
-    <h2 {{{ title_attributes }}}>{{{ block_subject }}}</h2>
-  {{/ block_subject }}
-  {{^ block_subject }}
-    <h2 class="mobile-nav-toggle"><a href="#">Search form</a></h2>
-  {{/ block_subject }}
+  <h2 {{{ title_attributes }}}><a href="#">{{{ block_subject }}}</a></h2>
   {{{ title_suffix }}}
 
   <div class="content" {{{ content_attributes }}}>

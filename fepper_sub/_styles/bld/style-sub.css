@@ -165,7 +165,7 @@
 #main-menu > h2 > a {
   border-left: 1px solid #ddd;
 }
-.mobile-nav-toggle > a {
+.region-header #block-search-form > h2 > a {
   border-left: 1px solid #ddd;
 }
 @media all and (max-width: 480px) {

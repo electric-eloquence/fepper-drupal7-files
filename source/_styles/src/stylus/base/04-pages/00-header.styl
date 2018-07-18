@@ -17,18 +17,25 @@ header.header
   #block-search-form
     float: right
     margin-top: $space-half
-  .mobile-nav-toggle
-    @extend .mobile-nav-icon
-    @extend .visually-hidden
-    float: right
-    margin: 0
-    > a
-      &::before
-        @extend .icon-search::before
+    > h2
+      @extend .mobile-nav-icon
+      @extend .visually-hidden
+      float: right
+      margin: 0
+      > a
+        &::before
+          @extend .icon-search::before
 @media all and (max-width: $bp-sm-max)
   .region-header
     #block-search-form
       margin-top: 0
+      > h2
+        // Undo .visually-hidden.
+        overflow: visible
+        position: relative !important
+        width: auto
+        height: auto
+        clip: auto
       .content
         max-height: 0
         overflow: hidden
@@ -42,10 +49,3 @@ header.header
       .content
         max-height: 100%
         overflow: visible
-    .mobile-nav-toggle
-      // Undo .visually-hidden.
-      overflow: visible
-      position: relative !important
-      width: auto
-      height: auto
-      clip: auto

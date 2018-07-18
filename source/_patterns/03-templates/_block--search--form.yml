@@ -3,8 +3,7 @@
   
   /**
    * @file
-   * Fepper theme's implementation to display a search form. The difference from
-   * the default is the a tag around the subject.
+   * Fepper theme's implementation to display a search form.
    */
   ?>
 'block_html_id': |2
@@ -15,16 +14,10 @@
   <?php print $attributes; ?>
 'title_prefix': |2
   <?php print render($title_prefix); ?>
-'# block_subject': |2
-  <?php if ($block->subject): ?>
 'title_attributes': |2
   <?php print $title_attributes; ?>
 'block_subject': |2
-  <?php print $block->subject ?>
-'/ block_subject': |2
-  <?php endif;?>
-'\^ block_subject': |2
-  <?php if (!$block->subject): ?>
+  <?php print $block->subject ? $block->subject : 'Search form'; ?>
 'title_suffix': |2
   <?php print render($title_suffix); ?>
 'content_attributes': |2

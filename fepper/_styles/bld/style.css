@@ -26,7 +26,7 @@
 }
 .visually-hidden,
 #main-menu > h2,
-.region-header .mobile-nav-toggle,
+.region-header #block-search-form > h2,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -38,7 +38,7 @@
 }
 .mobile-nav-icon > a,
 #main-menu > h2 > a,
-.region-header .mobile-nav-toggle > a {
+.region-header #block-search-form > h2 > a {
   background: rgba(255,255,255,0.95);
   color: transparent;
   cursor: pointer;
@@ -51,7 +51,7 @@
 }
 .mobile-nav-icon > a::before,
 #main-menu > h2 > a::before,
-.region-header .mobile-nav-toggle > a::before {
+.region-header #block-search-form > h2 > a::before {
   color: #333;
   float: right;
   font-size: 2.1rem;
@@ -59,7 +59,7 @@
 }
 .mobile-nav-icon > a:hover::before,
 #main-menu > h2 > a:hover::before,
-.region-header .mobile-nav-toggle > a:hover::before {
+.region-header #block-search-form > h2 > a:hover::before {
   color: #808080;
 }
 html {
@@ -144,7 +144,7 @@ summary {
 .icon-envelope::before,
 .icon-arrow::before,
 #block-search-form .form-item-search-block-form::after,
-.region-header .mobile-nav-toggle > a::before {
+.region-header #block-search-form > h2 > a::before {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -171,7 +171,7 @@ summary {
 }
 .icon-search::before,
 #block-search-form .form-item-search-block-form::after,
-.region-header .mobile-nav-toggle > a::before {
+.region-header #block-search-form > h2 > a::before {
   content: "\73";
 }
 .icon-play::before {
@@ -254,7 +254,7 @@ aside {
 }
 .visually-hidden,
 #main-menu > h2,
-.region-header .mobile-nav-toggle,
+.region-header #block-search-form > h2,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -523,6 +523,9 @@ input[type="search"]::-webkit-search-decoration {
   position: relative;
 }
 .page-search #block-search-form {
+  display: none;
+}
+#block-search-form #search-block-form h2.element-invisible {
   display: none;
 }
 #block-search-form .container-inline {
@@ -851,13 +854,20 @@ header.header {
   float: right;
   margin-top: 0.8rem;
 }
-.region-header .mobile-nav-toggle {
+.region-header #block-search-form > h2 {
   float: right;
   margin: 0;
 }
 @media all and (max-width: 767px) {
   .region-header #block-search-form {
     margin-top: 0;
+  }
+  .region-header #block-search-form > h2 {
+    overflow: visible;
+    position: relative !important;
+    width: auto;
+    height: auto;
+    clip: auto;
   }
   .region-header #block-search-form .content {
     max-height: 0;
@@ -873,13 +883,6 @@ header.header {
   .region-header #block-search-form.open .content {
     max-height: 100%;
     overflow: visible;
-  }
-  .region-header .mobile-nav-toggle {
-    overflow: visible;
-    position: relative !important;
-    width: auto;
-    height: auto;
-    clip: auto;
   }
 }
 #sidebar-second li {
