@@ -52,11 +52,6 @@ input[type="search"]::-webkit-search-decoration
   position: relative
   .page-search &
     display: none
-  #search-block-form
-    // Since this theme always renders a screen-readable h2 for #block-search-form, make the additional h2 added by
-    // Drupal core invisible to screen-readers.
-    h2.element-invisible
-      display: none
   .container-inline
     display: flex
   .form-item,
@@ -89,3 +84,8 @@ input[type="search"]::-webkit-search-decoration
       width: 5rem
       &:hover
         background: rgba(0, 0, 0, 0.3)
+#search-block-form
+  // Since this theme always renders a screen-readable h2 for #block-search-form, make the additional h2 added by
+  // Drupal core invisible to screen-readers.
+  h2.element-invisible
+    display: none

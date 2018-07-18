@@ -525,9 +525,6 @@ input[type="search"]::-webkit-search-decoration {
 .page-search #block-search-form {
   display: none;
 }
-#block-search-form #search-block-form h2.element-invisible {
-  display: none;
-}
 #block-search-form .container-inline {
   display: flex;
 }
@@ -566,6 +563,9 @@ input[type="search"]::-webkit-search-decoration {
 }
 #block-search-form input[id^="edit-submit"]:hover {
   background: rgba(0,0,0,0.3);
+}
+#search-block-form h2.element-invisible {
+  display: none;
 }
 #comments {
   border-top: 1px solid #ddd;
