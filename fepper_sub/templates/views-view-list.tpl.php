@@ -3,6 +3,8 @@
 /**
  * @file
  * Fepper theme's implementation to display a list of view rows.
+ *
+ * @see views/theme/views-view-list.tpl.php
  */
 ?>
 <?php print $wrapper_prefix; ?>

@@ -4,6 +4,8 @@
   /**
    * @file
    * Fepper theme's implementation to display a node.
+   *
+   * @see node/node.tpl.php
    */
   ?>
 'node_id': |2

@@ -4,6 +4,8 @@
   /**
    * @file
    * Fepper theme's implementation of the main view template.
+   *
+   * @see views/theme/views-view.tpl.php
    */
   ?>
 'views-view_classes': |2

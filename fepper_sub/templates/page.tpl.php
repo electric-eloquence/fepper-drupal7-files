@@ -3,6 +3,8 @@
 /**
  * @file
  * Fepper theme's implementation to display a single Drupal page.
+ *
+ * @see system/page.tpl.php
  */
 ?>
 <div class="layout-container">

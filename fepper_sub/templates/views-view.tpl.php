@@ -3,6 +3,8 @@
 /**
  * @file
  * Fepper theme's implementation of the main view template.
+ *
+ * @see views/theme/views-view.tpl.php
  */
 ?>
 <div class="<?php print $classes; ?>">

@@ -4,6 +4,8 @@
   /**
    * @file
    * Fepper theme's implementation to display a list of view rows.
+   *
+   * @see views/theme/views-view-list.tpl.php
    */
   ?>
 'wrapper_prefix': |2

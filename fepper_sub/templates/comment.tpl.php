@@ -3,6 +3,8 @@
 /**
  * @file
  * Fepper theme's implementation for comments.
+ *
+ * @see comment/comment.tpl.php
  */
 ?>
 <article class="<?php print $classes; ?> clearfix" <?php print $attributes; ?>>

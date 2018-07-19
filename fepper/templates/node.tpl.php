@@ -3,6 +3,8 @@
 /**
  * @file
  * Fepper theme's implementation to display a node.
+ *
+ * @see node/node.tpl.php
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>

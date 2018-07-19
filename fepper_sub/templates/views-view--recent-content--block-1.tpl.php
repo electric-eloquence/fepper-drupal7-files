@@ -6,6 +6,8 @@
  *
  * View name: recent_content.
  * View display name: block_1.
+ *
+ * @see views/theme/views-view.tpl.php
  */
 ?>
 <!-- Begin views-view -->

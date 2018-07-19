@@ -3,6 +3,8 @@
 /**
  * @file
  * Fepper theme's implementation to display a region.
+ *
+ * @see system/region.tpl.php
  */
 ?>
 <?php if ($content): ?>

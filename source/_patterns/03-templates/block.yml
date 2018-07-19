@@ -4,6 +4,8 @@
   /**
    * @file
    * Fepper theme's implementation to display a block.
+   *
+   * @see block/block.tpl.php
    */
   ?>
 'block_html_id': |2
