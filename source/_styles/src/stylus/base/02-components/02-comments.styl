@@ -2,10 +2,10 @@
   border-top: 1px solid $gray-light-3
   margin-top: 2em
   h2
-    margin-top: $space
+    margin: $space 0 0
   .comment
     display: flex 
-    margin: 1.8rem 0
+    padding: 1.8rem 0 // Padding instead of margin so borders appear when indented.
   .submitted
     min-height: 11em
     width: 12em
@@ -43,15 +43,17 @@
     list-style-type: disc
     padding: 0
   .indented
-    margin-left: 0.75em
+    margin-left: 0
+    padding-left: 0.75em
     .comment
       border-left: 1px solid $gray-light-3
+  > .indented
+    border-top: 1px solid $gray-light-3
   @media all and (max-width: $bp-xs-max)
     $img-size-xs = 8.75rem
     .comment
       display: block
-      margin: 1.2rem 0
-      padding: 0
+      padding: 1.2rem 0 // Padding instead of margin so borders appear when indented.
       overflow: hidden
     .submitted
       @extend .cf

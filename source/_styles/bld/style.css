@@ -571,11 +571,11 @@ input[type="search"]::-webkit-search-decoration {
   margin-top: 2em;
 }
 #comments h2 {
-  margin-top: 1.6rem;
+  margin: 1.6rem 0 0;
 }
 #comments .comment {
   display: flex;
-  margin: 1.8rem 0;
+  padding: 1.8rem 0;
 }
 #comments .submitted {
   min-height: 11em;
@@ -622,16 +622,19 @@ input[type="search"]::-webkit-search-decoration {
   padding: 0;
 }
 #comments .indented {
-  margin-left: 0.75em;
+  margin-left: 0;
+  padding-left: 0.75em;
 }
 #comments .indented .comment {
   border-left: 1px solid #ddd;
 }
+#comments > .indented {
+  border-top: 1px solid #ddd;
+}
 @media all and (max-width: 480px) {
   #comments .comment {
     display: block;
-    margin: 1.2rem 0;
-    padding: 0;
+    padding: 1.2rem 0;
     overflow: hidden;
   }
   #comments .submitted {
