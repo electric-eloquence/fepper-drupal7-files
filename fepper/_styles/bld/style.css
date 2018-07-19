@@ -575,8 +575,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 #comments .comment {
   display: flex;
-  margin-top: 0.75em;
-  padding-bottom: 0.5em;
+  margin: 1.8rem 0;
 }
 #comments .submitted {
   min-height: 11em;
@@ -588,11 +587,8 @@ input[type="search"]::-webkit-search-decoration {
   line-height: 1.6rem;
   margin-left: 2px;
 }
-#comments .content {
-  padding-bottom: 0.5em;
-}
 #comments .content p {
-  margin-bottom: 0;
+  margin: 0;
 }
 #comments .submitted + .content {
   width: calc(100% - 12em);
@@ -604,19 +600,13 @@ input[type="search"]::-webkit-search-decoration {
   width: 6.25em;
 }
 #comments .permalink {
-  font-size: 0.75em;
   display: block;
+  font-size: 0.75em;
+  margin-left: 2px;
   text-decoration: underline;
 }
 #comments .username {
   font-weight: bold;
-}
-#comments .comment-reply {
-  padding: 0;
-}
-#comments .comment-reply a::before {
-  content: "•";
-  margin-right: 0.25em;
 }
 #comments .comment:last-of-type {
   border-bottom: 1px solid #ddd;
@@ -626,8 +616,10 @@ input[type="search"]::-webkit-search-decoration {
   margin-top: 0.25em;
   margin-bottom: 0;
 }
-#comments .links li {
+#comments .comment-reply {
   display: list-item;
+  list-style-type: disc;
+  padding: 0;
 }
 #comments .indented {
   margin-left: 0.75em;
@@ -638,7 +630,7 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 480px) {
   #comments .comment {
     display: block;
-    margin: 0 0 0.8rem;
+    margin: 1.2rem 0;
     padding: 0;
     overflow: hidden;
   }
@@ -665,7 +657,9 @@ input[type="search"]::-webkit-search-decoration {
     width: auto;
   }
   #comments .links {
-    margin: 0 0.8rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.8rem;
     text-align: right;
   }
   #comments .filter-wrapper {

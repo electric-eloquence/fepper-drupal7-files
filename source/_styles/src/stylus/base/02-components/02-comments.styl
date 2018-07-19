@@ -5,8 +5,7 @@
     margin-top: $space
   .comment
     display: flex 
-    margin-top: 0.75em
-    padding-bottom: 0.5em
+    margin: 1.8rem 0
   .submitted
     min-height: 11em
     width: 12em
@@ -16,9 +15,8 @@
       line-height: 1.6rem
       margin-left: 2px
   .content
-    padding-bottom: 0.5em
     p
-      margin-bottom: 0
+      margin: 0
   .submitted + .content
     width: calc(100% - 12em)
   .user-picture
@@ -28,24 +26,22 @@
       margin-bottom: 0.5em
       width: 6.25em
   .permalink
-    font-size: 0.75em
     display: block
+    font-size: 0.75em
+    margin-left: 2px
     text-decoration: underline
   .username
     font-weight: bold
-  .comment-reply
-    padding: 0
-    a::before
-      content: "•"
-      margin-right: 0.25em
   .comment:last-of-type
     border-bottom: 1px solid $gray-light-3
   .links
     display: block
-    margin-top: 0.25em;
-    margin-bottom: 0;
-    li
-      display: list-item
+    margin-top: 0.25em
+    margin-bottom: 0
+  .comment-reply
+    display: list-item
+    list-style-type: disc
+    padding: 0
   .indented
     margin-left: 0.75em
     .comment
@@ -54,7 +50,7 @@
     $img-size-xs = 8.75rem
     .comment
       display: block
-      margin: 0 0 $space-half
+      margin: 1.2rem 0
       padding: 0
       overflow: hidden
     .submitted
@@ -74,7 +70,9 @@
     .submitted + .content
       width: auto
     .links
-      margin: 0 $space-half 0 0
+      display: flex
+      justify-content: flex-end
+      margin-right: $space-half
       text-align: right
     .filter-wrapper
       padding-bottom: 0
