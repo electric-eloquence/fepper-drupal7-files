@@ -5,6 +5,11 @@
    * @file
    * Fepper theme's implementation to display a single Drupal page.
    *
+   * Additional variables:
+   * - $system_site_name: Provides site name even with $site_name switched off.
+   * - $main_menu_block_enabled: (boolean) Is main menu enabled as a block?
+   * - $main_menu_expanded: The main menu and its sub-trees fully expanded.
+   *
    * @see system/page.tpl.php
    */
   ?>
