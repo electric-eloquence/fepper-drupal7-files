@@ -4,7 +4,10 @@
     <a class="anchor"></a>
     {{> 03-templates/comment(
       comment_classes: 'comment comment-by-node-author clearfix',
-      comment_attributes: ' typeof="sioc:Post sioct:Comment"'
+      comment_attributes: ' typeof="sioc:Post sioct:Comment"',
+      title_attributes: ' style="display: none;"',
+      anchor_open: '<a href="#" class="permalink" rel="bookmark">',
+      anchor_close: '</a>'
     ) }}
   {{/ listItems.five }}
   {{> 01-compounds/02-forms/01-comment-form }}
