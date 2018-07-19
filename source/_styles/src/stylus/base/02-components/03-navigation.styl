@@ -22,8 +22,10 @@
       max-height: 0
       overflow: hidden
       position: absolute
-      top: 0
+      top: $nav-toggle-height
+      transition: max-height 0.1s ease
       left: 0
+      width: 100%
       z-index: 1
       li
         border-top: 1px solid $gray-light-3
@@ -37,8 +39,6 @@
       > .menu
         border-bottom: 1px solid $gray-light-3
         max-height: 100%
-        top: $nav-toggle-height
-        width: 100%
   @media all and (min-width: $bp-med)
     float: left
     a

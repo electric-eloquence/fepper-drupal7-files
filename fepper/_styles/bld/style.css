@@ -575,7 +575,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 #comments .comment {
   display: flex;
-  padding: 1.8rem 0;
+  padding: 0.9rem 0;
 }
 #comments .submitted {
   min-height: 11em;
@@ -634,7 +634,7 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 480px) {
   #comments .comment {
     display: block;
-    padding: 1.2rem 0;
+    padding: 0.6rem 0;
     overflow: hidden;
   }
   #comments .submitted {
@@ -671,9 +671,6 @@ input[type="search"]::-webkit-search-decoration {
   #comments .indented .comment > * {
     margin-left: 2px;
   }
-  #comments .comment:last-of-type {
-    padding-bottom: 0.5em;
-  }
 }
 @media all and (min-width: 481px) {
   #comments .username::before {
@@ -705,8 +702,14 @@ input[type="search"]::-webkit-search-decoration {
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    top: 0;
+    top: 5.4rem;
+    -webkit-transition: max-height 0.1s ease;
+    -moz-transition: max-height 0.1s ease;
+    -ms-transition: max-height 0.1s ease;
+    -o-transition: max-height 0.1s ease;
+    transition: max-height 0.1s ease;
     left: 0;
+    width: 100%;
     z-index: 1;
   }
   #main-menu > .menu li {
@@ -722,8 +725,6 @@ input[type="search"]::-webkit-search-decoration {
   #main-menu.open > .menu {
     border-bottom: 1px solid #ddd;
     max-height: 100%;
-    top: 5.4rem;
-    width: 100%;
   }
 }
 @media all and (min-width: 768px) {

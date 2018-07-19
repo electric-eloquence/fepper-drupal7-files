@@ -5,7 +5,8 @@
     margin: $space 0 0
   .comment
     display: flex 
-    padding: 1.8rem 0 // Padding instead of margin so borders appear when indented.
+    //padding: 1.8rem 0 // Padding instead of margin so borders appear when indented.
+    padding: 0.9rem 0
   .submitted
     min-height: 11em
     width: 12em
@@ -53,7 +54,8 @@
     $img-size-xs = 8.75rem
     .comment
       display: block
-      padding: 1.2rem 0 // Padding instead of margin so borders appear when indented.
+      //padding: 1.2rem 0 // Padding instead of margin so borders appear when indented.
+      padding: 0.6rem 0 // Padding instead of margin so borders appear when indented.
       overflow: hidden
     .submitted
       @extend .cf
@@ -82,8 +84,6 @@
       .comment
         > *
           margin-left: 2px
-    .comment:last-of-type
-      padding-bottom: 0.5em
   @media all and (min-width: $bp-small)
     .username
       &::before
