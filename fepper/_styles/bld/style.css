@@ -657,11 +657,17 @@ input[type="search"]::-webkit-search-decoration {
   #comments .submitted + .content {
     width: auto;
   }
+  #comments [class^="comment-"] {
+    padding-right: 2.6rem;
+  }
   #comments .links {
     display: flex;
     justify-content: flex-end;
     margin-right: 0.8rem;
     text-align: right;
+  }
+  #comments .links li:last-of-type {
+    padding-right: 0;
   }
   #comments .filter-wrapper {
     padding-bottom: 0;
