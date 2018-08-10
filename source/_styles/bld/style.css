@@ -690,13 +690,15 @@ input[type="search"]::-webkit-search-decoration {
   }
 }
 #main-menu > h2 {
-  float: right;
   margin: 0;
 }
 #main-menu > .menu a {
   display: block;
 }
 @media all and (max-width: 767px) {
+  #main-menu {
+    float: right;
+  }
   #main-menu > h2 {
     overflow: visible;
     position: relative !important;

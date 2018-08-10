@@ -2,7 +2,6 @@
   > h2
     @extend .mobile-nav-icon
     @extend .visually-hidden
-    float: right
     margin: 0
   .menu
     @extend .cf
@@ -10,6 +9,7 @@
     a
       display: block
   @media all and (max-width: $bp-sm-max)
+    float: right
     > h2
       // Undo .visually-hidden.
       overflow: visible

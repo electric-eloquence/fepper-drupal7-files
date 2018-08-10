@@ -12,6 +12,9 @@
           {{^ site_name? }}</h1>{{/ site_name? }}
         {{/ homepage? }}
       {{/ img.logo }}
+      {{# compounds-name-and-slogan~~pages-new-install? }}
+        {{> 01-compounds/00-text/06-name-and-slogan }}
+      {{/ compounds-name-and-slogan~~pages-new-install? }}
       {{{ fpo_branding }}}
     </div> <!-- /#block-fepper-branding -->
 

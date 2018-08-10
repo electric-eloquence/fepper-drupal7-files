@@ -24,15 +24,39 @@
 
   Drupal.behaviors.openToggle = {
     attach: function (context) {
-      var searchBlock = $('#block-search-form', context);
-      var mainMenuBlock = $('#main-menu', context);
+      var $searchBlock = $('#block-search-form', context);
+      var $mainMenuBlock = $('#main-menu', context);
 
-      if (searchBlock.length) {
-        mobileNavToggle($('#block-search-form', context));
+      if ($searchBlock.length) {
+        mobileNavToggle($searchBlock);
+
+        var $searchToggler = $searchBlock.find('> h2 > a');
+
+        if ($searchToggler.length) {
+          $searchToggler.click(function () {
+            var searchBlockRect = $searchBlock[0].getBoundingClientRect();
+
+            if ($searchBlock.hasClass('open')) {
+              $searchBlock.children('.content').css('top', (searchBlockRect.top + searchBlockRect.height) + 'px');
+            }
+          });
+        }
       }
 
-      if (mainMenuBlock.length) {
-        mobileNavToggle($('#main-menu', context));
+      if ($mainMenuBlock.length) {
+        mobileNavToggle($mainMenuBlock);
+
+        var $mainMenuToggler = $mainMenuBlock.find('> h2 > a');
+
+        if ($mainMenuToggler.length) {
+          $mainMenuToggler.click(function () {
+            var mainMenuBlockRect = $mainMenuBlock[0].getBoundingClientRect();
+
+            if ($mainMenuBlock.hasClass('open')) {
+              $mainMenuBlock.children('ul').css('top', (mainMenuBlockRect.top + mainMenuBlockRect.height) + 'px');
+            }
+          });
+        }
       }
     }
   };
