@@ -43,6 +43,7 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
+  padding: 1.7rem 1.6rem 1.6rem;
   position: relative;
   z-index: 2;
   width: 5.5rem;
@@ -51,15 +52,9 @@
 .mobile-nav-icon > a::before,
 #main-menu > h2 > a::before,
 .region-header #block-search-form > h2 > a::before {
-  color: #333;
-  float: right;
-  font-size: 2.1rem;
-  padding: 0.8em;
-}
-.mobile-nav-icon > a:hover::before,
-#main-menu > h2 > a:hover::before,
-.region-header #block-search-form > h2 > a:hover::before {
-  color: #808080;
+  content: "";
+  display: block;
+  padding: 1.1rem;
 }
 html {
   box-sizing: border-box;
@@ -104,120 +99,6 @@ nav,
 section,
 summary {
   display: block;
-}
-@font-face {
-  font-family: 'icons';
-  src: url("fonts/icons.eot");
-  src: url("fonts/icons.eot?#iefix") format("embedded-opentype"), url("fonts/icons.woff") format("woff"), url("fonts/icons.ttf") format("truetype"), url("fonts/icons.svg#icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-.icon-font,
-.icon-twitter::before,
-.icon-stumbleupon::before,
-.icon-pinterest::before,
-.icon-linkedin::before,
-.icon-google-plus::before,
-.icon-search::before,
-.icon-play::before,
-.icon-menu::before,
-.icon-arrow-left::before,
-.icon-arrow-right::before,
-.icon-bubble::before,
-.icon-facebook::before,
-.icon-feed::before,
-.icon-youtube::before,
-.icon-tag::before,
-.icon-tumblr::before,
-.icon-instagram::before,
-.icon-podcast::before,
-.icon-android::before,
-.icon-apple::before,
-.icon-envelope::before,
-.icon-arrow::before,
-#block-search-form .form-item-search-block-form::after,
-.region-header #block-search-form > h2 > a::before {
-  font-family: 'icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-.icon-twitter::before {
-  content: "\74";
-}
-.icon-stumbleupon::before {
-  content: "\75";
-}
-.icon-pinterest::before {
-  content: "\70";
-}
-.icon-linkedin::before {
-  content: "\69";
-}
-.icon-google-plus::before {
-  content: "\67";
-}
-.icon-search::before,
-#block-search-form .form-item-search-block-form::after,
-.region-header #block-search-form > h2 > a::before {
-  content: "\73";
-}
-.icon-play::before {
-  content: "\61";
-}
-.icon-menu::before {
-  content: "\21";
-}
-.icon-arrow-left::before {
-  content: "\23";
-}
-.icon-arrow-right::before {
-  content: "\24";
-}
-.icon-bubble::before {
-  content: "\25";
-}
-.icon-facebook::before {
-  content: "\66";
-}
-.icon-feed::before {
-  content: "\27";
-}
-.icon-youtube::before {
-  content: "\79";
-}
-.icon-tag::before {
-  content: "\28";
-}
-.icon-tumblr::before {
-  content: "\6d";
-}
-.icon-instagram::before {
-  content: "\22";
-}
-.icon-podcast::before {
-  content: "\26";
-}
-.icon-android::before {
-  content: "\29";
-}
-.icon-apple::before {
-  content: "\2a";
-}
-.icon-envelope::before {
-  content: "\2b";
-}
-.icon-arrow::before {
-  content: "\61";
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 html {
   font-size: 62.5%;
@@ -528,7 +409,10 @@ input[type="search"]::-webkit-search-decoration {
   position: relative;
 }
 #block-search-form .form-item-search-block-form::after {
-  color: #000;
+  background: url("../../_assets/src/icon-search.svg") no-repeat 0 0;
+  background-size: cover;
+  content: "";
+  padding: 0.7rem;
   position: absolute;
   top: 1.2rem;
   right: -3.2rem;
@@ -691,6 +575,10 @@ input[type="search"]::-webkit-search-decoration {
 }
 #main-menu > h2 {
   margin: 0;
+}
+#main-menu .icon-menu::before {
+  background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0;
+  background-size: cover;
 }
 #main-menu > .menu a {
   display: block;
@@ -860,6 +748,10 @@ header.header {
 .region-header #block-search-form > h2 {
   float: right;
   margin: 0;
+}
+.region-header #block-search-form > h2 > a::before {
+  background: url("../../_assets/src/icon-search.svg") no-repeat 0 0;
+  background-size: cover;
 }
 @media all and (max-width: 767px) {
   .region-header #block-search-form {

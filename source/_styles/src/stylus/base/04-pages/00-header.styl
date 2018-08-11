@@ -23,9 +23,9 @@ header.header
       @extend .visually-hidden
       float: right
       margin: 0
-      > a
-        &::before
-          @extend .icon-search::before
+      > a::before
+        background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
+        background-size: cover
 @media all and (max-width: $bp-sm-max)
   .region-header
     #block-search-form
