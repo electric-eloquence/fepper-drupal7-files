@@ -22,7 +22,7 @@
     }
   }
 
-  Drupal.behaviors.openToggle = {
+  Drupal.behaviors.toggleMobileNav = {
     attach: function (context) {
       var $searchBlock = $('#block-search-form', context);
       var $mainMenuBlock = $('#main-menu', context);
@@ -58,6 +58,19 @@
           });
         }
       }
+    }
+  };
+
+  Drupal.behaviors.resetSearchBlock = {
+    attach: function (context) {
+      $(window).resize(function () {
+        var $searchBlock = $('#block-search-form', context);
+
+        if ($searchBlock.length && $searchBlock.hasClass('open')) {
+          $searchBlock.removeClass('open');
+          $searchBlock.children('.content').css('top', '0');
+        }
+      });
     }
   };
 })(jQuery);
