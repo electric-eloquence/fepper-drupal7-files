@@ -1,5 +1,8 @@
 #block-views-recent-content-block-2,
 .view-id-recent_content.view-display-id-page_1
+  .node-teaser
+    > h2
+      font-size: 2rem
   @media all and (max-width: $bp-xs-max)
     h2
       text-align: center
@@ -15,7 +18,7 @@
         font-size: 1.7rem
   @media all and (min-width: $bp-small)
     .item-list
-      margin-top: 0.5em
+      margin-top: $space-quarter
       .views-row 
         clear: both
         float: left

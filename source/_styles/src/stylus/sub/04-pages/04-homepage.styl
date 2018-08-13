@@ -7,7 +7,7 @@
     justify-content: space-between
   // Hero block
   #block-system-main
-    margin-bottom: 0.5em
+    margin-bottom: $space-half
     img
       display: block
     .views-field-title
@@ -25,7 +25,7 @@
         justify-content: center
         height: 8.7rem
     @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
-      position: relative;
+      position: relative
       .views-field-field-image
         padding-top: 75%
         .field-content
@@ -47,8 +47,6 @@
         background: $dimmer
         overflow: hidden
         padding: 0 $space-half
-        a
-          font-size: 1.8rem
     @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
       .views-field-title
         padding-top: 19%
@@ -67,10 +65,10 @@
         left: 0
         width: 100%
         background: $dim
-        padding: 1.5em
+        padding: 2.8rem $space-half
   // Subs block
   .region-content > .views-row
-    margin-bottom: 0.5em
+    margin-bottom: $space-half
     position: relative
     .views-field-field-image
       min-height: 17rem
@@ -88,10 +86,10 @@
         background: rgba(0, 0, 0, 0.5)
         color: $white
         display: block
-        padding: 0.5em
-        font-size: 1.8rem
+        font-size: 2rem
         font-weight: bold
         line-height: 1.2
+        padding: 1.2rem $space-half
   @media all and (max-width: $bp-xs-max)
     .views-field-title
       text-align: center

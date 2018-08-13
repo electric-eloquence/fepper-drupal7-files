@@ -33,7 +33,7 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
-  padding: 1.7rem 1.6rem 1.6rem;
+  padding: 1.6rem;
   position: relative;
   z-index: 2;
   width: 5.5rem;
@@ -99,6 +99,10 @@
     text-align: right;
   }
 }
+#block-views-recent-content-block-2 .node-teaser > h2,
+.view-id-recent_content.view-display-id-page_1 .node-teaser > h2 {
+  font-size: 2rem;
+}
 @media all and (max-width: 480px) {
   #block-views-recent-content-block-2 h2,
   .view-id-recent_content.view-display-id-page_1 h2 {
@@ -124,7 +128,7 @@
 @media all and (min-width: 481px) {
   #block-views-recent-content-block-2 .item-list,
   .view-id-recent_content.view-display-id-page_1 .item-list {
-    margin-top: 0.5em;
+    margin-top: 0.4rem;
   }
   #block-views-recent-content-block-2 .item-list .views-row,
   .view-id-recent_content.view-display-id-page_1 .item-list .views-row {
@@ -162,7 +166,7 @@
   justify-content: space-between;
 }
 .front .layout-content #block-system-main {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8rem;
 }
 .front .layout-content #block-system-main img {
   display: block;
@@ -214,9 +218,6 @@
     overflow: hidden;
     padding: 0 0.8rem;
   }
-  .front .layout-content #block-system-main .views-field-title a {
-    font-size: 1.8rem;
-  }
 }
 @media all and (min-width: 481px) and (max-width: 767px) {
   .front .layout-content #block-system-main .views-field-title {
@@ -246,11 +247,11 @@
     left: 0;
     width: 100%;
     background: rgba(0,0,0,0.5);
-    padding: 1.5em;
+    padding: 2.8rem 0.8rem;
   }
 }
 .front .layout-content .region-content > .views-row {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8rem;
   position: relative;
 }
 .front .layout-content .region-content > .views-row .views-field-field-image {
@@ -272,10 +273,10 @@
   background: rgba(0,0,0,0.5);
   color: #fff;
   display: block;
-  padding: 0.5em;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
+  padding: 1.2rem 0.8rem;
 }
 @media all and (max-width: 480px) {
   .front .layout-content .views-field-title {
