@@ -200,9 +200,6 @@ h6 {
 p {
   margin: 1.6rem 0;
 }
-.node-teaser p {
-  margin-top: 0;
-}
 a {
   color: #333;
   text-decoration: none;
@@ -307,7 +304,7 @@ object {
 }
 @media all and (max-width: 767px) {
   #logo img {
-    height: 3.7rem;
+    height: 3.8rem;
   }
 }
 form ol,
@@ -840,6 +837,9 @@ body:not(.node-type-article) .node-article > .links {
 }
 .node-teaser {
   margin-bottom: 0;
+}
+.node-teaser p {
+  margin-top: 0;
 }
 #name-and-slogan {
   float: left;

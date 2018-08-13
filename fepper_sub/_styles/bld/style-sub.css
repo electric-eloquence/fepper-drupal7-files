@@ -86,31 +86,6 @@
     padding: 0 0 0 1em;
   }
 }
-@media all and (min-width: 481px) and (max-width: 767px) {
-  #block-system-main {
-    position: relative;
-  }
-  #block-system-main .views-field-field-image {
-    padding-top: 75%;
-  }
-  #block-system-main .views-field-field-image .field-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #block-system-main .views-field-title {
-    background: rgba(0,0,0,0.5);
-    overflow: hidden;
-    padding: 0.8rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  #block-system-main .views-field-title a {
-    color: #fff;
-  }
-}
 .region-footer > * {
   width: 100%;
 }
@@ -143,7 +118,7 @@
 @media all and (max-width: 767px) {
   #block-views-recent-content-block-2 .node-teaser > h2,
   .view-id-recent_content.view-display-id-page_1 .node-teaser > h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 @media all and (min-width: 481px) {
@@ -206,6 +181,31 @@
     align-items: center;
     justify-content: center;
     height: 8.7rem;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 767px) {
+  .front .layout-content #block-system-main {
+    position: relative;
+  }
+  .front .layout-content #block-system-main .views-field-field-image {
+    padding-top: 75%;
+  }
+  .front .layout-content #block-system-main .views-field-field-image .field-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .front .layout-content #block-system-main .views-field-title {
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    padding: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .front .layout-content #block-system-main .views-field-title a {
+    color: #fff;
   }
 }
 @media all and (max-width: 767px) {
@@ -303,5 +303,12 @@
   .front.page-hero .layout-content #block-system-main,
   .front.page-hero .layout-content .region-content > .views-row {
     width: calc(50% - 0.4rem);
+  }
+}
+@media all and (max-width: 767px) {
+  .front.page-hero .layout-content #block-system-main a,
+  .front.page-hero .layout-content .region-content > .views-row a {
+    font-size: 1.7rem;
+    line-height: 1.1;
   }
 }

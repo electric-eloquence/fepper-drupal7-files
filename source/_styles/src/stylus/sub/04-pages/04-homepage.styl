@@ -24,6 +24,24 @@
         align-items: center
         justify-content: center
         height: 8.7rem
+    @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+      position: relative;
+      .views-field-field-image
+        padding-top: 75%
+        .field-content
+          position: absolute
+          top: 0
+          left: 0
+      .views-field-title
+        background: $dim
+        overflow: hidden
+        padding: $space-half
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        a
+          color: $white
     @media all and (max-width: $bp-sm-max)
       .views-field-title
         background: $dimmer
@@ -92,8 +110,12 @@
   margin-bottom: $space-double
   padding: 0 0 $space-double
   width: 100%
-  @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
-    // Sizing Hero and Subs
-    #block-system-main,
-    .region-content > .views-row
+  // Hero and Subs
+  #block-system-main,
+  .region-content > .views-row
+    @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
       width: calc(50% - 0.4rem)
+    @media all and (max-width: $bp-sm-max)
+      a
+        font-size: 1.7rem
+        line-height: 1.1
