@@ -17,7 +17,8 @@
 }
 .lc,
 [role="main"],
-.layout-container > *:not(footer) {
+.layout-container > *:not(footer),
+.layout-container > footer > * {
   clear: both;
   max-width: 1152px;
   margin: 0 auto;
@@ -522,12 +523,10 @@ input[type="search"]::-webkit-search-decoration {
   }
   #comments .user-picture {
     float: left;
+    margin-right: 0.8rem;
   }
   #comments .user-picture img {
     margin: 0;
-  }
-  #comments .user-picture {
-    margin-right: 0.4rem;
   }
   #comments .content {
     padding-bottom: 0;
@@ -618,7 +617,7 @@ input[type="search"]::-webkit-search-decoration {
   }
   #main-menu.open > .menu {
     border-bottom: 1px solid #ddd;
-    max-height: 100%;
+    max-height: none;
   }
 }
 @media all and (min-width: 768px) {
@@ -768,13 +767,13 @@ header.header {
     position: absolute;
     top: 5.5rem;
     right: 0;
-    z-index: 2;
+    z-index: 3;
   }
   .region-header #block-search-form input {
     height: 3.7rem;
   }
   .region-header #block-search-form.open .content {
-    max-height: 100%;
+    max-height: none;
     overflow: visible;
   }
 }
@@ -810,7 +809,7 @@ footer[role="contentinfo"] a {
   position: relative;
 }
 .region-footer > * {
-  padding: 0.8rem;
+  padding: 0.8rem 0;
 }
 .region-footer p {
   margin: 0;

@@ -49,6 +49,11 @@
     text-align: center;
   }
 }
+@media all and (max-width: 480px) {
+  #comments h2 {
+    text-align: center;
+  }
+}
 #main-menu > h2 > a {
   border-left: 1px solid #ddd;
 }

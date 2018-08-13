@@ -37,7 +37,7 @@
             var searchBlockRect = $searchBlock[0].getBoundingClientRect();
 
             if ($searchBlock.hasClass('open')) {
-              $searchBlock.children('.content').css('top', (searchBlockRect.top + searchBlockRect.height) + 'px');
+              $searchBlock.children('.content').css('top', (searchBlockRect.height + 1) + 'px');
             }
           });
         }
@@ -53,7 +53,7 @@
             var mainMenuBlockRect = $mainMenuBlock[0].getBoundingClientRect();
 
             if ($mainMenuBlock.hasClass('open')) {
-              $mainMenuBlock.children('ul').css('top', (mainMenuBlockRect.top + mainMenuBlockRect.height) + 'px');
+              $mainMenuBlock.children('ul').css('top', (mainMenuBlockRect.height + mainMenuBlockRect.top) + 'px');
             }
           });
         }
