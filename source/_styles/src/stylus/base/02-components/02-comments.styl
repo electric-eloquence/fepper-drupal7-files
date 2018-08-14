@@ -5,8 +5,7 @@
     margin: $space 0 0
   .comment
     display: flex 
-    //padding: 1.8rem 0 // Padding instead of margin so borders appear when indented.
-    padding: 0.9rem 0
+    padding: 0.9rem 0 // Padding instead of margin so borders appear when indented.
   .submitted
     min-height: 11em
     width: 12em
@@ -14,7 +13,7 @@
       display: block
       font-size: 1.2rem
       line-height: 1.6rem
-      margin-left: 2px
+      margin-left: 0.2rem
   .content
     p
       margin: 0
@@ -28,8 +27,8 @@
       width: 6.25em
   .permalink
     display: block
-    font-size: 0.75em
-    margin-left: 2px
+    font-size: 1.2rem
+    margin-left: 0.2rem
     text-decoration: underline
   .username
     font-weight: bold
@@ -55,12 +54,10 @@
       padding-bottom: 0
   .username
     display: block
-    padding-bottom: $space-half
   @media all and (max-width: $bp-xs-max)
     $img-size-xs = 8.75rem
     .comment
       display: block
-      //padding: 1.2rem 0 // Padding instead of margin so borders appear when indented.
       padding: 0.6rem 0 // Padding instead of margin so borders appear when indented.
       overflow: hidden
     .submitted
@@ -93,15 +90,3 @@
       .comment
         > *
           margin-left: 2px
-  @media all and (min-width: $bp-small)
-    .username
-      &::before
-        content: "\A"
-        white-space: pre
-      &::after
-        content: "\A"
-        white-space: pre
-    #comment-form
-      .username
-        &::before
-          content: ""

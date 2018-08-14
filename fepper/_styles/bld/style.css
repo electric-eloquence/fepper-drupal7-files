@@ -458,7 +458,7 @@ input[type="search"]::-webkit-search-decoration {
   display: block;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  margin-left: 2px;
+  margin-left: 0.2rem;
 }
 #comments .content p {
   margin: 0;
@@ -474,8 +474,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 #comments .permalink {
   display: block;
-  font-size: 0.75em;
-  margin-left: 2px;
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
   text-decoration: underline;
 }
 #comments .username {
@@ -509,7 +509,6 @@ input[type="search"]::-webkit-search-decoration {
 }
 #comments .username {
   display: block;
-  padding-bottom: 0.8rem;
 }
 @media all and (max-width: 480px) {
   #comments .comment {
@@ -554,19 +553,6 @@ input[type="search"]::-webkit-search-decoration {
   }
   #comments .indented .comment > * {
     margin-left: 2px;
-  }
-}
-@media all and (min-width: 481px) {
-  #comments .username::before {
-    content: "\A";
-    white-space: pre;
-  }
-  #comments .username::after {
-    content: "\A";
-    white-space: pre;
-  }
-  #comments #comment-form .username::before {
-    content: "";
   }
 }
 #main-menu > h2 {
@@ -878,6 +864,10 @@ body:not(.node-type-article) .node-article > .links {
 }
 .search-results {
   margin-top: 1em;
+}
+.views-field-title {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 @media all and (max-width: 1024px) {
   #skip-link a {
