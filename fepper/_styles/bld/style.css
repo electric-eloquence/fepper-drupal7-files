@@ -481,9 +481,6 @@ input[type="search"]::-webkit-search-decoration {
 #comments .username {
   font-weight: bold;
 }
-#comments .comment:last-of-type {
-  border-bottom: 1px solid #ddd;
-}
 #comments .links {
   display: block;
   margin-top: 0.25em;
@@ -495,14 +492,10 @@ input[type="search"]::-webkit-search-decoration {
   padding: 0;
 }
 #comments .indented {
-  margin-left: 0;
-  padding-left: 0.75em;
-}
-#comments .indented .comment {
+  border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
-}
-#comments > .indented {
-  border-top: 1px solid #ddd;
+  margin-left: 0.75em;
+  padding-bottom: 0.5em;
 }
 #comments [id^="edit-author"] label {
   padding-bottom: 0;
