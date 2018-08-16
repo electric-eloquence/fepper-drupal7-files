@@ -877,4 +877,9 @@ body:not(.node-type-article) .node-article > .links {
   #user-login-form input[type="password"] {
     width: 20rem;
   }
+  #sidebar-first .views-field-title,
+  #sidebar-second .views-field-title {
+    font-size: 1em;
+    font-weight: normal;
+  }
 }
