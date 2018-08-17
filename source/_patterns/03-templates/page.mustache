@@ -5,11 +5,15 @@
     <div id="block-fepper-branding">
       {{# img.logo }}
         {{# homepage? }}
-          {{^ site_name? }}<h1>{{/ site_name? }}
+          {{^ site_name? }}
+            <h1>
+          {{/ site_name? }}
         {{/ homepage? }}
         {{> 01-compounds/01-blocks/04-logo.mustache }}
         {{# homepage? }}
-          {{^ site_name? }}</h1>{{/ site_name? }}
+          {{^ site_name? }}
+            </h1>
+          {{/ site_name? }}
         {{/ homepage? }}
       {{/ img.logo }}
       {{# compounds-name-and-slogan~~pages-new-install? }}
