@@ -3,8 +3,8 @@
 The documentation for Fepper for Drupal 7 does not vary from the documentation 
 for <a href="https://github.com/electric-eloquence/fepper-drupal" target="_blank">
 Fepper for Drupal 8</a>. As such, there does not exist enough justification to 
-maintain a separate Fepper project for Drupal 7. Instead, populate your Fepper 
-for Drupal 8 project with the Drupal 7 backend and patterns: 
+maintain a separate Fepper distribution for Drupal 7. Instead, populate your 
+Fepper for Drupal 8 project with the Drupal 7 backend and patterns: 
 
 * Download the latest release of 
   <a href="https://github.com/electric-eloquence/fepper-drupal/releases/latest" target="_blank">
