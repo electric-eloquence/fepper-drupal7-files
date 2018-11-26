@@ -293,7 +293,6 @@ img,
 video,
 object {
   max-width: 100%;
-  height: auto;
 }
 .more-link {
   font-style: italic;
