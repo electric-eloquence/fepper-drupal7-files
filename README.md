@@ -39,5 +39,7 @@ screenshot) in your Drupal 7 backend, follow these instructions:
 * Replace `backend/drupal/sites/default/files` in Fepper for Drupal 8 with the 
   `files` directory from this repository.
 * Restore `fepper-drupal-mysqldump.sql` into your MySQL database.
+* `drush updatedb`
+* `drush cc all`
 * Open http://d7.local in a browser.
 * Log into Drupal with `admin:admin`
