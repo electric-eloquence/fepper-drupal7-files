@@ -1,14 +1,14 @@
 .cf::before,
-[role="main"]::before,
+#main::before,
 .layout-content::before,
 .cf::after,
-[role="main"]::after,
+#main::after,
 .layout-content::after {
   content: " ";
   display: table;
 }
 .cf::after,
-[role="main"]::after,
+#main::after,
 .layout-content::after {
   clear: both;
 }

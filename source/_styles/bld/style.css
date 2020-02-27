@@ -16,7 +16,7 @@
   clear: both;
 }
 .lc,
-[role="main"],
+#main,
 .layout-container > *:not(footer),
 .layout-container > footer > * {
   clear: both;
