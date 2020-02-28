@@ -813,9 +813,6 @@ footer[role="contentinfo"] a {
 body:not(.node-type-article) .node-article > .links {
   display: none;
 }
-.node-teaser {
-  margin-bottom: 0;
-}
 .node-teaser p:first-of-type {
   margin-top: 0;
 }

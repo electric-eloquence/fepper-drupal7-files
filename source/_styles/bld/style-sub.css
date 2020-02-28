@@ -141,6 +141,10 @@
     float: left;
     margin-bottom: 1.6rem;
   }
+  #block-views-recent-content-block-2 .node-teaser,
+  .view-id-recent_content.view-display-id-page_1 .node-teaser {
+    margin-bottom: 0;
+  }
   #block-views-recent-content-block-2 .node-teaser > h2,
   .view-id-recent_content.view-display-id-page_1 .node-teaser > h2,
   #block-views-recent-content-block-2 .node-teaser .field-name-body p,
@@ -264,6 +268,7 @@
 }
 .front .layout-content .region-content > .views-row .views-field-field-image img {
   display: block;
+  height: auto;
 }
 .front .layout-content .region-content > .views-row .views-field-title {
   position: absolute;
