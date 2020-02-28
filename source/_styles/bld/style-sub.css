@@ -160,7 +160,6 @@
   #block-views-recent-content-block-2 .node-teaser img,
   .view-id-recent_content.view-display-id-page_1 .node-teaser img {
     float: left;
-    height: auto;
     width: 33.333333333333336%;
   }
 }
@@ -268,7 +267,6 @@
 }
 .front .layout-content .region-content > .views-row .views-field-field-image img {
   display: block;
-  height: auto;
 }
 .front .layout-content .region-content > .views-row .views-field-title {
   position: absolute;
@@ -320,4 +318,8 @@
     font-size: 1.7rem;
     line-height: 1.1;
   }
+}
+#scraper div.error {
+  background-color: transparent;
+  background-image: none;
 }

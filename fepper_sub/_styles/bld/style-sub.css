@@ -319,3 +319,7 @@
     line-height: 1.1;
   }
 }
+#scraper div.error {
+  background-color: transparent;
+  background-image: none;
+}
