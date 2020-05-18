@@ -1,0 +1,30 @@
+#main,
+.layout-content
+  @extend .cf
+@media all and (max-width: $bp-xs-max)
+  #sidebar-second
+    text-align: center
+@media all and (max-width: $bp-sm-max)
+  .layout-content
+    clear: both
+@media all and (min-width: $bp-med)
+  .layout-content,
+  .two-sidebars #sidebar-first
+    float: left
+    width: $column-width-two-thirds
+  .no-sidebars .layout-content
+    width: 100%
+  .one-sidebar #sidebar-first
+    display: flex
+    justify-content: center
+    padding-right: 0
+  #sidebar-second
+    float: left
+    padding: 0 0 0 1em
+    width: $column-width-one-third
+@media all and (min-width: $bp-large)
+  .layout-content,
+  .two-sidebars #sidebar-first
+    width: $column-width-three-quarters
+  #sidebar-second
+    width: $column-width-one-quarter

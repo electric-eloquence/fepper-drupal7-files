@@ -1,3 +1,5 @@
+$img-size = 5em
+$meta-width = 17rem
 #comments
   border-top: 1px solid $gray-light-3
   margin-top: 2em
@@ -8,7 +10,7 @@
     padding: 0.9rem 0 // Padding instead of margin so borders appear when indented.
   .submitted
     min-height: 11em
-    width: 12em
+    width: $meta-width
     > span
       display: block
       font-size: 1.2rem
@@ -18,13 +20,14 @@
     p
       margin: 0
   .submitted + .content
-    width: calc(100% - 12em)
+    width: "calc(100% - %s)" % $meta-width
   .user-picture
-    img
+    img,
+    svg
       display: block
       border: 1px solid $gray-light-2
-      margin-bottom: 0.5em
-      width: 6.25em
+      width: $img-size
+      height: $img-size
   .permalink
     display: block
     font-size: 1.2rem
@@ -51,7 +54,6 @@
   .username
     display: block
   @media all and (max-width: $bp-xs-max)
-    $img-size-xs = 8.75rem
     .comment
       display: block
       padding: 0.6rem 0 // Padding instead of margin so borders appear when indented.

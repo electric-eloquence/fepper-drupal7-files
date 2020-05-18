@@ -1,0 +1,117 @@
+.front .layout-content
+  @media all and (min-width: $bp-med)
+    margin-bottom: 2.0rem
+  .region-content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  // Hero block
+  #block-system-main
+    margin-bottom: $space-half
+    img
+      display: block
+    .views-field-title
+      a
+        color: $white
+        display: block
+        line-height: 1.2
+    @media all and (max-width: $bp-xs-max)
+      .views-field-title
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 8.7rem
+    @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+      position: relative
+      .views-field-field-image
+        padding-top: 75%
+        .field-content
+          position: absolute
+          top: 0
+          left: 0
+      .views-field-title
+        background: $dim
+        overflow: hidden
+        padding: $space-half
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        a
+          color: $white
+    @media all and (max-width: $bp-sm-max)
+      .views-field-title
+        background: $dimmer
+        overflow: hidden
+        padding: 0 $space-half
+    @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+      .views-field-title
+        padding-top: 19%
+        .field-content
+          display: block
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+    @media all and (min-width: $bp-med)
+      position: relative
+      .views-field-field-image
+        min-height: 7.68rem
+      .views-field-title
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        background: $dim
+        padding: 2.8rem $space-half
+  // Subs block
+  .region-content > .views-row
+    margin-bottom: $space-half
+    position: relative
+    .views-field-field-image
+      min-height: 17rem
+      position: relative
+      z-index: 0
+      img
+        display: block
+    .views-field-title
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      color: $white
+      a
+        background: rgba(0, 0, 0, 0.5)
+        color: $white
+        display: block
+        font-size: 2rem
+        font-weight: bold
+        line-height: 1.2
+        padding: 1.2rem $space-half
+  @media all and (max-width: $bp-xs-max)
+    .views-field-title
+      text-align: center
+  @media all and (max-width: $bp-sm-max)
+    .region-content > .views-row
+      .views-field-title
+        a
+          font-size: 1.7rem
+  @media all and (min-width: $bp-med)
+    // Sizing just Subs
+    .region-content > .views-row
+      padding-top: $space-half
+      width: "calc((%s) - (3.2rem / 3))" % $column-width-one-third
+.front.page-hero .layout-content
+  border-bottom: 2px solid $gray-light-2
+  margin-bottom: $space-double
+  padding: 0 0 $space-double
+  width: 100%
+  // Hero and Subs
+  #block-system-main,
+  .region-content > .views-row
+    @media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+      width: calc(50% - 0.4rem)
+    @media all and (max-width: $bp-sm-max)
+      a
+        font-size: 1.7rem
+        line-height: 1.1

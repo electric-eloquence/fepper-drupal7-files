@@ -37,7 +37,7 @@
             var searchBlockRect = $searchBlock[0].getBoundingClientRect();
 
             if ($searchBlock.hasClass('open')) {
-              $searchBlock.children('.content').css('top', (searchBlockRect.height + 1) + 'px');
+              $searchBlock.children('.content').css('top', (searchBlockRect.bottom + 1) + 'px');
             }
           });
         }
@@ -53,7 +53,7 @@
             var mainMenuBlockRect = $mainMenuBlock[0].getBoundingClientRect();
 
             if ($mainMenuBlock.hasClass('open')) {
-              $mainMenuBlock.children('ul').css('top', (mainMenuBlockRect.height + mainMenuBlockRect.top) + 'px');
+              $mainMenuBlock.children('ul').css('top', (mainMenuBlockRect.bottom) + 'px');
             }
           });
         }
@@ -65,10 +65,16 @@
     attach: function (context) {
       $(window).resize(function () {
         var $searchBlock = $('#block-search-form', context);
+        var $mainMenuBlock = $('#main-menu', context);
 
         if ($searchBlock.length && $searchBlock.hasClass('open')) {
           $searchBlock.removeClass('open');
           $searchBlock.children('.content').css('top', '0');
+        }
+
+        if ($mainMenuBlock.length) {
+          $mainMenuBlock.removeClass('open');
+          $mainMenuBlock.children('ul').css('top', '0');
         }
       });
     }

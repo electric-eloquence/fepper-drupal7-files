@@ -65,25 +65,26 @@ input[type="search"]::-webkit-search-decoration
       background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
       background-size: cover
       content: ""
-      padding: 0.7rem
+      padding: 0.5625em
       position: absolute
-      top: 1.2rem
-      right: -3.2rem
+      top: 0.6875em
+      right: -2em
       z-index: 1
   input
     background: transparent
-    height: 4rem
+    height: 2.5em
     &[id^="edit-search-block-form"]
-      width: 11.5em
+      width: 13.5em
+      @media all and (min-width: $bp-med) and (max-width: $bp-md-max)
+        width: 11.4375em
     &[id^="edit-submit"]
       border: 1px solid $gray
       border-left: 0
       color: transparent
-      font-size: 0.85em
       padding-right: 0
       padding-left: 0
       position: relative
-      width: 5rem
+      width: 3.125em
       &:hover
         background: rgba(0, 0, 0, 0.3)
 #search-block-form

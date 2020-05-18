@@ -8,6 +8,8 @@
   },
   "homepage": "04-pages-00-homepage-00-homepage",
   "html_title": "Fepper D7",
+  "header_title": "Home",
+  "header_rel": "home",
   "site_name": "Fepper Theme D7",
   "sidebar_second?": true,
   "rows?": true,
