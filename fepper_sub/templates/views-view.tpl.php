@@ -34,10 +34,9 @@
   <?php if ($rows): ?>
     <div class="view-content">
 
-
       <?php print $rows; ?>
 
-      </div>
+    </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>

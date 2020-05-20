@@ -51,12 +51,6 @@
         "components-article?": true
       ) }}
     {{/ templates-node~~pages-article? }}
-    {{# components-related-posts? }}
-      {{> 02-components/01-sections/01-related-posts }}
-    {{/ components-related-posts? }}
-    {{# components-recent-comments? }}
-      {{> 02-components/01-sections/00-recent-comments }}
-    {{/ components-recent-comments? }}
 
     {{! END ARTICLE }}
 
@@ -71,6 +65,24 @@
     {{/ compounds-login? }}
 
     {{! END NEW INSTALL }}
+
+
+    {{! BEGIN SIDEBAR2 VIEWS }}
+
+    {{# templates-views-view~~templates-block--sidebar2__posts? }}
+      {{> 03-templates/views-view(
+        views-view_classes: 'view view-recent-content view-id-recent_content view-display-id-block',
+        "templates-views-view-list~~templates-block--sidebar2__posts?": true
+      ) }}
+    {{/ templates-views-view~~templates-block--sidebar2__posts? }}
+    {{# templates-views-view~~templates-block--sidebar2__comments? }}
+      {{> 03-templates/views-view(
+        views-view_classes: 'view view-comments-recent view-id-comments_recent view-display-id-block',
+        "templates-views-view-list~~templates-block--sidebar2__comments?": true
+      ) }}
+    {{/ templates-views-view~~templates-block--sidebar2__comments? }}
+
+    {{! END SIDEBAR2 VIEWS }}
 
 
     {{! BEGIN FOOTER }}

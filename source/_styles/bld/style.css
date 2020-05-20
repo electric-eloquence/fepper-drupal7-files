@@ -400,10 +400,12 @@ ol.text,
 }
 img,
 video,
-object {
+object,
+svg {
   max-width: 100%;
 }
-img {
+img,
+svg {
   height: auto;
 }
 .more-link {
@@ -586,7 +588,6 @@ input[type="search"]::-webkit-search-decoration {
   display: block;
   border: 1px solid #eee;
   width: 5em;
-  height: 5em;
 }
 #comments .permalink {
   display: block;

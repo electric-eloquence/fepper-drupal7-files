@@ -80,19 +80,22 @@
       {{> 03-templates/block(
         block_html_id: 'block-views-recent-content-block',
         block_classes: 'block block-views',
-        "components-related-posts?": true
+        block_subject: 'Recent posts',
+        "templates-views-view~~templates-block--sidebar2__posts?": true
       ) }}
       {{> 03-templates/block(
         block_html_id: 'block-views-comments-recent-block',
         block_classes: 'block block-views',
-        "components-recent-comments?": true
+        block_subject: 'Recent comments',
+        "templates-views-view~~templates-block--sidebar2__comments?": true
       ) }}
     {{/ templates-block--sidebar2~~pages-article? }}
     {{# templates-block--sidebar2? }}
       {{> 03-templates/block(
         block_html_id: 'block-views-comments-recent-block',
         block_classes: 'block block-views',
-        "components-recent-comments?": true
+        block_subject: 'Recent comments',
+        "templates-views-view~~templates-block--sidebar2__comments?": true
       ) }}
     {{/ templates-block--sidebar2? }}
 

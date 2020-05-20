@@ -26,9 +26,6 @@
   {{# rows? }}
     <div class="view-content">
 
-
-      {{! BEGIN VIEWS ROWS }}
-
       {{# templates-views-view-unformatted~~pages-homepage__hero? }}
         {{> 03-templates/views-view-unformatted(
           "templates-views-view-unformatted__row~~pages-homepage__hero?": true
@@ -52,10 +49,25 @@
           wrapper_suffix: '</div>'
         ) }}
       {{/ templates-views-view-list~~pages-blog? }}
+      {{# templates-views-view-list~~templates-block--sidebar2__posts? }}
+        {{> 03-templates/views-view-list(
+          wrapper_prefix: '<div class="item-list">',
+          list_type_prefix: '<ul>',
+          "templates-views-view-list__row~~templates-block--sidebar2__posts?": true,
+          list_type_suffix: '</ul>',
+          wrapper_suffix: '</div>'
+        ) }}
+      {{/ templates-views-view-list~~templates-block--sidebar2__posts? }}
+      {{# templates-views-view-list~~templates-block--sidebar2__comments? }}
+        {{> 03-templates/views-view-list(
+          wrapper_prefix: '<div class="item-list">',
+          list_type_prefix: '<ul>',
+          "templates-views-view-list__row~~templates-block--sidebar2__comments?": true,
+          list_type_suffix: '</ul>',
+          wrapper_suffix: '</div>'
+        ) }}
+      {{/ templates-views-view-list~~templates-block--sidebar2__comments? }}
       {{{ fpo_template_content }}}
-
-      {{! END VIEWS ROWS }}
-
 
     </div>
   {{/ rows? }}

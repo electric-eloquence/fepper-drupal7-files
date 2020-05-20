@@ -12,5 +12,11 @@
       node_attributes: ' typeof="sioc:Item foaf:Document"',
       "compounds-media-block~~pages-blog?": true
     ) }}
-{{/ templates-node~~pages-blog? }}
+  {{/ templates-node~~pages-blog? }}
+  {{# elements-content-list-item~~templates-block--sidebar2__posts? }}
+    {{> 00-elements/01-lists/02-content-list-item }}
+  {{/ elements-content-list-item~~templates-block--sidebar2__posts? }}
+  {{# elements-content-list-item~~templates-block--sidebar2__comments? }}
+    {{> 00-elements/01-lists/02-content-list-item }}
+  {{/ elements-content-list-item~~templates-block--sidebar2__comments? }}
 </li>
