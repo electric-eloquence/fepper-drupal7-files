@@ -39,6 +39,9 @@
   width: 5.5rem;
   height: 5.4rem;
 }
+.mobile-nav-icon > a:active {
+  background-color: #eee;
+}
 .mobile-nav-icon > a::before {
   content: "";
   display: block;

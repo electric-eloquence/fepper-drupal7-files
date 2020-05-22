@@ -50,6 +50,11 @@
   width: 5.5rem;
   height: 5.4rem;
 }
+.mobile-nav-icon > a:active,
+.region-header #block-search-form > h2 > a:active,
+#main-menu > h2 > a:active {
+  background-color: #eee;
+}
 .mobile-nav-icon > a::before,
 .region-header #block-search-form > h2 > a::before,
 #main-menu > h2 > a::before {
@@ -705,8 +710,10 @@ input[type="search"]::-webkit-search-decoration {
     border-top: 1px solid #ddd;
   }
   #main-menu > .menu li a {
-    display: table;
     padding: 0.7rem 1.6rem;
+  }
+  #main-menu > .menu li a:active {
+    background-color: #eee;
   }
   #main-menu > .menu li li {
     padding-left: 2rem;
