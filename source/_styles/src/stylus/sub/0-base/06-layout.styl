@@ -1,30 +1,65 @@
 #main,
 .layout-content
   @extend .cf
-@media all and (max-width: $bp-xs-max)
-  #sidebar-second
-    text-align: center
-@media all and (max-width: $bp-sm-max)
-  .layout-content
-    clear: both
-@media all and (min-width: $bp-med)
-  .layout-content,
-  .two-sidebars #sidebar-first
+.layout-content,
+.two-sidebars #sidebar-first
+  @media all and (min-width: $bp-med)
     float: left
     width: $column-width-two-thirds
-  .no-sidebars .layout-content
-    width: 100%
-  .one-sidebar #sidebar-first
+  @media all and (min-width: $bp-large)
+    width: $column-width-three-quarters
+.layout-content
+  @media all and (max-width: $bp-sm-max)
+    clear: both
+  @media all and (min-width: $bp-med)
+    .no-sidebars &
+      width: 100%
+.one-sidebar #sidebar-first
+  @media all and (min-width: $bp-med)
     display: flex
     justify-content: center
     padding-right: 0
-  #sidebar-second
+#sidebar-second
+  @media all and (max-width: $bp-xs-max)
+    text-align: center
+  @media all and (min-width: $bp-med)
     float: left
     padding: 0 0 0 1em
     width: $column-width-one-third
-@media all and (min-width: $bp-large)
-  .layout-content,
-  .two-sidebars #sidebar-first
-    width: $column-width-three-quarters
-  #sidebar-second
+  @media all and (min-width: $bp-large)
     width: $column-width-one-quarter
+#block-views-recent-content-block-2,
+.view-id-recent_content.view-display-id-page_1
+  .node-teaser
+    > h2
+      font-size: 1.25em
+  @media all and (max-width: $bp-xs-max)
+    h2
+      text-align: center
+    p
+      margin-top: $space-quarter
+    .field-name-field-image
+      display: flex
+      justify-content: center
+      a
+        display: block
+        max-width: 22.5rem
+  @media all and (min-width: $bp-small)
+    .item-list
+      margin-top: $space-quarter
+      .views-row
+        clear: both
+        float: left
+        margin-bottom: $space
+    .node-teaser
+      margin-bottom: 0
+      > h2,
+      .field-name-body p
+        float: right
+        padding: 0 1.6rem
+        width: $column-width-three-quarters
+      > h2
+        margin-top: 0
+      img
+        float: left
+        width: $column-width-one-quarter

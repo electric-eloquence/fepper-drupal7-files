@@ -407,6 +407,7 @@ img,
 video,
 object,
 svg {
+  display: block;
   max-width: 100%;
 }
 img,
@@ -491,6 +492,11 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 480px) {
   textarea {
     width: 100%;
+  }
+}
+@media all and (min-width: 768px) {
+  textarea {
+    max-width: 100%;
   }
 }
 #edit-actions {
