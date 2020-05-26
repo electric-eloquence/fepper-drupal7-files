@@ -325,7 +325,7 @@
 @media all and (min-width: 768px) {
   .front .layout-content .region-content > .views-row {
     padding-top: 0.8rem;
-    width: calc((33.333333333333336%) - (3.2rem / 3));
+    width: calc(33.333333333333336% - (3.2rem / 3));
   }
 }
 @media all and (max-width: 480px) {

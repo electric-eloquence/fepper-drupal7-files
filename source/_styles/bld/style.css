@@ -494,7 +494,7 @@ input[type="search"]::-webkit-search-decoration {
     width: 100%;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 481px) {
   textarea {
     max-width: 100%;
   }
@@ -560,6 +560,7 @@ input[type="search"]::-webkit-search-decoration {
   padding-left: 0;
   position: relative;
   width: 3.125em;
+  z-index: 1;
 }
 #block-search-form input[id^="edit-submit"]:hover {
   background: rgba(0,0,0,0.3);

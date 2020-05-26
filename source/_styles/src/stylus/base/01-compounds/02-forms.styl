@@ -38,7 +38,7 @@ input[type="search"]::-webkit-search-decoration
 textarea
   @media all and (max-width: $bp-xs-max)
     width: 100%
-  @media all and (min-width: $bp-med)
+  @media all and (min-width: $bp-small)
     max-width: 100%
 #edit-actions
   background: transparent
@@ -87,6 +87,7 @@ textarea
       padding-left: 0
       position: relative
       width: 3.125em
+      z-index: 1
       &:hover
         background: rgba(0, 0, 0, 0.3)
 #search-block-form
