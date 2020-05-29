@@ -182,8 +182,8 @@
 }
 .front .layout-content {
   border-bottom: 2px solid #eee;
-  margin-bottom: 3.2rem;
-  padding: 0 0 3.2rem;
+  margin-bottom: 1em;
+  padding: 0 0 1.5em;
   width: 100%;
 }
 .front .layout-content .region-content {
