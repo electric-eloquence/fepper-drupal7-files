@@ -1,3 +1,11 @@
+ul.menu
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  > li
+    padding-right: 1em
+    @media all and (min-width: $bp-med)
+      padding-left: 1em
 #main-menu
   > h2
     @extend .mobile-nav-icon
@@ -32,6 +40,7 @@
       z-index: 1
       li
         border-top: 1px solid $gray-light-2
+        padding: 0
         a
           padding: 0.7rem $space
           &:active
@@ -45,8 +54,6 @@
         max-height: none
   @media all and (min-width: $bp-med)
     float: left
-    a
-      padding: $space-quarter $space
     .expanded
       > a::after
         color: $gray
@@ -66,9 +73,6 @@
         ul
           max-height: 100%
     > ul
-      display: flex
-      flex-wrap: wrap
-      align-items: center
       min-height: $nav-toggle-height + 0.2rem
       > .expanded > ul
         background: $white-translucent
