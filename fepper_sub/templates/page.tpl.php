@@ -35,30 +35,26 @@
           <?php endif; ?>
         <?php endif; ?>
       <?php endif; ?>
-      <?php if ($site_name || $site_slogan): ?>
-        <div id="name-and-slogan">
-          <?php if ($site_name): ?>
-            <?php
-              // Wrap in h1 on front page or when the content title is empty.
-            ?>
-            <?php if ($is_front || !$title): ?>
-              <h1 id="site-name">
-            <?php else: ?>
-              <div id="site-name">
-            <?php endif; ?>
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-              <?php print $site_name; ?>
-            </a>
-            <?php if ($is_front || !$title): ?>
-              </h1>
-            <?php else: ?>
-              </div>
-            <?php endif; ?>
-          <?php endif; ?>
-          <?php if ($site_slogan): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-        </div> <!-- /#name-and-slogan -->
+      <?php if ($site_name): ?>
+        <?php
+          // Wrap in h1 on front page or when the content title is empty.
+        ?>
+        <?php if ($is_front || !$title): ?>
+          <h1 id="site-name">
+        <?php else: ?>
+          <div id="site-name">
+        <?php endif; ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+          <?php print $site_name; ?>
+        </a>
+        <?php if ($is_front || !$title): ?>
+          </h1>
+        <?php else: ?>
+          </div>
+        <?php endif; ?>
+      <?php endif; ?>
+      <?php if ($site_slogan): ?>
+        <div id="site-slogan"><?php print $site_slogan; ?></div>
       <?php endif; ?>
     </div> <!-- /#block-fepper-branding -->
 
