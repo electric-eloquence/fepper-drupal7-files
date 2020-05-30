@@ -249,13 +249,13 @@ div.error a {
 header.header {
   background: #fff;
   border-bottom: 1px solid #ddd;
+  margin-top: 0.8rem;
   padding: 0;
   width: 100%;
 }
 @media all and (max-width: 767px) {
   header.header {
-    margin: 0;
-    padding-left: 0.8rem;
+    margin-left: 0.8rem;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1152px) {
@@ -271,13 +271,17 @@ header.header {
 #block-fepper-branding {
   position: relative;
 }
+@media all and (min-width: 768px) {
+  #block-fepper-branding {
+    float: left;
+  }
+}
 #block-fepper-branding h1 {
   margin: 0;
   padding: 0;
 }
 .region-header #block-search-form {
   float: right;
-  margin-top: 0.8rem;
 }
 .region-header #block-search-form > h2 {
   float: right;
@@ -309,6 +313,11 @@ header.header {
   .region-header #block-search-form.open .content {
     max-height: none;
     overflow: visible;
+  }
+}
+@media all and (min-width: 768px) {
+  .region-header #block-search-form {
+    margin-bottom: 0.8rem;
   }
 }
 .column.sidebar {
@@ -449,9 +458,9 @@ svg {
   font-style: italic;
   text-align: left;
 }
-#logo img {
+#logo {
   float: left;
-  margin: 0.8rem 0;
+  margin-right: 0.8rem;
 }
 @media all and (max-width: 767px) {
   #logo img {
@@ -799,7 +808,8 @@ ul.menu > li {
     max-height: 100%;
   }
   #main-menu > ul {
-    min-height: 5.600000000000001rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
   }
   #main-menu > ul > .expanded > ul {
     background: rgba(255,255,255,0.95);
@@ -879,17 +889,18 @@ body:not(.node-type-article) .node-article > .links {
 .node-teaser p:last-of-type {
   margin-bottom: 0;
 }
-#name-and-slogan {
-  float: left;
-  margin: 0.4em 1em;
-}
 #site-name {
   font-size: 2em;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 #site-name h1 {
   font-size: 1em;
+}
+@media all and (max-width: 767px) {
+  #site-name {
+    clear: both;
+  }
 }
 #breadcrumb {
   font-size: 0.75em;
