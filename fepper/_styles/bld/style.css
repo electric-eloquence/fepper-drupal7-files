@@ -298,6 +298,7 @@ header.header {
 @media all and (max-width: 767px) {
   .region-header #block-search-form {
     margin-top: 0;
+    position: static;
   }
   .region-header #block-search-form > h2 {
     overflow: visible;
@@ -305,6 +306,9 @@ header.header {
     width: auto;
     height: auto;
     clip: auto;
+  }
+  .region-header #block-search-form > h2 > a {
+    border-left: 1px solid #ddd;
   }
   .region-header #block-search-form .content {
     max-height: 0;
@@ -558,9 +562,6 @@ input[type="search"]::-webkit-search-decoration {
 .form-item,
 .form-actions {
   margin: 0;
-}
-#block-search-form {
-  position: relative;
 }
 .page-search #block-search-form {
   display: none;

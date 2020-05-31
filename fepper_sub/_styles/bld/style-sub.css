@@ -47,9 +47,6 @@
   display: block;
   padding: 1.1rem;
 }
-.region-header #block-search-form > h2 > a {
-  border-left: 1px solid #ddd;
-}
 @media all and (min-width: 768px) {
   .layout-content,
   .two-sidebars #sidebar-first {

@@ -30,6 +30,7 @@ header.header
       background-size: cover
   @media all and (max-width: $bp-sm-max)
     margin-top: 0
+    position: static // In order for the mobile nav to work while logged in.
     > h2
       // Undo .visually-hidden.
       overflow: visible
@@ -37,6 +38,8 @@ header.header
       width: auto
       height: auto
       clip: auto
+      > a
+        border-left: 1px solid $gray-light-2
     .content
       max-height: 0
       overflow: hidden
