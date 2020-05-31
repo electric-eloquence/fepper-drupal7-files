@@ -40,14 +40,14 @@
 @import 'base/04-pages/02-article'
 
 // Only in Drupal, not Fepper.
-#site-name
+#site-name#site-name
   font-size: 2em
   font-weight: bold
   line-height: 1.25
-  h1
-    font-size: 1em
   @media all and (max-width: $bp-sm-max)
     clear: both
+  @media all and (min-width: $bp-med)
+    margin-bottom: $space-half
 #breadcrumb
   font-size: 0.75em
   font-weight: bold

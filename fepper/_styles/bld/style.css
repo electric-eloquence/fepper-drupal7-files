@@ -468,7 +468,7 @@ svg {
 }
 #logo {
   float: left;
-  margin: 0 0.8rem 0.8rem 0;
+  margin-right: 0.8rem;
 }
 @media all and (max-width: 767px) {
   #logo {
@@ -476,6 +476,11 @@ svg {
   }
   #logo img {
     height: 3.8rem;
+  }
+}
+@media all and (min-width: 768px) {
+  #logo {
+    margin-bottom: 0.8rem;
   }
 }
 form > div {
@@ -895,17 +900,19 @@ body:not(.node-type-article) .node-article > .links {
 .node-teaser p:last-of-type {
   margin-bottom: 0;
 }
-#site-name {
+#site-name#site-name {
   font-size: 2em;
   font-weight: bold;
   line-height: 1.25;
 }
-#site-name h1 {
-  font-size: 1em;
-}
 @media all and (max-width: 767px) {
-  #site-name {
+  #site-name#site-name {
     clear: both;
+  }
+}
+@media all and (min-width: 768px) {
+  #site-name#site-name {
+    margin-bottom: 0.8rem;
   }
 }
 #breadcrumb {
