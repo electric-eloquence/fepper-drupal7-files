@@ -97,18 +97,16 @@ ul.menu
     display: flex
     flex-wrap: wrap
     justify-content: center
-    margin: 0
-    padding-bottom: 1em
+    margin-bottom: 1em
     li
       border-right: 1px solid $gray-light-2
       margin: 0
       padding: 0
       &:last-child
         border: 0
-    a
-      padding: $space 1.2rem
-    @media all and (max-width: $bp-sm-max)
-      a
-        padding: 1.6rem 1.0rem
+    a,
+    .pager-current
+      // Using padding for a tag to increase tappable area when the link is a numeral.
+      padding: 0 0.75em
     @media all and (min-width: $bp-med)
       justify-content: flex-start

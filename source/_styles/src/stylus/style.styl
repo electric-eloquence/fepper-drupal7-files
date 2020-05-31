@@ -65,6 +65,10 @@
   @extend .cf
   .user-picture
     margin-top: 2em
+    @media all and (max-width: $bp-xs-max)
+      display: flex
+      justify-content: center
+      float: none
 .page-search h1
   @extend .visually-hidden
 .search-results

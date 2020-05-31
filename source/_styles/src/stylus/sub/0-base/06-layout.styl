@@ -30,6 +30,8 @@
     width: $column-width-one-quarter + "%"
 #block-views-recent-content-block-2,
 .view-id-recent_content.view-display-id-page_1
+  .view-content
+    @extend .cf
   .node-teaser
     > h2
       font-size: 1.25em
@@ -53,6 +55,7 @@
         margin-bottom: $space
     .node-teaser
       margin-bottom: 0
+      width: "calc(100vw - %s)" % $space
       > h2,
       .field-name-body p
         float: right
@@ -63,3 +66,12 @@
       img
         float: left
         width: $column-width-one-quarter + "%"
+  @media all and (min-width: $bp-med) and (max-width: $bp-md-max)
+    .node-teaser
+      width: "%svw" % $column-width-two-thirds
+  @media all and (min-width: $bp-large) and (max-width: $max-width)
+    .node-teaser
+      width: "%svw" % $column-width-three-quarters
+  @media all and (min-width: $max-width)
+    .node-teaser
+      width: ($column-width-three-quarters / 100) * $max-width

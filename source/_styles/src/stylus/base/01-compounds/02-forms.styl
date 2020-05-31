@@ -1,3 +1,5 @@
+form > div
+  margin-bottom: 1em
 form ol, form ul
   list-style: none
   margin-left: 0
@@ -90,6 +92,8 @@ textarea
       &:hover
         background: rgba(0, 0, 0, 0.3)
 #search-block-form
+  > div
+    margin-bottom: 0
   // Since this theme always renders a screen-readable h2 for #block-search-form, make the additional h2 added by
   // Drupal core invisible to screen-readers.
   h2.element-invisible

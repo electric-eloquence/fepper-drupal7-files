@@ -329,7 +329,7 @@ header.header {
   }
 }
 .column.sidebar {
-  padding-bottom: 1.6rem;
+  margin-bottom: 1em;
 }
 #sidebar-second li {
   padding: 0.25em 0;
@@ -468,7 +468,7 @@ svg {
 }
 #logo {
   float: left;
-  margin-right: 0.8rem;
+  margin: 0 0.8rem 0.8rem 0;
 }
 @media all and (max-width: 767px) {
   #logo {
@@ -477,6 +477,9 @@ svg {
   #logo img {
     height: 3.8rem;
   }
+}
+form > div {
+  margin-bottom: 1em;
 }
 form ol,
 form ul {
@@ -613,6 +616,9 @@ input[type="search"]::-webkit-search-decoration {
 #block-search-form input[id^="edit-submit"]:hover {
   background: rgba(0,0,0,0.3);
 }
+#search-block-form > div {
+  margin-bottom: 0;
+}
 #search-block-form h2.element-invisible {
   display: none;
 }
@@ -657,14 +663,14 @@ input[type="search"]::-webkit-search-decoration {
   font-weight: bold;
 }
 #comments .links {
-  display: block;
+  display: flex;
   margin-top: 0.25em;
   margin-bottom: 0;
 }
-#comments .comment-reply {
+#comments [class^="comment-"] {
   display: list-item;
   list-style-type: disc;
-  padding: 0;
+  padding: 0 2.6rem 0 0;
 }
 #comments .indented {
   border-bottom: 1px solid #ddd;
@@ -704,11 +710,7 @@ input[type="search"]::-webkit-search-decoration {
   #comments .submitted + .content {
     width: auto;
   }
-  #comments [class^="comment-"] {
-    padding-right: 2.6rem;
-  }
   #comments .links {
-    display: flex;
     justify-content: flex-end;
     margin-right: 0.8rem;
     text-align: right;
@@ -847,8 +849,7 @@ ul.menu > li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 .item-list .pager li {
   border-right: 1px solid #ddd;
@@ -858,13 +859,9 @@ ul.menu > li {
 .item-list .pager li:last-child {
   border: 0;
 }
-.item-list .pager a {
-  padding: 1.6rem 1.2rem;
-}
-@media all and (max-width: 767px) {
-  .item-list .pager a {
-    padding: 1.6rem 1rem;
-  }
+.item-list .pager a,
+.item-list .pager .pager-current {
+  padding: 0 0.75em;
 }
 @media all and (min-width: 768px) {
   .item-list .pager {
@@ -872,7 +869,7 @@ ul.menu > li {
   }
 }
 .node-article {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1em;
 }
 .node-article > .submitted {
   font-size: 0.9em;
@@ -930,6 +927,13 @@ body:not(.node-type-article) .node-article > .links {
 }
 .page-user .profile .user-picture {
   margin-top: 2em;
+}
+@media all and (max-width: 480px) {
+  .page-user .profile .user-picture {
+    display: flex;
+    justify-content: center;
+    float: none;
+  }
 }
 .search-results {
   margin-top: 1em;
