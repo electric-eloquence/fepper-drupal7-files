@@ -18,36 +18,35 @@ header.header
   h1
     margin: 0
     padding: 0
-.region-header
-  #block-search-form
+.region-header #block-search-form
+  float: right
+  > h2
+    @extend .mobile-nav-icon
+    @extend .visually-hidden
     float: right
+    margin: 0
+    > a::before
+      background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
+      background-size: cover
+  @media all and (max-width: $bp-sm-max)
+    margin-top: 0
     > h2
-      @extend .mobile-nav-icon
-      @extend .visually-hidden
-      float: right
-      margin: 0
-      > a::before
-        background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
-        background-size: cover
-    @media all and (max-width: $bp-sm-max)
-      margin-top: 0
-      > h2
-        // Undo .visually-hidden.
-        overflow: visible
-        position: relative !important
-        width: auto
-        height: auto
-        clip: auto
+      // Undo .visually-hidden.
+      overflow: visible
+      position: relative !important
+      width: auto
+      height: auto
+      clip: auto
+    .content
+      max-height: 0
+      overflow: hidden
+      position: absolute
+      top: $nav-toggle-n-border
+      right: 0
+      z-index: 3
+    &.open
       .content
-        max-height: 0
-        overflow: hidden
-        position: absolute
-        top: $nav-toggle-n-border
-        right: 0
-        z-index: 3
-      &.open
-        .content
-          max-height: none
-          overflow: visible
-    @media all and (min-width: $bp-med)
-      margin-bottom: $space-half
+        max-height: none
+        overflow: visible
+  @media all and (min-width: $bp-med)
+    margin-bottom: $space-half
