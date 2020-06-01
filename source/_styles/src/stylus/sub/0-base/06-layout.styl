@@ -1,24 +1,15 @@
 #main,
 .layout-content
   @extend .cf
-.layout-content,
+.page-hero .layout-content,
+.page-blog .layout-content,
+.not-front.page-node.one-sidebar.sidebar-second .layout-content,
 .two-sidebars #sidebar-first
   @media all and (min-width: $bp-med)
     float: left
     width: $column-width-two-thirds + "%"
   @media all and (min-width: $bp-large)
     width: $column-width-three-quarters + "%"
-.layout-content
-  @media all and (max-width: $bp-sm-max)
-    clear: both
-  @media all and (min-width: $bp-med)
-    .no-sidebars &
-      width: 100%
-.one-sidebar #sidebar-first
-  @media all and (min-width: $bp-med)
-    display: flex
-    justify-content: center
-    padding-right: 0
 #sidebar-second
   @media all and (max-width: $bp-xs-max)
     text-align: center
