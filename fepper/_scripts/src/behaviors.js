@@ -24,7 +24,7 @@
 
   Drupal.behaviors.toggleMobileNav = {
     attach: function (context) {
-      var $searchBlock = $('#block-search-form', context);
+      var $searchBlock = $('.region-header #block-search-form', context);
       var $mainMenuBlock = $('#main-menu', context);
 
       if ($searchBlock.length) {
@@ -64,7 +64,7 @@
   Drupal.behaviors.resetSearchBlock = {
     attach: function (context) {
       $(window).resize(function () {
-        var $searchBlock = $('#block-search-form', context);
+        var $searchBlock = $('.region-header #block-search-form', context);
         var $mainMenuBlock = $('#main-menu', context);
 
         if ($searchBlock.length && $searchBlock.hasClass('open')) {
