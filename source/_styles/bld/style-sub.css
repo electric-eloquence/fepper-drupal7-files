@@ -54,7 +54,6 @@
   padding: 1.1rem;
 }
 @media all and (min-width: 768px) {
-  .page-hero .layout-content,
   .page-blog .layout-content,
   .not-front.page-node.one-sidebar.sidebar-second .layout-content,
   .two-sidebars #sidebar-first {
@@ -63,7 +62,6 @@
   }
 }
 @media all and (min-width: 1025px) {
-  .page-hero .layout-content,
   .page-blog .layout-content,
   .not-front.page-node.one-sidebar.sidebar-second .layout-content,
   .two-sidebars #sidebar-first {
@@ -78,8 +76,12 @@
 @media all and (min-width: 768px) {
   #sidebar-second {
     float: left;
-    padding: 0 0 0 1em;
     width: 33.333333333333336%;
+  }
+  .page-hero #sidebar-second,
+  .page-blog #sidebar-second,
+  .page-node #sidebar-second {
+    padding: 0 0 0 1em;
   }
 }
 @media all and (min-width: 1025px) {

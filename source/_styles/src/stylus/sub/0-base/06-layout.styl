@@ -1,7 +1,6 @@
 #main,
 .layout-content
   @extend .cf
-.page-hero .layout-content,
 .page-blog .layout-content,
 .not-front.page-node.one-sidebar.sidebar-second .layout-content,
 .two-sidebars #sidebar-first
@@ -15,8 +14,11 @@
     text-align: center
   @media all and (min-width: $bp-med)
     float: left
-    padding: 0 0 0 1em
     width: $column-width-one-third + "%"
+    .page-hero &,
+    .page-blog &,
+    .page-node &
+      padding: 0 0 0 1em
   @media all and (min-width: $bp-large)
     width: $column-width-one-quarter + "%"
 #block-views-recent-content-block-2,
