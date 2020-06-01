@@ -783,6 +783,7 @@ ul.menu > li {
   #main-menu > .menu li {
     border-top: 1px solid #ddd;
     padding: 0;
+    width: 100%;
   }
   #main-menu > .menu li a {
     padding: 0.7rem 1.6rem;
@@ -791,7 +792,7 @@ ul.menu > li {
     background-color: #eee;
   }
   #main-menu > .menu li li {
-    padding-left: 2rem;
+    padding-left: 1.2rem;
   }
   #main-menu.open > .menu {
     border-bottom: 1px solid #ddd;
