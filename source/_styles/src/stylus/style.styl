@@ -40,14 +40,22 @@
 @import 'base/04-pages/02-article'
 
 // Only in Drupal, not Fepper.
+#site-name#site-name,
+#site-slogan
+  margin-right: $space-half
 #site-name#site-name
   font-size: 2em
   font-weight: bold
   line-height: 1.25
   @media all and (max-width: $bp-sm-max)
     clear: both
+    padding-top: $space-quarter
   @media all and (min-width: $bp-med)
-    margin-bottom: $space-half
+    display: inline-block
+    vertical-align: top
+#site-slogan
+  @media all and (min-width: $bp-med)
+    margin-top: 0.66rem
 #breadcrumb
   font-size: 0.75em
   font-weight: bold

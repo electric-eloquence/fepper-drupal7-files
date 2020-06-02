@@ -273,19 +273,27 @@ header.header {
   }
 }
 #block-fepper-branding {
+  float: left;
   position: relative;
 }
 @media all and (min-width: 768px) {
   #block-fepper-branding {
-    float: left;
+    margin-bottom: 0.8rem;
   }
 }
 #block-fepper-branding h1 {
   margin: 0;
   padding: 0;
 }
-.region-header #block-search-form {
-  float: right;
+@media all and (max-width: 767px) {
+  .region-header {
+    float: left;
+  }
+}
+@media all and (min-width: 768px) {
+  .region-header {
+    float: right;
+  }
 }
 .region-header #block-search-form > h2 {
   float: right;
@@ -406,7 +414,7 @@ ol.text,
 [role="article"] ol,
 [typeof="schema:Article"] ul,
 [typeof="schema:Article"] ol {
-  margin: 0 0 1.6rem 1.92rem;
+  margin: 0 0 1.6rem 1.2em;
 }
 .text ul ul,
 .text ol ul,
@@ -467,11 +475,11 @@ svg {
   text-align: left;
 }
 #logo {
-  float: left;
   margin-right: 0.8rem;
 }
 @media all and (max-width: 767px) {
   #logo {
+    float: left;
     margin-top: 0.8rem;
   }
   #logo img {
@@ -480,7 +488,7 @@ svg {
 }
 @media all and (min-width: 768px) {
   #logo {
-    margin-bottom: 0.8rem;
+    display: inline-block;
   }
 }
 form > div {
@@ -743,15 +751,32 @@ ul.menu > li {
     padding-left: 1em;
   }
 }
+ul.menu a {
+  display: block;
+}
+@media all and (min-width: 768px) {
+  #block-system-user-menu .menu,
+  #main-menu .menu {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  #block-system-user-menu .menu a,
+  #main-menu .menu a {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+}
+@media all and (max-width: 767px) {
+  #block-system-user-menu {
+    margin-top: 0.8rem;
+  }
+}
 #main-menu > h2 {
   margin: 0;
 }
 #main-menu .icon-menu::before {
   background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0;
   background-size: cover;
-}
-#main-menu > .menu a {
-  display: block;
 }
 @media all and (max-width: 767px) {
   #main-menu {
@@ -766,7 +791,6 @@ ul.menu > li {
   }
   #main-menu > .menu {
     background: rgba(255,255,255,0.95);
-    display: block;
     max-height: 0;
     overflow: hidden;
     position: absolute;
@@ -802,10 +826,6 @@ ul.menu > li {
 @media all and (min-width: 768px) {
   #main-menu {
     float: left;
-  }
-  #main-menu a {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
   }
   #main-menu .expanded > a::after {
     color: #808080;
@@ -906,6 +926,10 @@ body:not(.node-type-article) .node-article > .links {
 .node-teaser p:last-of-type {
   margin-bottom: 0;
 }
+#site-name#site-name,
+#site-slogan {
+  margin-right: 0.8rem;
+}
 #site-name#site-name {
   font-size: 2em;
   font-weight: bold;
@@ -914,11 +938,18 @@ body:not(.node-type-article) .node-article > .links {
 @media all and (max-width: 767px) {
   #site-name#site-name {
     clear: both;
+    padding-top: 0.4rem;
   }
 }
 @media all and (min-width: 768px) {
   #site-name#site-name {
-    margin-bottom: 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media all and (min-width: 768px) {
+  #site-slogan {
+    margin-top: 0.66rem;
   }
 }
 #breadcrumb {

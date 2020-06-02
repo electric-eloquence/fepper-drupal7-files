@@ -12,44 +12,49 @@ header.header
   @media all and (min-width: $max-width)
     width: "calc(%s - %s)" % ($max-width $space)
 #block-fepper-branding
+  float: left
   position: relative
   @media all and (min-width: $bp-med)
-    float: left
+    margin-bottom: $space-half
   h1
     margin: 0
     padding: 0
-.region-header #block-search-form
-  float: right
-  > h2
-    @extend .mobile-nav-icon
-    @extend .visually-hidden
-    float: right
-    margin: 0
-    > a::before
-      background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
-      background-size: cover
+.region-header
   @media all and (max-width: $bp-sm-max)
-    margin-top: 0
-    position: static // In order for the mobile nav to work while logged in.
-    > h2
-      // Undo .visually-hidden.
-      overflow: visible
-      position: relative !important
-      width: auto
-      height: auto
-      clip: auto
-      > a
-        border-left: 1px solid $gray-light-2
-    .content
-      max-height: 0
-      overflow: hidden
-      position: absolute
-      top: $nav-toggle-n-border
-      right: 0
-      z-index: 3
-    &.open
-      .content
-        max-height: none
-        overflow: visible
+    float: left
   @media all and (min-width: $bp-med)
-    margin-bottom: $space-half
+    float: right
+  #block-search-form
+    > h2
+      @extend .mobile-nav-icon
+      @extend .visually-hidden
+      float: right
+      margin: 0
+      > a::before
+        background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
+        background-size: cover
+    @media all and (max-width: $bp-sm-max)
+      margin-top: 0
+      position: static // In order for the mobile nav to work while logged in.
+      > h2
+        // Undo .visually-hidden.
+        overflow: visible
+        position: relative !important
+        width: auto
+        height: auto
+        clip: auto
+        > a
+          border-left: 1px solid $gray-light-2
+      .content
+        max-height: 0
+        overflow: hidden
+        position: absolute
+        top: $nav-toggle-n-border
+        right: 0
+        z-index: 3
+      &.open
+        .content
+          max-height: none
+          overflow: visible
+    @media all and (min-width: $bp-med)
+      margin-bottom: $space-half

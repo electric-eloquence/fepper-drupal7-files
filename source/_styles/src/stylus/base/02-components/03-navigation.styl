@@ -6,6 +6,20 @@ ul.menu
     padding-right: 1em
     @media all and (min-width: $bp-med)
       padding-left: 1em
+  a
+    display: block
+#block-system-user-menu,
+#main-menu
+  @media all and (min-width: $bp-med)
+    .menu
+      margin-top: $space-half
+      margin-bottom: $space-half
+      a
+        padding-top: 0.2rem
+        padding-bottom: 0.2rem
+#block-system-user-menu
+  @media all and (max-width: $bp-sm-max)
+    margin-top: $space-half
 #main-menu
   > h2
     @extend .mobile-nav-icon
@@ -16,9 +30,6 @@ ul.menu
     background-size: cover
   .menu
     @extend .cf
-  > .menu
-    a
-      display: block
   @media all and (max-width: $bp-sm-max)
     float: right
     > h2
@@ -30,7 +41,6 @@ ul.menu
       clip: auto
     > .menu
       background: $white-translucent
-      display: block
       max-height: 0
       overflow: hidden
       position: absolute
@@ -56,9 +66,6 @@ ul.menu
         max-height: none
   @media all and (min-width: $bp-med)
     float: left
-    a
-      padding-top: 0.2rem
-      padding-bottom: 0.2rem
     .expanded
       > a::after
         color: $gray
