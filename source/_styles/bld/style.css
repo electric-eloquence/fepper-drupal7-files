@@ -303,9 +303,6 @@ header.header {
     height: auto;
     clip: auto;
   }
-  .region-header #block-search-form > h2 > a {
-    border-left: 1px solid #ddd;
-  }
   .region-header #block-search-form .content {
     max-height: 0;
     overflow: hidden;

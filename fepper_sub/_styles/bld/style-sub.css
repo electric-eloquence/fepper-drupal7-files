@@ -53,6 +53,10 @@
   display: block;
   padding: 1.1rem;
 }
+.region-header #block-search-form > h2 > a,
+#main-menu > h2 > a {
+  border-left: 1px solid #ddd;
+}
 @media all and (min-width: 768px) {
   .page-blog .layout-content,
   .not-front.page-node.one-sidebar.sidebar-second .layout-content,
@@ -187,9 +191,6 @@
   #comments h2 {
     text-align: center;
   }
-}
-#main-menu > h2 > a {
-  border-left: 1px solid #ddd;
 }
 .page-hero .layout-content {
   border-bottom: 2px solid #eee;
