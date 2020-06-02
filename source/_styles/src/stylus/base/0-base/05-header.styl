@@ -14,17 +14,12 @@ header.header
 #block-fepper-branding
   float: left
   position: relative
-  @media all and (min-width: $bp-med)
-    margin-bottom: $space-half
   h1
     margin: 0
     padding: 0
 .region-header
-  @media all and (max-width: $bp-sm-max)
-    float: left
-  @media all and (min-width: $bp-med)
-    float: right
   #block-search-form
+    float: right
     > h2
       @extend .mobile-nav-icon
       @extend .visually-hidden
@@ -58,3 +53,8 @@ header.header
           overflow: visible
     @media all and (min-width: $bp-med)
       margin-bottom: $space-half
+  #block-system-user-menu
+    @media all and (max-width: $bp-sm-max)
+      float: left
+    @media all and (min-width: $bp-med)
+      float: right

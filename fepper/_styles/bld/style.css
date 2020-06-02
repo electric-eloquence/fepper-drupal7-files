@@ -276,24 +276,12 @@ header.header {
   float: left;
   position: relative;
 }
-@media all and (min-width: 768px) {
-  #block-fepper-branding {
-    margin-bottom: 0.8rem;
-  }
-}
 #block-fepper-branding h1 {
   margin: 0;
   padding: 0;
 }
-@media all and (max-width: 767px) {
-  .region-header {
-    float: left;
-  }
-}
-@media all and (min-width: 768px) {
-  .region-header {
-    float: right;
-  }
+.region-header #block-search-form {
+  float: right;
 }
 .region-header #block-search-form > h2 {
   float: right;
@@ -334,6 +322,16 @@ header.header {
 @media all and (min-width: 768px) {
   .region-header #block-search-form {
     margin-bottom: 0.8rem;
+  }
+}
+@media all and (max-width: 767px) {
+  .region-header #block-system-user-menu {
+    float: left;
+  }
+}
+@media all and (min-width: 768px) {
+  .region-header #block-system-user-menu {
+    float: right;
   }
 }
 .column.sidebar {
@@ -938,7 +936,8 @@ body:not(.node-type-article) .node-article > .links {
 @media all and (max-width: 767px) {
   #site-name#site-name {
     clear: both;
-    padding-top: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
 }
 @media all and (min-width: 768px) {
