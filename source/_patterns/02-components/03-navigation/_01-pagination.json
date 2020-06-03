@@ -15,8 +15,8 @@
         "item": "<a title=\"Go to page 1\" href=\"#\">1</a>"
       },
       {
-        "item_attributes": " class=\"pager-item\"",
-        "item": "<a title=\"Go to page 2\" href=\"#\">2</a>"
+        "item_attributes": " class=\"pager-current\"",
+        "item": "2"
       },
       {
         "item_attributes": " class=\"pager-item\"",
