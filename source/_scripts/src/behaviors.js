@@ -24,6 +24,8 @@
 
   Drupal.behaviors.toggleMobileNav = {
     attach: function (context) {
+      var $body = $('body', context);
+      var $header = $('.header', context);
       var $searchBlock = $('.region-header #block-search-form', context);
       var $mainMenuBlock = $('#main-menu', context);
 
@@ -34,10 +36,13 @@
 
         if ($searchToggler.length) {
           $searchToggler.click(function () {
-            var searchBlockRect = $searchBlock[0].getBoundingClientRect();
-
             if ($searchBlock.hasClass('open')) {
-              $searchBlock.children('.content').css('top', (searchBlockRect.bottom + 1) + 'px');
+              var cssTop = 'calc(' + $body.css('padding-top') + ' + ' + $header.outerHeight() + 'px)';
+
+              $searchBlock.children('.content').css('top', cssTop);
+            }
+            else {
+              $searchBlock.children('.content').css('top', '');
             }
           });
         }
@@ -50,10 +55,13 @@
 
         if ($mainMenuToggler.length) {
           $mainMenuToggler.click(function () {
-            var mainMenuBlockRect = $mainMenuBlock[0].getBoundingClientRect();
-
             if ($mainMenuBlock.hasClass('open')) {
-              $mainMenuBlock.children('ul').css('top', (mainMenuBlockRect.bottom) + 'px');
+              var cssTop = 'calc(' + $body.css('padding-top') + ' + ' + $header.outerHeight() + 'px)';
+
+              $mainMenuBlock.children('ul').css('top', cssTop);
+            }
+            else {
+              $mainMenuBlock.children('ul').css('top', '');
             }
           });
         }
@@ -61,7 +69,7 @@
     }
   };
 
-  Drupal.behaviors.resetSearchBlock = {
+  Drupal.behaviors.resetMobileNavBlocks = {
     attach: function (context) {
       $(window).resize(function () {
         var $searchBlock = $('.region-header #block-search-form', context);
@@ -69,12 +77,12 @@
 
         if ($searchBlock.length && $searchBlock.hasClass('open')) {
           $searchBlock.removeClass('open');
-          $searchBlock.children('.content').css('top', '0');
+          $searchBlock.children('.content').css('top', '');
         }
 
         if ($mainMenuBlock.length) {
           $mainMenuBlock.removeClass('open');
-          $mainMenuBlock.children('ul').css('top', '0');
+          $mainMenuBlock.children('ul').css('top', '');
         }
       });
     }
