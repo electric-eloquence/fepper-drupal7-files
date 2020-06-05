@@ -840,14 +840,14 @@ ul.menu a {
   #main-menu .expanded ul li:last-child {
     border-bottom: 1px solid #eee;
   }
-  #main-menu .expanded:hover ul {
+  #main-menu .expanded:hover ul.menu {
     max-height: 100%;
   }
-  #main-menu > ul {
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+  #main-menu > ul.menu {
+    margin-top: 0;
+    min-height: 4rem;
   }
-  #main-menu > ul > .expanded > ul {
+  #main-menu > ul.menu > .expanded > ul {
     background: rgba(255,255,255,0.95);
     max-height: 0;
     overflow: hidden;
@@ -859,12 +859,12 @@ ul.menu a {
     transition: max-height 0.3s ease;
     z-index: 2;
   }
-  #main-menu > ul > .expanded > ul > .expanded li {
+  #main-menu > ul.menu > .expanded > ul > .expanded li {
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
   }
-  #main-menu > ul > .expanded > ul ul {
+  #main-menu > ul.menu > .expanded > ul ul {
     background: transparent;
   }
 }
@@ -874,6 +874,7 @@ ul.menu a {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 1em;
+  padding-top: 1em;
 }
 .item-list .pager li {
   border-right: 1px solid #ddd;

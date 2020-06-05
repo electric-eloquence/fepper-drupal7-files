@@ -13,7 +13,7 @@
  */
 ?>
 <div class="layout-container">
-  <header class="header cf">
+  <header id="header" class="header cf">
 
     <div id="block-fepper-branding">
       <?php if ($logo): ?>
