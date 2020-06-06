@@ -25,9 +25,10 @@ ul.menu
     @extend .mobile-nav-icon
     @extend .visually-hidden
     margin: 0
-  .icon-menu::before
-    background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0
-    background-size: cover
+  .icon-menu
+    &::before
+      background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0
+      background-size: cover
   .menu
     @extend .cf
   @media all and (max-width: $bp-sm-max)
@@ -50,10 +51,10 @@ ul.menu
       width: 100%
       z-index: 1
       li
-        border-bottom: 1px solid $gray-light-2
         padding: 0
         width: 100%
         a
+          border-bottom: 1px solid $gray-light-2
           padding: 0.7rem $space
           &:active
             background-color: $gray-light-1
@@ -67,11 +68,11 @@ ul.menu
     float: left
     .expanded
       > a::after
-        color: $gray
         content: "▼"
         font-size: 0.75em
         margin-left: $space-half
       ul
+        display: block
         margin: 0
         padding: 0
         li
