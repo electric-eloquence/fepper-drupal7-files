@@ -281,6 +281,7 @@ header.header {
 .region-header #block-search-form > h2 {
   float: right;
   margin: 0;
+  padding: 0;
 }
 .region-header #block-search-form > h2 > a::before {
   background: url("../../_assets/src/icon-search.svg") no-repeat 0 0;
@@ -758,6 +759,7 @@ ul.menu a {
 }
 #main-menu > h2 {
   margin: 0;
+  padding: 0;
 }
 #main-menu .icon-menu::before {
   background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0;
