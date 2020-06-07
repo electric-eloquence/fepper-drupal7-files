@@ -26,13 +26,14 @@
 }
 .visually-hidden,
 .page-search h1 {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  pointer-events: none !important;
   position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px !important;
+  height: 1px !important;
 }
 .mobile-nav-icon > a,
 .region-header #block-search-form > h2 > a,

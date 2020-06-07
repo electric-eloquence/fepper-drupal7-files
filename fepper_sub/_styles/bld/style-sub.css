@@ -25,13 +25,14 @@
   padding: 0.8rem;
 }
 .visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  pointer-events: none !important;
   position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px !important;
+  height: 1px !important;
 }
 .mobile-nav-icon > a {
   background: rgba(255,255,255,0.95);
