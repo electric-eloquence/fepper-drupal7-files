@@ -22,7 +22,6 @@ header.header
     float: right
     > h2
       @extend .mobile-nav-icon
-      @extend .visually-hidden
       float: right
       margin: 0
       > a::before
@@ -30,13 +29,6 @@ header.header
         background-size: cover
     @media all and (max-width: $bp-sm-max)
       position: static // In order for the mobile nav to work while logged in.
-      > h2
-        // Undo .visually-hidden.
-        overflow: visible
-        position: relative !important
-        width: auto
-        height: auto
-        clip: auto
       .content
         max-height: 0
         overflow: hidden
@@ -50,6 +42,8 @@ header.header
           overflow: visible
     @media all and (min-width: $bp-med)
       margin-bottom: $space-half
+      > h2
+        display: none
   #block-system-user-menu
     @media all and (max-width: $bp-sm-max)
       float: left

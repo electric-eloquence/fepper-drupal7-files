@@ -25,8 +25,6 @@
   padding: 0.8rem;
 }
 .visually-hidden,
-.region-header #block-search-form > h2,
-#main-menu > h2,
 .page-search h1 {
   position: absolute !important;
   overflow: hidden;
@@ -210,18 +208,6 @@ aside {
   display: none !important;
   visibility: hidden !important;
 }
-.visually-hidden,
-.region-header #block-search-form > h2,
-#main-menu > h2,
-.page-search h1 {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
 .right {
   float: right;
   padding: 0 0 1.6rem 1.6rem;
@@ -303,13 +289,6 @@ header.header {
   .region-header #block-search-form {
     position: static;
   }
-  .region-header #block-search-form > h2 {
-    overflow: visible;
-    position: relative !important;
-    width: auto;
-    height: auto;
-    clip: auto;
-  }
   .region-header #block-search-form .content {
     max-height: 0;
     overflow: hidden;
@@ -326,6 +305,9 @@ header.header {
 @media all and (min-width: 768px) {
   .region-header #block-search-form {
     margin-bottom: 0.8rem;
+  }
+  .region-header #block-search-form > h2 {
+    display: none;
   }
 }
 @media all and (max-width: 767px) {
@@ -784,13 +766,6 @@ ul.menu a {
   #main-menu {
     float: right;
   }
-  #main-menu > h2 {
-    overflow: visible;
-    position: relative !important;
-    width: auto;
-    height: auto;
-    clip: auto;
-  }
   #main-menu > .menu {
     background: rgba(255,255,255,0.95);
     max-height: 0;
@@ -827,6 +802,9 @@ ul.menu a {
 @media all and (min-width: 768px) {
   #main-menu {
     float: left;
+  }
+  #main-menu > h2 {
+    display: none;
   }
   #main-menu .expanded > a::after {
     content: "▼";
