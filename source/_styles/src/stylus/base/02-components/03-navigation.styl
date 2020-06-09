@@ -22,13 +22,13 @@ ul.menu
     margin-top: $space-half
 #main-menu
   > h2
-    @extend .mobile-nav-icon
     margin: 0
     padding: 0
-  .icon-menu
-    &::before
-      background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0
-      background-size: cover
+    > a
+      @extend .mobile-nav-icon
+      &::before
+        background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0
+        background-size: cover
   .menu
     @extend .cf
   @media all and (max-width: $bp-sm-max)
@@ -59,7 +59,7 @@ ul.menu
         max-height: none
   @media all and (min-width: $bp-med)
     float: left
-    > h2
+    .hidden-link
       display: none
     .expanded
       > a::after
@@ -78,7 +78,8 @@ ul.menu
           padding-left: 1.2rem
           &:last-child
             border-bottom: 1px solid $gray-light-1
-      &:hover
+      &:hover,
+      &:focus
         ul.menu
           max-height: 100%
     > ul.menu

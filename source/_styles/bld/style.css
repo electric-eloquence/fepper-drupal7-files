@@ -35,7 +35,7 @@
   width: 1px !important;
   height: 1px !important;
 }
-.mobile-nav-icon > a,
+.mobile-nav-icon,
 .region-header #block-search-form > h2 > a,
 #main-menu > h2 > a {
   background: rgba(255,255,255,0.95);
@@ -49,22 +49,22 @@
   width: 4.3rem;
   height: 4.3rem;
 }
-.mobile-nav-icon > a:active,
+.mobile-nav-icon:active,
 .region-header #block-search-form > h2 > a:active,
 #main-menu > h2 > a:active {
   background-color: #eee;
 }
-.mobile-nav-icon > a::before,
+.mobile-nav-icon::before,
 .region-header #block-search-form > h2 > a::before,
 #main-menu > h2 > a::before {
   content: "";
   display: block;
   padding: 1.1rem;
 }
-.mobile-nav-icon > a:hover::before,
+.mobile-nav-icon:hover::before,
 .region-header #block-search-form > h2 > a:hover::before,
 #main-menu > h2 > a:hover::before,
-.mobile-nav-icon > a:focus::before,
+.mobile-nav-icon:focus::before,
 .region-header #block-search-form > h2 > a:focus::before,
 #main-menu > h2 > a:focus::before {
   filter: invert(50%);
@@ -308,7 +308,7 @@ header.header {
   .region-header #block-search-form {
     margin-bottom: 0.8rem;
   }
-  .region-header #block-search-form > h2 {
+  .region-header #block-search-form .hidden-link {
     display: none;
   }
 }
@@ -612,7 +612,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 3.125em;
   z-index: 1;
 }
-#block-search-form input[id^="edit-submit"]:hover {
+#block-search-form input[id^="edit-submit"]:hover,
+#block-search-form input[id^="edit-submit"]:focus {
   background: rgba(0,0,0,0.3);
 }
 #search-block-form > div {
@@ -761,7 +762,7 @@ ul.menu a {
   margin: 0;
   padding: 0;
 }
-#main-menu .icon-menu::before {
+#main-menu > h2 > a::before {
   background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0;
   background-size: cover;
 }
@@ -806,7 +807,7 @@ ul.menu a {
   #main-menu {
     float: left;
   }
-  #main-menu > h2 {
+  #main-menu .hidden-link {
     display: none;
   }
   #main-menu .expanded > a::after {
@@ -829,7 +830,8 @@ ul.menu a {
   #main-menu .expanded ul li:last-child {
     border-bottom: 1px solid #eee;
   }
-  #main-menu .expanded:hover ul.menu {
+  #main-menu .expanded:hover ul.menu,
+  #main-menu .expanded:focus ul.menu {
     max-height: 100%;
   }
   #main-menu > ul.menu {

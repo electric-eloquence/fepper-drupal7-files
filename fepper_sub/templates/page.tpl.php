@@ -66,11 +66,13 @@
       // enabled in a region at admin/structure/block.
     ?>
     <?php if (!$main_menu_block_enabled): ?>
-      <nav id="main-menu" role="navigation">
-        <h2><a href="#" class="icon-menu">Main menu</a></h2>
+      <nav id="main-menu" role="navigation" aria-labelledby="main-menu-menu">
+        <h2 id="main-menu-menu"><a href="#" class="hidden-link"></a>
+        <span class="visually-hidden">Main menu</span></h2>
         <?php print render($main_menu_expanded); ?>
       </nav> <!-- /#navigation -->
     <?php endif; ?>
+
 
   </header> <!-- /.header -->
 

@@ -21,13 +21,14 @@ header.header
   #block-search-form
     float: right
     > h2
-      @extend .mobile-nav-icon
       float: right
       margin: 0
       padding: 0
-      > a::before
-        background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
-        background-size: cover
+      > a
+        @extend .mobile-nav-icon
+        &::before
+          background: url("../../_assets/src/icon-search.svg") no-repeat 0 0
+          background-size: cover
     @media all and (max-width: $bp-sm-max)
       position: static // In order for the mobile nav to work while logged in.
       .content
@@ -43,7 +44,7 @@ header.header
           overflow: visible
     @media all and (min-width: $bp-med)
       margin-bottom: $space-half
-      > h2
+      .hidden-link
         display: none
   #block-system-user-menu
     @media all and (max-width: $bp-sm-max)

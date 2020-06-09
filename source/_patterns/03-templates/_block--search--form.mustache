@@ -1,7 +1,8 @@
 {{{ php_docblock }}}
-<div id="{{ block_html_id }}" class="{{ block_classes }}" {{{ block_attributes }}}>
+<div id="{{ block_html_id }}" class="{{ block_classes }}" {{{ block_attributes }}} role="search">
   {{{ title_prefix }}}
-  <h2 {{{ title_attributes }}}><a href="#">{{{ block_subject }}}</a></h2>
+  <h2 {{{ title_attributes }}}><a href="#" class="hidden-link"></a>
+  <span class="visually-hidden">{{{ block_subject }}}</span></h2>
   {{{ title_suffix }}}
 
   <div class="content" {{{ content_attributes }}}>
