@@ -78,9 +78,9 @@ ul.menu
           padding-left: 1.2rem
           &:last-child
             border-bottom: 1px solid $gray-light-1
-      &:hover,
-      &:focus
-        ul.menu
+      &:hover > a,
+      > a:focus
+        + ul.menu
           max-height: 100%
     > ul.menu
       margin-top: 0

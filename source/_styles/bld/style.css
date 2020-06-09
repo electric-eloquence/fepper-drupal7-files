@@ -830,8 +830,8 @@ ul.menu a {
   #main-menu .expanded ul li:last-child {
     border-bottom: 1px solid #eee;
   }
-  #main-menu .expanded:hover ul.menu,
-  #main-menu .expanded:focus ul.menu {
+  #main-menu .expanded:hover > a + ul.menu,
+  #main-menu .expanded > a:focus + ul.menu {
     max-height: 100%;
   }
   #main-menu > ul.menu {
