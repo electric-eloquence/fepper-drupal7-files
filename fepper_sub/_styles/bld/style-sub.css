@@ -40,11 +40,11 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
-  padding: 0.9rem;
+  padding: 1.2rem;
   position: relative;
   z-index: 2;
-  width: 4rem;
-  height: 4rem;
+  width: 4.6rem;
+  height: 4.6rem;
 }
 .mobile-nav-icon:active {
   background-color: #eee;
@@ -126,12 +126,12 @@
   }
 }
 @media all and (min-width: 481px) {
-  #block-views-recent-content-block-2 .item-list,
-  .view-id-recent_content.view-display-id-page_1 .item-list {
-    margin-top: 0.4rem;
+  #block-views-recent-content-block-2 .view-content,
+  .view-id-recent_content.view-display-id-page_1 .view-content {
+    padding-top: 0.4rem;
   }
-  #block-views-recent-content-block-2 .item-list .views-row,
-  .view-id-recent_content.view-display-id-page_1 .item-list .views-row {
+  #block-views-recent-content-block-2 .view-content .views-row,
+  .view-id-recent_content.view-display-id-page_1 .view-content .views-row {
     clear: both;
     float: left;
     margin-bottom: 1.6rem;
@@ -139,14 +139,13 @@
   #block-views-recent-content-block-2 .node-teaser,
   .view-id-recent_content.view-display-id-page_1 .node-teaser {
     margin-bottom: 0;
-    width: calc(100vw - 1.6rem);
   }
   #block-views-recent-content-block-2 .node-teaser > h2,
   .view-id-recent_content.view-display-id-page_1 .node-teaser > h2,
   #block-views-recent-content-block-2 .node-teaser .field-name-body p,
   .view-id-recent_content.view-display-id-page_1 .node-teaser .field-name-body p {
     float: right;
-    padding: 0 1.6rem;
+    padding: 0 0 0 1.6rem;
     width: 75%;
   }
   #block-views-recent-content-block-2 .node-teaser > h2,
@@ -159,22 +158,10 @@
     width: 25%;
   }
 }
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  #block-views-recent-content-block-2 .node-teaser,
-  .view-id-recent_content.view-display-id-page_1 .node-teaser {
-    width: 66.66666666666667vw;
-  }
-}
-@media all and (min-width: 1025px) and (max-width: 1152px) {
-  #block-views-recent-content-block-2 .node-teaser,
-  .view-id-recent_content.view-display-id-page_1 .node-teaser {
-    width: 75vw;
-  }
-}
-@media all and (min-width: 1152px) {
-  #block-views-recent-content-block-2 .node-teaser,
-  .view-id-recent_content.view-display-id-page_1 .node-teaser {
-    width: 864px;
+@media all and (min-width: 768px) {
+  #block-views-recent-content-block-2 .view-content,
+  .view-id-recent_content.view-display-id-page_1 .view-content {
+    padding-right: 1.6rem;
   }
 }
 .region-footer > * {

@@ -40,31 +40,24 @@
         display: block
         max-width: 22.5rem
   @media all and (min-width: $bp-small)
-    .item-list
-      margin-top: $space-quarter
+    .view-content
+      padding-top: $space-quarter
       .views-row
         clear: both
         float: left
         margin-bottom: $space
     .node-teaser
       margin-bottom: 0
-      width: "calc(100vw - %s)" % $space
       > h2,
       .field-name-body p
         float: right
-        padding: 0 1.6rem
+        padding: 0 0 0 $space
         width: $column-width-three-quarters + "%"
       > h2
         margin-top: 0
       img
         float: left
         width: $column-width-one-quarter + "%"
-  @media all and (min-width: $bp-med) and (max-width: $bp-md-max)
-    .node-teaser
-      width: "%svw" % $column-width-two-thirds
-  @media all and (min-width: $bp-large) and (max-width: $max-width)
-    .node-teaser
-      width: "%svw" % $column-width-three-quarters
-  @media all and (min-width: $max-width)
-    .node-teaser
-      width: ($column-width-three-quarters / 100) * $max-width
+  @media all and (min-width: $bp-med)
+    .view-content
+      padding-right: $space

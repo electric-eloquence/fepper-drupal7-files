@@ -43,11 +43,11 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
-  padding: 0.9rem;
+  padding: 1.2rem;
   position: relative;
   z-index: 2;
-  width: 4rem;
-  height: 4rem;
+  width: 4.6rem;
+  height: 4.6rem;
 }
 .mobile-nav-icon:active,
 .region-header #block-search-form > h2 > a:active,
@@ -603,7 +603,6 @@ input[type="search"]::-webkit-search-decoration {
   padding-left: 0;
   position: relative;
   width: 3.125em;
-  z-index: 1;
 }
 #block-search-form input[id^="edit-submit"]:hover,
 #block-search-form input[id^="edit-submit"]:focus {
@@ -663,7 +662,7 @@ input[type="search"]::-webkit-search-decoration {
   margin-top: 0.25em;
   margin-bottom: 0;
 }
-#comments [class^="comment-"] {
+#comments li[class^="comment-"] {
   display: list-item;
   list-style-type: disc;
   padding: 0 2.6rem 0 0;
@@ -780,7 +779,7 @@ ul.menu a {
     transition: max-height 0.1s ease;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   #main-menu > .menu li {
     padding: 0;
@@ -819,13 +818,14 @@ ul.menu a {
   }
   #main-menu .expanded ul li {
     float: none;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     border-bottom: 0;
+    min-width: 11rem;
     padding-right: 1.2rem;
     padding-left: 1.2rem;
   }
   #main-menu .expanded ul li:last-child {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
   }
   #main-menu .expanded:hover > a + ul.menu,
   #main-menu .expanded > a:focus + ul.menu {
@@ -935,6 +935,9 @@ body:not(.node-type-article) .node-article > .links {
     margin-top: 0.66rem;
   }
 }
+#block-system-main {
+  margin-bottom: 1em;
+}
 #breadcrumb {
   font-size: 0.75em;
   font-weight: bold;
@@ -964,6 +967,7 @@ body:not(.node-type-article) .node-article > .links {
 }
 .search-results {
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 .views-field-title {
   font-size: 1.5em;
