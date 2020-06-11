@@ -41,7 +41,7 @@
   height: 1px !important;
 }
 .mobile-nav-icon {
-  background: rgba(255,255,255,0.95);
+  background-color: rgba(255,255,255,0.95);
   color: transparent;
   cursor: pointer;
   display: block;
@@ -53,7 +53,7 @@
   height: 4.6rem;
 }
 .mobile-nav-icon:active {
-  background: #eee;
+  background-color: #eee;
 }
 .mobile-nav-icon::before {
   content: "";
@@ -264,7 +264,7 @@
     left: 0;
   }
   .page-hero .layout-content #block-system-main .views-field-title {
-    background: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     overflow: hidden;
     padding: 0.8rem;
     position: absolute;
@@ -278,7 +278,7 @@
 }
 @media all and (max-width: 767px) {
   .page-hero .layout-content #block-system-main .views-field-title {
-    background: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.8);
     overflow: hidden;
     padding: 0 0.8rem;
   }
@@ -306,7 +306,7 @@
     min-height: 7.68rem;
   }
   .page-hero .layout-content #block-system-main .views-field-title {
-    background: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     font-size: 1.5em;
     padding: 2.8rem 0.8rem;
     position: absolute;
@@ -335,7 +335,7 @@
   color: #fff;
 }
 .page-hero .layout-content .region-content > .views-row .views-field-title a {
-  background: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5);
   color: #fff;
   display: block;
   font-weight: bold;
