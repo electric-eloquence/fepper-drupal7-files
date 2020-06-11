@@ -28,11 +28,13 @@
   .node-teaser
     > h2
       font-size: 1.25em
+    p
+      margin: $space-quarter 0
+    p:last-child
+      margin-bottom: 0
   @media all and (max-width: $bp-xs-max)
     h2
       text-align: center
-    p
-      margin-top: $space-quarter
     .field-name-field-image
       display: flex
       justify-content: center
@@ -43,13 +45,13 @@
     .view-content
       padding-top: $space-quarter
       .views-row
+        @extend .cf
         clear: both
-        float: left
         margin-bottom: $space
     .node-teaser
       margin-bottom: 0
       > h2,
-      .field-name-body p
+      .field-name-body
         float: right
         padding: 0 0 0 $space
         width: $column-width-three-quarters + "%"
@@ -58,6 +60,8 @@
       img
         float: left
         width: $column-width-one-quarter + "%"
+      p:first-child
+        margin-top: 0
   @media all and (min-width: $bp-med)
     .view-content
       padding-right: $space

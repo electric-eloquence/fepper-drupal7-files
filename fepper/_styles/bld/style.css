@@ -562,10 +562,6 @@ input[type="search"]::-webkit-search-decoration {
 #edit-preview {
   margin-left: 0.5rem;
 }
-.form-item,
-.form-actions {
-  margin: 0;
-}
 .page-search #block-search-form {
   display: none;
 }
@@ -575,10 +571,10 @@ input[type="search"]::-webkit-search-decoration {
 #block-search-form .form-item,
 #block-search-form .form-actions {
   background: rgba(255,255,255,0.95);
+  margin: 0;
 }
 #block-search-form .form-item-search-block-form {
   font-size: 1em;
-  margin-bottom: 0;
   position: relative;
 }
 #block-search-form input {
@@ -744,8 +740,7 @@ ul.menu a {
   }
   #block-system-user-menu .menu a,
   #main-menu .menu a {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding: 0.2rem 0;
   }
 }
 @media all and (max-width: 767px) {
@@ -821,23 +816,28 @@ ul.menu a {
     border: 1px solid #ddd;
     border-bottom: 0;
     min-width: 11rem;
-    padding-right: 1.2rem;
-    padding-left: 1.2rem;
+    padding: 0 1.2rem;
   }
   #main-menu .expanded ul li:last-child {
     border-bottom: 1px solid #ddd;
   }
-  #main-menu .expanded:hover > a + ul.menu,
-  #main-menu .expanded > a:focus + ul.menu {
-    max-height: 100%;
+  #main-menu .expanded ul a {
+    padding: 0.15rem 0;
   }
   #main-menu > ul.menu {
     margin-top: 0;
-    min-height: 4rem;
+  }
+  #main-menu > ul.menu > .expanded:hover > a + ul.menu,
+  #main-menu > ul.menu > .expanded > a:focus + ul.menu {
+    margin-top: 0;
+    max-height: 100%;
+    padding-top: 0.8rem;
   }
   #main-menu > ul.menu > .expanded > ul {
     background: rgba(255,255,255,0.95);
     max-height: 0;
+    padding-top: 0;
+    margin-top: 0.8rem;
     overflow: hidden;
     position: absolute;
     -webkit-transition: max-height 0.3s ease;

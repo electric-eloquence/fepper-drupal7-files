@@ -15,8 +15,7 @@ ul.menu
       margin-top: $space-half
       margin-bottom: $space-half
       a
-        padding-top: 0.2rem
-        padding-bottom: 0.2rem
+        padding: 0.2rem 0
 #block-system-user-menu
   @media all and (max-width: $bp-sm-max)
     margin-top: $space-half
@@ -76,30 +75,37 @@ ul.menu
           border: 1px solid $gray-light-2
           border-bottom: 0
           min-width: 11rem
-          padding-right: 1.2rem
-          padding-left: 1.2rem
+          padding: 0 1.2rem
           &:last-child
             border-bottom: 1px solid $gray-light-2
-      &:hover > a,
-      > a:focus
-        + ul.menu
-          max-height: 100%
+        a
+          padding: 0.15rem 0 // This makes expanded menu horizontal borders align with header border bottom.
     > ul.menu
       margin-top: 0
-      min-height: 4rem
-      > .expanded > ul
-        background: $white-translucent
-        max-height: 0
-        overflow: hidden
-        position: absolute
-        transition: max-height 0.3s ease
-        z-index: 2
-        > .expanded li
-          border-right: 0
-          border-bottom: 0
-          border-left: 0
-        ul
-          background: transparent
+      > .expanded
+        &:hover > a,
+        > a:focus
+          + ul.menu
+            // Margin and padding must be switched from unhovered/unfocused state
+            // so unexpanded items don't interfere with expanded items.
+            margin-top: 0
+            max-height: 100%
+            padding-top: $space-half
+        > ul
+          background: $white-translucent
+          max-height: 0
+          padding-top: 0
+          margin-top: $space-half
+          overflow: hidden
+          position: absolute
+          transition: max-height 0.3s ease
+          z-index: 2
+          > .expanded li
+            border-right: 0
+            border-bottom: 0
+            border-left: 0
+          ul
+            background: transparent
 // Pager.
 .item-list
   .pager
