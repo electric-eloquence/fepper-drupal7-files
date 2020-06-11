@@ -46,14 +46,14 @@
   cursor: pointer;
   display: block;
   overflow: hidden;
-  padding: 1.2rem;
+  padding: 1.2rem 0.9rem;
   position: relative;
   z-index: 2;
-  width: 4.6rem;
+  width: 4rem;
   height: 4.6rem;
 }
 .mobile-nav-icon:active {
-  background-color: #eee;
+  background: #eee;
 }
 .mobile-nav-icon::before {
   content: "";
