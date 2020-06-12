@@ -202,7 +202,7 @@
   }
 }
 @media all and (min-width: 768px) {
-  ul.menu {
+  #main-menu > ul.menu {
     min-height: 3.4rem;
   }
 }
