@@ -8,7 +8,7 @@ header.header
   @media all and (min-width: $bp-med) and (max-width: $max-width)
     width: "calc(100% - %s)" % $space
   @media all and (min-width: $bp-med)
-    margin-top: $space-half
+    padding-top: $space-half
   @media all and (min-width: $max-width)
     width: "calc(%s - %s)" % ($max-width $space)
 #block-fepper-branding
@@ -44,7 +44,6 @@ header.header
           max-height: none
           overflow: visible
     @media all and (min-width: $bp-med)
-      margin-bottom: $space-half
       .hidden-link
         display: none
   #block-system-user-menu

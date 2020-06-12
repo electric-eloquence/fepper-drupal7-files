@@ -188,13 +188,16 @@ h5 {
 h6 {
   font-size: 1em;
 }
-a {
+a,
+li a.active {
   color: #333;
   text-decoration: none;
   outline: 0;
 }
 a:hover,
-a:focus {
+li a.active:hover,
+a:focus,
+li a.active:focus {
   color: #808080;
 }
 .text a,
@@ -259,7 +262,7 @@ header.header {
 }
 @media all and (min-width: 768px) {
   header.header {
-    margin-top: 0.8rem;
+    padding-top: 0.8rem;
   }
 }
 @media all and (min-width: 1152px) {
@@ -306,9 +309,6 @@ header.header {
   }
 }
 @media all and (min-width: 768px) {
-  .region-header #block-search-form {
-    margin-bottom: 0.8rem;
-  }
   .region-header #block-search-form .hidden-link {
     display: none;
   }
@@ -461,7 +461,7 @@ svg {
   font-style: italic;
   text-align: left;
 }
-#logo {
+#logo img {
   margin-right: 0.8rem;
 }
 @media all and (max-width: 767px) {
@@ -476,6 +476,7 @@ svg {
 @media all and (min-width: 768px) {
   #logo {
     display: inline-block;
+    vertical-align: top;
   }
 }
 form > div {
@@ -733,14 +734,13 @@ ul.menu a {
   display: block;
 }
 @media all and (min-width: 768px) {
-  #block-system-user-menu .menu,
-  #main-menu .menu {
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+  #block-system-user-menu,
+  #main-menu {
+    margin: 1.1rem 0;
   }
   #block-system-user-menu .menu a,
   #main-menu .menu a {
-    padding: 0.2rem 0;
+    padding: 0 0 0.2rem;
   }
 }
 @media all and (max-width: 767px) {
@@ -796,6 +796,9 @@ ul.menu a {
 }
 @media all and (min-width: 768px) {
   #main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     float: left;
   }
   #main-menu .hidden-link {
@@ -803,6 +806,7 @@ ul.menu a {
   }
   #main-menu .expanded > a::after {
     content: "▼";
+    filter: invert(20%);
     font-size: 0.75em;
     margin-left: 0.8rem;
   }
@@ -822,22 +826,19 @@ ul.menu a {
     border-bottom: 1px solid #ddd;
   }
   #main-menu .expanded ul a {
-    padding: 0.15rem 0;
-  }
-  #main-menu > ul.menu {
-    margin-top: 0;
+    padding: 0 0 0.1rem;
   }
   #main-menu > ul.menu > .expanded:hover > a + ul.menu,
   #main-menu > ul.menu > .expanded > a:focus + ul.menu {
     margin-top: 0;
     max-height: 100%;
-    padding-top: 0.8rem;
+    padding-top: 1.1rem;
   }
   #main-menu > ul.menu > .expanded > ul {
     background-color: rgba(255,255,255,0.95);
     max-height: 0;
     padding-top: 0;
-    margin-top: 0.8rem;
+    margin-top: 1.1rem;
     overflow: hidden;
     position: absolute;
     -webkit-transition: max-height 0.3s ease;
@@ -927,12 +928,7 @@ body:not(.node-type-article) .node-article > .links {
 @media all and (min-width: 768px) {
   #site-name#site-name {
     display: inline-block;
-    vertical-align: top;
-  }
-}
-@media all and (min-width: 768px) {
-  #site-slogan {
-    margin-top: 0.66rem;
+    vertical-align: bottom;
   }
 }
 #block-system-main {

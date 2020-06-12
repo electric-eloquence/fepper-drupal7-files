@@ -1,3 +1,4 @@
+$menu-margin = 1.1rem
 ul.menu
   display: flex
   flex-wrap: wrap
@@ -11,11 +12,9 @@ ul.menu
 #block-system-user-menu,
 #main-menu
   @media all and (min-width: $bp-med)
-    .menu
-      margin-top: $space-half
-      margin-bottom: $space-half
-      a
-        padding: 0.2rem 0
+    margin: $menu-margin 0
+    .menu  a
+        padding: 0 0 0.2rem
 #block-system-user-menu
   @media all and (max-width: $bp-sm-max)
     margin-top: $space-half
@@ -58,12 +57,16 @@ ul.menu
       > .menu
         max-height: none
   @media all and (min-width: $bp-med)
+    display: flex
+    flex-direction: column
+    justify-content: center
     float: left
     .hidden-link
       display: none
     .expanded
       > a::after
         content: "▼"
+        filter: invert(20%)
         font-size: 0.75em
         margin-left: $space-half
       ul
@@ -79,9 +82,8 @@ ul.menu
           &:last-child
             border-bottom: 1px solid $gray-light-2
         a
-          padding: 0.15rem 0 // This makes expanded menu horizontal borders align with header border bottom.
+          padding: 0 0 0.1rem // This makes expanded menu horizontal borders align with header border bottom.
     > ul.menu
-      margin-top: 0
       > .expanded
         &:hover > a,
         > a:focus
@@ -90,12 +92,12 @@ ul.menu
             // so unexpanded items don't interfere with expanded items.
             margin-top: 0
             max-height: 100%
-            padding-top: $space-half
+            padding-top: $menu-margin
         > ul
           background-color: $white-translucent
           max-height: 0
           padding-top: 0
-          margin-top: $space-half
+          margin-top: $menu-margin
           overflow: hidden
           position: absolute
           transition: max-height 0.3s ease
