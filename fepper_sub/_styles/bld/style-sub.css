@@ -281,7 +281,7 @@
   .page-hero .layout-content #block-system-main .views-field-title {
     background-color: rgba(0,0,0,0.8);
     overflow: hidden;
-    padding: 0 0.8rem;
+    padding: 0;
   }
 }
 @media all and (min-width: 481px) and (max-width: 767px) {
@@ -290,6 +290,7 @@
   }
   .page-hero .layout-content #block-system-main .views-field-title .field-content {
     display: block;
+    padding: 0 0.8rem;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
