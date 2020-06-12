@@ -14,7 +14,9 @@
     body:not(.node-type-article) &
       display: none
 .node-teaser
-  p:first-of-type
+  p
+    margin: $space-quarter 0
+  p:first-child
     margin-top: 0
-  p:last-of-type
+  p:last-child
     margin-bottom: 0

@@ -14,7 +14,7 @@ ul.menu
   @media all and (min-width: $bp-med)
     margin: $menu-margin 0
     .menu  a
-        padding: 0 0 0.2rem
+        padding: 0.1rem 0
 #block-system-user-menu
   @media all and (max-width: $bp-sm-max)
     margin-top: $space-half
@@ -57,9 +57,6 @@ ul.menu
       > .menu
         max-height: none
   @media all and (min-width: $bp-med)
-    display: flex
-    flex-direction: column
-    justify-content: center
     float: left
     .hidden-link
       display: none
@@ -82,7 +79,7 @@ ul.menu
           &:last-child
             border-bottom: 1px solid $gray-light-2
         a
-          padding: 0 0 0.1rem // This makes expanded menu horizontal borders align with header border bottom.
+          padding: 0.1rem 0 // This makes expanded menu horizontal borders align with header border bottom.
     > ul.menu
       > .expanded
         &:hover > a,
