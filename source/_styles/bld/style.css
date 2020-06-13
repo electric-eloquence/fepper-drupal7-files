@@ -304,8 +304,8 @@ header.header {
   }
 }
 @media all and (min-width: 768px) {
-  .region-header #block-search-form .hidden-link {
-    display: none;
+  .region-header #block-search-form {
+    margin-top: 0.8rem;
   }
 }
 @media all and (max-width: 767px) {
@@ -316,6 +316,11 @@ header.header {
 @media all and (min-width: 768px) {
   .region-header #block-system-user-menu {
     float: right;
+  }
+}
+@media all and (min-width: 768px) {
+  .hidden-link {
+    display: none !important;
   }
 }
 .column.sidebar {
@@ -716,6 +721,9 @@ ul.menu {
   flex-wrap: wrap;
   align-items: center;
 }
+ul.menu a {
+  display: block;
+}
 ul.menu > li {
   padding-right: 1em;
 }
@@ -724,8 +732,59 @@ ul.menu > li {
     padding-left: 1em;
   }
 }
-ul.menu a {
-  display: block;
+@media all and (min-width: 768px) {
+  ul.menu .expanded ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  ul.menu .expanded ul li {
+    float: none;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    min-width: 11rem;
+    padding: 0 1.2rem;
+  }
+  ul.menu .expanded ul li:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+  ul.menu .expanded ul a {
+    padding: 0.05rem 0;
+  }
+  ul.menu .expanded > a::after {
+    content: "▼";
+    filter: invert(20%);
+    font-size: 0.75em;
+    margin-left: 0.8rem;
+  }
+  ul.menu > ul.menu > .expanded:hover > a + ul.menu,
+  ul.menu > ul.menu > .expanded > a:focus + ul.menu {
+    margin-top: 0;
+    max-height: 100%;
+    padding-top: 1.1rem;
+  }
+  ul.menu > ul.menu > .expanded > ul {
+    background-color: rgba(255,255,255,0.95);
+    max-height: 0;
+    padding-top: 0;
+    margin-top: 1.1rem;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transition: max-height 0.3s ease;
+    -moz-transition: max-height 0.3s ease;
+    -ms-transition: max-height 0.3s ease;
+    -o-transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease;
+    z-index: 2;
+  }
+  ul.menu > ul.menu > .expanded > ul > .expanded li {
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+  ul.menu > ul.menu > .expanded > ul ul {
+    background-color: transparent;
+  }
 }
 @media all and (min-width: 768px) {
   #block-system-user-menu,
@@ -792,61 +851,6 @@ ul.menu a {
   #main-menu {
     float: left;
   }
-  #main-menu .hidden-link {
-    display: none;
-  }
-  #main-menu .expanded > a::after {
-    content: "▼";
-    filter: invert(20%);
-    font-size: 0.75em;
-    margin-left: 0.8rem;
-  }
-  #main-menu .expanded ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  #main-menu .expanded ul li {
-    float: none;
-    border: 1px solid #ddd;
-    border-bottom: 0;
-    min-width: 11rem;
-    padding: 0 1.2rem;
-  }
-  #main-menu .expanded ul li:last-child {
-    border-bottom: 1px solid #ddd;
-  }
-  #main-menu .expanded ul a {
-    padding: 0.05rem 0;
-  }
-  #main-menu > ul.menu > .expanded:hover > a + ul.menu,
-  #main-menu > ul.menu > .expanded > a:focus + ul.menu {
-    margin-top: 0;
-    max-height: 100%;
-    padding-top: 1.1rem;
-  }
-  #main-menu > ul.menu > .expanded > ul {
-    background-color: rgba(255,255,255,0.95);
-    max-height: 0;
-    padding-top: 0;
-    margin-top: 1.1rem;
-    overflow: hidden;
-    position: absolute;
-    -webkit-transition: max-height 0.3s ease;
-    -moz-transition: max-height 0.3s ease;
-    -ms-transition: max-height 0.3s ease;
-    -o-transition: max-height 0.3s ease;
-    transition: max-height 0.3s ease;
-    z-index: 2;
-  }
-  #main-menu > ul.menu > .expanded > ul > .expanded li {
-    border-right: 0;
-    border-bottom: 0;
-    border-left: 0;
-  }
-  #main-menu > ul.menu > .expanded > ul ul {
-    background-color: transparent;
-  }
 }
 .item-list .pager {
   clear: both;
@@ -872,6 +876,9 @@ ul.menu a {
   .item-list .pager {
     justify-content: flex-start;
   }
+}
+.item-list .pager .pager-current {
+  color: #000;
 }
 .node-article {
   margin-bottom: 1em;
@@ -911,6 +918,7 @@ body:not(.node-type-article) .node-article > .links {
   font-size: 2em;
   font-weight: bold;
   line-height: 1.25;
+  margin-top: 0.8rem;
 }
 @media all and (max-width: 767px) {
   #site-name#site-name {
@@ -922,7 +930,14 @@ body:not(.node-type-article) .node-article > .links {
 @media all and (min-width: 768px) {
   #site-name#site-name {
     display: inline-block;
+    margin-top: 0.8rem;
     vertical-align: bottom;
+  }
+}
+@media all and (min-width: 768px) {
+  #site-slogan {
+    margin-top: 1.1rem;
+    padding-top: 0.1rem;
   }
 }
 #block-system-main {

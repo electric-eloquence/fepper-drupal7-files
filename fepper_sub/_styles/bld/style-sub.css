@@ -72,11 +72,6 @@
   height: 5.4rem;
 }
 @media all and (min-width: 768px) {
-  .region-header #block-search-form {
-    margin-top: 0.8rem;
-  }
-}
-@media all and (min-width: 768px) {
   .page-blog .layout-content,
   .not-front.page-node.one-sidebar.sidebar-second .layout-content,
   .two-sidebars #sidebar-first {

@@ -42,10 +42,12 @@ header.header
           max-height: none
           overflow: visible
     @media all and (min-width: $bp-med)
-      .hidden-link
-        display: none
+      margin-top: $space-half
   #block-system-user-menu
     @media all and (max-width: $bp-sm-max)
       float: left
     @media all and (min-width: $bp-med)
       float: right
+.hidden-link
+  @media all and (min-width: $bp-med)
+    display: none !important
