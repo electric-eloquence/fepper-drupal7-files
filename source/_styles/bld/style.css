@@ -933,7 +933,6 @@ body:not(.node-type-article) .node-article > .links {
   #site-name#site-name {
     display: inline-block;
     margin-top: 0.8rem;
-    vertical-align: bottom;
   }
 }
 @media all and (min-width: 768px) {
