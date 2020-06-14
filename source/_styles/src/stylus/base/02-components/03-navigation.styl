@@ -1,65 +1,65 @@
-ul.menu
-  display: flex
-  flex-wrap: wrap
-  align-items: center
-  a
-    display: block
-  > li
-    padding-right: 1em
-    @media all and (min-width: $bp-med)
-      padding-left: 1em
+nav[role="navigation"] > ul.menu
   @media all and (min-width: $bp-med)
     .expanded
-      ul
+      ul.menu
         display: block
         margin: 0
         padding: 0
-        li
-          float: none
-          border: 1px solid $gray-light-2
-          border-bottom: 0
-          min-width: 11rem
-          padding: 0 1.2rem
-          &:last-child
-            border-bottom: 1px solid $gray-light-2
-        a
-          padding: 0.05rem 0 // This makes expanded menu horizontal borders align with header border bottom.
+      li
+        float: none
+        border: 1px solid $gray-light-2
+        border-bottom: 0
+        min-width: 11rem
+        padding: 0 1.2rem
+        &:last-child
+          border-bottom: 1px solid $gray-light-2
       > a::after
         content: "▼"
         filter: invert(20%)
         font-size: 0.75em
         margin-left: $space-half
-    > ul.menu
-      > .expanded
-        &:hover > a,
-        > a:focus
-          + ul.menu
-            // Margin and padding must be switched from unhovered/unfocused state
-            // so unexpanded items don't interfere with expanded items.
-            margin-top: 0
-            max-height: 100%
-            padding-top: $menu-margin
-        > ul
-          background-color: $white-translucent
-          max-height: 0
-          padding-top: 0
-          margin-top: $menu-margin
-          overflow: hidden
-          position: absolute
-          transition: max-height 0.3s ease
-          z-index: 2
-          > .expanded li
-            border-right: 0
-            border-bottom: 0
-            border-left: 0
-          ul
-            background-color: transparent
-#block-system-user-menu,
-#main-menu
-  @media all and (min-width: $bp-med)
-    margin: $menu-margin 0
-    .menu  a
-        padding: 0.1rem 0
+    > .expanded
+      &:hover > a,
+      > a:focus
+        + ul.menu
+          // Margin and padding must be switched from unhovered/unfocused state
+          // so unexpanded items don't interfere with expanded items.
+          margin-top: 0
+          max-height: 100%
+          padding-top: $menu-margin
+      > ul.menu
+        background-color: $white-translucent
+        max-height: 0
+        padding-top: 0
+        margin-top: $menu-margin
+        overflow: hidden
+        position: absolute
+        transition: max-height 0.3s ease
+        z-index: 2
+        a
+          padding: 0.05rem 0 // This makes expanded menu horizontal borders align with header border bottom.
+        > .expanded li
+          border-right: 0
+          border-bottom: 0
+          border-left: 0
+        ul.menu
+          background-color: transparent
+#block-system-user-menu > div,
+nav[role="navigation"]
+  > ul.menu
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    a
+      display: block
+    > li
+      padding-right: 1em
+    @media all and (min-width: $bp-med)
+      margin: $menu-margin 0
+      > li
+        padding-left: 1em
+        > a
+          padding: 0.1rem 0
 #block-system-user-menu
   @media all and (max-width: $bp-sm-max)
     margin-top: $space-half
@@ -73,11 +73,11 @@ ul.menu
         background: url("../../_assets/src/icon-menu.svg") no-repeat 0 0
         background-size: cover
         filter: invert(20%)
-  .menu
+  ul.menu
     @extend .cf
   @media all and (max-width: $bp-sm-max)
     float: right
-    > .menu
+    > ul.menu
       background-color: $white-translucent
       max-height: 0
       overflow: hidden
@@ -99,7 +99,7 @@ ul.menu
           padding-left: 1.2rem
     // Open hamburger menu.
     &.open
-      > .menu
+      > ul.menu
         max-height: none
   @media all and (min-width: $bp-med)
     float: left
