@@ -11,8 +11,11 @@ ul li.expanded,
 ul li.leaf
   padding: 0
 li
-  a:hover, a:focus
+  a:focus
     color: $gray
+  @media (hover: hover)
+    a:hover
+      color: $gray
 .text ul,
 .text ol,
 ul.text,

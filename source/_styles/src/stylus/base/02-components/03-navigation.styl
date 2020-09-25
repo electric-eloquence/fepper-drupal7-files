@@ -18,7 +18,6 @@ nav[role="navigation"] > ul.menu
         font-size: 0.5625em
         margin-left: $space-half
     > .expanded
-      &:hover > a,
       > a:focus
         + ul.menu
           // Margin and padding must be switched from unhovered/unfocused state
@@ -43,6 +42,15 @@ nav[role="navigation"] > ul.menu
           border-left: 0
         ul.menu
           background-color: transparent
+    @media (hover: hover)
+      > .expanded
+        &:hover > a
+          + ul.menu
+            // Margin and padding must be switched from unhovered/unfocused state
+            // so unexpanded items don't interfere with expanded items.
+            margin-top: 0
+            max-height: 100%
+            padding-top: $menu-margin
 #block-system-user-menu > div,
 nav[role="navigation"]
   > ul.menu

@@ -63,6 +63,8 @@ transition()
     content: ""
     display: block
     padding: 1.1rem
-  &:hover::before,
   &:focus::before
     filter: invert(50%)
+  @media (hover: hover)
+    &:hover::before
+      filter: invert(50%)

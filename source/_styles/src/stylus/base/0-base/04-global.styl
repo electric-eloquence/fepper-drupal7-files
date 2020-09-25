@@ -32,8 +32,11 @@ li a.active
   color: $gray-dark
   text-decoration: none
   outline: 0
-  &:hover, &:focus
+  &:focus
     color: $gray
+  @media (hover: hover)
+    &:hover
+      color: $gray
 .text a,
 a.text,
 p a
