@@ -60,9 +60,13 @@
   display: block;
   padding: 1.1rem;
 }
-.mobile-nav-icon:hover::before,
 .mobile-nav-icon:focus::before {
   filter: invert(50%);
+}
+@media (hover: hover) {
+  .mobile-nav-icon:hover::before {
+    filter: invert(50%);
+  }
 }
 .region-header #block-search-form > h2 > a,
 #main-menu > h2 > a {
