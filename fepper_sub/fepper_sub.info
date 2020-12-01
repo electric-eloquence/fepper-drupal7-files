@@ -6,7 +6,6 @@ base theme = fepper
 stylesheets[all][] = _styles/bld/style-sub.css
 
 scripts[] = _scripts/src/variables.styl
-scripts[] = _scripts/src/fepper-obj.js
 scripts[] = _scripts/src/behaviors-sub.js
 
 regions[header] = Header
