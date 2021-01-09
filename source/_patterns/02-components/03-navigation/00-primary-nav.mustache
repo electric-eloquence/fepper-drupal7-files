@@ -1,8 +1,8 @@
 {{ info_primary_nav }}
-    {{^ main_menu_block_enabled }}
-      <nav id="main-menu" role="navigation" aria-labelledby="main-menu-menu">
-        <h2 id="main-menu-menu"><a href="#" class="hidden-link"></a>
-        <span class="visually-hidden">Main menu</span></h2>
-        {{> 01-compounds/01-blocks/_06-primary-nav-menu }}
-      </nav> <!-- /#navigation -->
-    {{/ main_menu_block_enabled }}
+{{^ main_menu_block_enabled }}
+  <nav id="main-menu" role="navigation" aria-labelledby="main-menu-menu">
+    <h2 id="main-menu-menu"><a href="#" class="hidden-link"></a>
+    <span class="visually-hidden">Main menu</span></h2>
+    {{> 01-compounds/01-blocks/_06-primary-nav-menu }}
+  </nav> <!-- /#navigation -->
+{{/ main_menu_block_enabled }}

@@ -73,7 +73,6 @@
       </nav> <!-- /#navigation -->
     <?php endif; ?>
 
-
   </header> <!-- /.header -->
 
   <?php

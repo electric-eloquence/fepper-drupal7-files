@@ -18,7 +18,7 @@
   <?php print $user_picture; ?>
 'title_prefix': |2
   <?php print render($title_prefix); ?>
-'\^ page\?': |2
+'^ page?': |2
   <?php if (!$page): ?>
 'title_attributes': |2
   <?php print $title_attributes; ?>
@@ -28,17 +28,17 @@
   <?php print $title; ?>
 '/ article_title': |2
   
-'/ page\?': |2
+'/ page?': |2
   <?php endif; ?>
 'title_suffix': |2
   <?php print render($title_suffix); ?>
-'# page\?': |2
+'# page?': |2
   <?php if ($page): ?>
-'# submitted\?': |2
+'# submitted?': |2
   <?php if ($display_submitted): ?>
 '> 01-compounds/00-text/00-byline': |2
   <?php print $submitted; ?>
-'/ submitted\?': |2
+'/ submitted?': |2
   <?php endif; ?>
 'content_attributes': |2
   <?php print $content_attributes; ?>

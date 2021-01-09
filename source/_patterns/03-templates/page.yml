@@ -19,9 +19,9 @@
             // Wrap in h1 on front page when the site name is not configured to be
             // rendered.
           ?>
-'# homepage\?': |2
+'# homepage?': |2
   <?php if ($is_front): ?>
-'\^ site_name\?': |2
+'^ site_name?': |2
   <?php if (!$site_name): ?>
 'link.pages-homepage': |2
   <?php print $front_page; ?>
@@ -33,9 +33,9 @@
   <?php print $logo; ?>
 'img.logo.alt': |2
   <?php print $system_site_name; ?>
-'/ site_name\?': |2
+'/ site_name?': |2
   <?php endif; ?>
-'/ homepage\?': |2
+'/ homepage?': |2
   <?php endif; ?>
 '/ img.logo': |2
   <?php endif; ?>
@@ -69,7 +69,7 @@
         // Do not render this menu if the main-menu block is administratively
         // enabled in a region at admin/structure/block.
       ?>
-'\^ main_menu_block_enabled': |2
+'^ main_menu_block_enabled': |2
   <?php if (!$main_menu_block_enabled): ?>
 '> 01-compounds/01-blocks/_06-primary-nav-menu': |2
   <?php print render($main_menu_expanded); ?>
@@ -99,7 +99,7 @@
   <?php if (!empty($page['highlighted'])): ?>
           <div id="highlighted"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>
-'\^ front\?': |2
+'^ front?': |2
   <?php if (!$is_front): ?>
 'title_prefix': |2
   <?php print render($title_prefix); ?>
@@ -111,7 +111,7 @@
   <?php endif; ?>
 'title_suffix': |2
   <?php print render($title_suffix); ?>
-'/ front\?': |2
+'/ front?': |2
   <?php endif; ?>
 'fpo_template_content': |2
   <?php if ($tabs): ?>
@@ -123,17 +123,17 @@
         <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
-'# sidebar_first\?': |2
+'# sidebar_first?': |2
   <?php if ($page['sidebar_first']): ?>
 'fpo_sidebar_first': |2
   <?php print render($page['sidebar_first']); ?>
-'/ sidebar_first\?': |2
+'/ sidebar_first?': |2
   <?php endif; ?>
-'# sidebar_second\?': |2
+'# sidebar_second?': |2
   <?php if ($page['sidebar_second']): ?>
 'fpo_sidebar_second': |2
   <?php print render($page['sidebar_second']); ?>
-'/ sidebar_second\?': |2
+'/ sidebar_second?': |2
   <?php endif; ?>
 'fpo_footer': |2
   <?php print render($page['footer']); ?>

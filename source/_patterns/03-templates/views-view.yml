@@ -38,7 +38,7 @@
   <?php print $attachment_before; ?>
 '/ attachment_before': |2
   <?php endif; ?>
-'# rows\?': |2
+'# rows?': |2
   <?php if ($rows): ?>
 'fpo_template_content': |2
   <?php print $rows; ?>
@@ -48,11 +48,11 @@
   <?php print $empty; ?>
 '/ empty': |2
   <?php endif; ?>
-'# pager\?': |2
+'# pager?': |2
   <?php if ($pager): ?>
 '> 02-components/03-navigation/01-pagination': |2
   <?php print $pager; ?>
-'/ pager\?': |2
+'/ pager?': |2
   <?php endif; ?>
 '# attachment_after': |2
   <?php if ($attachment_after): ?>
@@ -60,11 +60,11 @@
   <?php print $attachment_after; ?>
 '/ attachment_after': |2
   <?php endif; ?>
-'# more\?': |2
+'# more?': |2
   <?php if ($more): ?>
 '> 01-compounds/00-text/03-more-link': |2
   <?php print $more; ?>
-'/ more\?': |2
+'/ more?': |2
   <?php endif; ?>
 '# footer': |2
   <?php if ($footer): ?>
