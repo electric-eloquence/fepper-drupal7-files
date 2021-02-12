@@ -30,12 +30,12 @@
     {{/ latest_posts }}
   {{/ templates-views-view-list__row~~templates-block--sidebar2__posts? }}
   {{# templates-views-view-list__row~~templates-block--sidebar2__comments? }}
-    {{# listItems.five }}
+    {{# comment_placeholders }}
       {{> 03-templates/__views-view-list__row(
         views-view-list__row_classes: 'views-row',
         "elements-content-list-item~~templates-block--sidebar2__comments?": true
       ) }}
-    {{/ listItems.five }}
+    {{/ comment_placeholders }}
   {{/ templates-views-view-list__row~~templates-block--sidebar2__comments? }}
   {{{ fpo_template_content }}}
 

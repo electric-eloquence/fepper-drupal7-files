@@ -21,11 +21,9 @@
     "",
   "Fepper docs":
     "",
-  "Pattern Lab docs":
-    "",
   "Keyboard shortcuts":
     "",
-  "Search patterns":
+  "Pattern Search":
     "",
   "All":
     "",
@@ -39,11 +37,13 @@
     "",
   "Check the console for JavaScript errors":
     "",
-  "The state of":
+  "includes":
     "",
-  "includes the following patterns":
+  "included by":
     "",
-  "is included by the following patterns":
+  "Copy path":
+    "",
+  "Copied!":
     "",
   "No Annotations":
     "",
@@ -56,10 +56,6 @@
   "Missing an essential file from %s":
     "",
   "Malformed %s":
-    "",
-  "Found pattern-specific listitems.json for %s":
-    "",
-  "There was an error parsing pattern-specific listitems.json for %s":
     "",
   "Could not find optional user-defined header, usually found at %s":
     "",
@@ -85,13 +81,11 @@
     "",
   "Delete all patterns in the public directory":
     "",
-  "Compile the user interface from its components":
+  "Compile the Fepper User Interface from its components":
     "",
   "Copy frontend files (_assets, _scripts, _styles) to the public directory":
     "",
   "Copy _styles to the public directory (for injection into the browser without a refresh)":
-    "",
-  "Get more information about Fepper UI CLI commands":
     "",
   "Invalid config object!":
     "",
@@ -131,6 +125,10 @@
     "",
   "Incorrect submission!":
     "",
+  "Copy relative path":
+    "",
+  "Copy absolute path":
+    "",
   "Running npm --global update on fepper-cli...":
     "",
   "Running this command again as root/Administrator...":
@@ -158,8 +156,6 @@
   "Combine frontend-copy and template tasks":
     "",
   "Translate templates in 03-templates for the backend, and output them there":
-    "",
-  "Compile the UI React components":
     "",
   "Print UI tasks and their descriptions":
     "",
